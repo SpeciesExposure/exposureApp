@@ -1,0 +1,22 @@
+Package: exposureApp
+Type: Package
+Title: Species Climate Exposure Shiny App
+Version: 0.1.0
+Authors@R: person("Cory", "Merow", role = c("aut", "cre"), email = "cory@example.com")
+Description: Installable Shiny application for exploring species climate exposure,
+    including hotspot and single-species views.
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+Depends: R (>= 4.2)
+Imports:
+    shiny
+Suggests:
+    qs2,
+    dplyr,
+    terra,
+    leaflet,
+    leaflet.extras,
+    jsonlite,
+    DT,
+    raster
