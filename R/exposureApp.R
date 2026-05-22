@@ -26,9 +26,12 @@ exposureApp <- function(intDir = NULL,
 
   Sys.setenv(INT_DIR = intDir)
 
-  meta_path <- file.path(intDir, "spAttributes_v7.qs")
-  if (file.exists(meta_path)) {
-    Sys.setenv(SP_META_PATH = meta_path)
+  meta_path_v8 <- file.path(intDir, "spAttributes_v8.qs")
+  meta_path_v7 <- file.path(intDir, "spAttributes_v7.qs")
+  if (file.exists(meta_path_v8)) {
+    Sys.setenv(SP_META_PATH = meta_path_v8)
+  } else if (file.exists(meta_path_v7)) {
+    Sys.setenv(SP_META_PATH = meta_path_v7)
   }
 
   app_dir <- system.file("app", package = "exposureApp")

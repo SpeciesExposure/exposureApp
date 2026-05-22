@@ -169,7 +169,8 @@ vars_raw       <- unique(as.character(app_df$var))
 vars_avail     <- vars_raw[order(ifelse(grepl("^temp", vars_raw), 0L, 1L), vars_raw)]
 orders_avail   <- sort(na.omit(unique(app_df$orderName)))
 families_avail <- sort(na.omit(unique(app_df$familyName)))
-iucn_avail     <- sort(na.omit(unique(app_df$redlistCategory)))
+# IUCN filter currently disabled in app UI/server filtering; keep for easy restore:
+# iucn_avail     <- sort(na.omit(unique(app_df$redlistCategory)))
 default_year   <- if (2025 %in% years_avail) 2025 else max(years_avail)
 
 species_lookup <- app_df %>%
@@ -206,7 +207,7 @@ var_label <- function(v) {
   lab <- VAR_LABELS[as.character(v)]
   if (!is.na(lab)) lab else as.character(v)
 }
-var_choices <- setNames(vars_avail, vapply(vars_avail, var_label, character(1)))
+var_choices <- setNames(as.list(vars_avail), vapply(vars_avail, var_label, character(1)))
 
 # ── helpers ───────────────────────────────────────────────────────────────────
 build_species_layers <- function(d, sel_vars) {
@@ -244,33 +245,160 @@ build_hotspot_raster <- function(d) {
   raster(setValues(tpl, rv))
 }
 
+safe_read_json <- function(url) {
+  tryCatch(jsonlite::fromJSON(url), error = function(e) NULL)
+}
+
+BOUNDARY_CACHE_DIR <- file.path(intDir, "boundary_cache")
+if (!dir.exists(BOUNDARY_CACHE_DIR)) dir.create(BOUNDARY_CACHE_DIR, recursive = TRUE, showWarnings = FALSE)
+
+geoboundaries_country_index <- local({
+  x <- safe_read_json("https://www.geoboundaries.org/api/current/gbOpen/ALL/ADM0/")
+  if (is.null(x) || !is.data.frame(x)) return(data.frame())
+  out <- x %>%
+    dplyr::transmute(
+      iso3 = as.character(boundaryISO),
+      country = as.character(boundaryName)
+    ) %>%
+    filter(!is.na(iso3), nchar(iso3) == 3, !is.na(country), nzchar(country)) %>%
+    distinct()
+  out[order(out$country, out$iso3), , drop = FALSE]
+})
+
+gadm_gpkg_path <- function(iso3) {
+  iso3 <- toupper(trimws(as.character(iso3 %||% "")))
+  if (!nzchar(iso3)) return(NA_character_)
+  file.path(BOUNDARY_CACHE_DIR, sprintf("gadm41_%s.gpkg", iso3))
+}
+
+ensure_gadm_file <- function(iso3) {
+  iso3 <- toupper(trimws(as.character(iso3 %||% "")))
+  if (!nzchar(iso3)) stop("Missing ISO3 code")
+  out <- gadm_gpkg_path(iso3)
+  if (file.exists(out)) return(out)
+  url <- sprintf("https://geodata.ucdavis.edu/gadm/gadm4.1/gpkg/gadm41_%s.gpkg", iso3)
+  tmp <- tempfile(fileext = ".gpkg")
+  utils::download.file(url, tmp, mode = "wb", quiet = TRUE)
+  file.copy(tmp, out, overwrite = TRUE)
+  out
+}
+
+read_gadm_level <- function(iso3, level) {
+  stopifnot(level %in% c(0L, 1L, 2L))
+  gpkg <- ensure_gadm_file(iso3)
+  lyr <- sprintf("ADM_ADM_%d", as.integer(level))
+  terra::vect(gpkg, layer = lyr)
+}
+
+spatvector_to_leaflet_geojson <- function(v) {
+  tmp <- tempfile(fileext = ".geojson")
+  terra::writeVector(v, tmp, filetype = "GeoJSON", overwrite = TRUE)
+  paste(readLines(tmp, warn = FALSE), collapse = "\n")
+}
+
 # ── UI ────────────────────────────────────────────────────────────────────────
 ui <- fluidPage(
-  tags$head(tags$style(HTML(
+  tags$head(
+    tags$style(HTML(
     "body{font-size:13px}
      #click_panel{margin-top:12px;padding:10px;border:1px solid #ddd;border-radius:4px;background:#fafafa}
      #click_panel h4{margin-top:4px}
      #polygon_panel{margin-top:12px;padding:10px;border:1px solid #e67e00;border-radius:4px;background:#fffaf5}
-     #polygon_panel h4{margin-top:4px}"
-  ))),
+     #polygon_panel h4{margin-top:4px}
+    .sidebar-panel{font-size:1.1em}
+    .sidebar .well{padding:10px 12px}
+    .sidebar hr{margin:8px 0}
+    .sidebar h5{margin:6px 0 4px 0}
+    .sidebar .form-group{margin-bottom:6px}
+    .sidebar .control-label{margin-bottom:2px}
+    .sidebar .radio{margin-top:2px;margin-bottom:2px}
+    .sidebar .radio-inline,.sidebar .checkbox-inline{padding-top:2px;padding-bottom:2px}
+    .sidebar .checkbox{margin-top:3px;margin-bottom:3px}
+    .sidebar .selectize-control{margin-bottom:4px}
+    .sidebar .selectize-input{min-height:30px;padding-top:4px;padding-bottom:4px}
+    .sidebar .btn{padding-top:4px;padding-bottom:4px}
+    .sidebar p{margin:3px 0}
+  .btn,.radio label,.checkbox label{min-height:34px}
+  .radio-inline,.checkbox-inline{padding:6px 10px}
+  .btn-sm{min-height:34px}
+  .btn:focus-visible,.selectize-input:focus-within,input:focus-visible,select:focus-visible{outline:3px solid #1e90ff;outline-offset:1px}
+     .tip{display:inline-block;margin-left:5px;width:15px;height:15px;line-height:15px;text-align:center;
+          font-size:10px;font-weight:bold;color:#fff;background:#888;border-radius:50%;
+          cursor:help;vertical-align:middle;position:relative}
+  .tip:hover::after,.tip:focus::after,.tip.tip-open::after{content:attr(data-tip);position:absolute;left:20px;top:-4px;
+          background:#333;color:#fff;padding:5px 8px;border-radius:4px;font-size:11px;
+          font-weight:normal;white-space:normal;width:200px;z-index:9999;line-height:1.4}
+  @media (pointer: coarse){
+    .tip{width:18px;height:18px;line-height:18px;font-size:11px}
+    .tip:hover::after,.tip:focus::after,.tip.tip-open::after{position:fixed;left:12px;right:12px;top:auto;bottom:12px;width:auto;max-width:none;font-size:12px}
+  }
+     #app-progress-wrap{display:none;margin:6px 0 2px 0}
+     #app-progress-bar{height:8px;border-radius:4px;background:#3498db;
+          transition:width 0.25s ease;width:0%}
+    #app-progress-label{font-size:11px;color:#555;margin-top:2px}
+    .leaflet-control .legend{background:#fff !important;opacity:1 !important}
+    "
+    )),
+    tags$script(HTML("
+      Shiny.addCustomMessageHandler('setProgress', function(msg) {
+        var wrap  = document.getElementById('app-progress-wrap');
+        var bar   = document.getElementById('app-progress-bar');
+        var label = document.getElementById('app-progress-label');
+        if (!wrap || !bar || !label) return;
+        if (msg.pct < 0) {
+          wrap.style.display = 'none';
+          bar.style.width = '0%';
+          label.textContent = '';
+        } else {
+          wrap.style.display = 'block';
+          bar.style.width = Math.min(100, msg.pct) + '%';
+          label.textContent = msg.label || '';
+        }
+      });
+      document.addEventListener('DOMContentLoaded', function(){
+        var tips = document.querySelectorAll('.tip');
+        tips.forEach(function(t){
+          t.setAttribute('tabindex', '0');
+          t.setAttribute('role', 'button');
+          t.setAttribute('aria-label', 'Help');
+        });
+        document.addEventListener('click', function(ev){
+          tips.forEach(function(t){ if (t !== ev.target) t.classList.remove('tip-open'); });
+          if (ev.target.classList && ev.target.classList.contains('tip')) {
+            ev.target.classList.toggle('tip-open');
+            ev.preventDefault();
+          }
+        });
+      });
+    "))
+  ),
 
-  titlePanel("Species exposure to extreme climate"),
+  tags$div(style = "display:flex;align-items:center;justify-content:space-between;padding:10px 15px 4px 15px",
+    tags$h2("Species exposure to extreme climate", style = "margin:0"),
+    tags$a(href = "https://speciesexposure.github.io/", target = "_blank",
+           style = "font-size:13px;color:#3498db;text-decoration:none;white-space:nowrap",
+           "speciesexposure.github.io ↗")
+  ),
   sidebarLayout(
-    sidebarPanel(width = 3,
-      radioButtons("mode", "Map mode",
-                   choices  = c("Single species" = "single",
-                                "Hotspot: # species/cell" = "hotspot"),
-                   selected = "hotspot"),
+    sidebarPanel(width = 3, class = "sidebar-panel",
+      radioButtons("mode", tags$span("Map mode", tags$span("?", class="tip", `data-tip`="Single species: map one species' exposed cells. Hotspot: map how many species are exposed per cell.")),
+                   choices  = list("Single species" = "single",
+                                   "Hotspot: # species/cell" = "hotspot"),
+                   selected = "hotspot", inline = TRUE),
+      actionButton("reset_all", "Reset all controls", width = "100%"),
       hr(),
-      selectInput("year", "Year", choices = years_avail, selected = default_year),
-      checkboxGroupInput("sel_vars", "Climate variables", choices = var_choices, selected = vars_avail),
+      fluidRow(
+        column(4, tags$label("Year", tags$span("?", class="tip", `data-tip`="Select the year to display exposure for."), style = "padding-top:7px;font-weight:600")),
+        column(8, selectInput("year", NULL, choices = years_avail, selected = default_year))
+      ),
+      checkboxGroupInput("sel_vars", tags$span("Climate variables", tags$span("?", class="tip", `data-tip`="Choose which extreme climate variables to include. The map shows cells where at least one selected variable exceeds the species' historical threshold.")), choices = var_choices, selected = vars_avail),
       fluidRow(
         column(6, actionButton("vars_all", "Select all", width = "100%")),
         column(6, actionButton("vars_none", "Deselect all", width = "100%"))
       ),
       hr(),
       conditionalPanel("input.mode == 'single'",
-        h5("Species"),
+        h5(tags$span("Species", tags$span("?", class="tip", `data-tip`="Type to search for a species. The map will show all grid cells where that species is exposed to the selected climate variable(s) in the chosen year."))),
         checkboxInput("flt_exposed_only", "Only show species with exposure in selected year/variable(s)", value = FALSE),
         selectizeInput("species", NULL,
                        choices  = NULL,
@@ -279,27 +407,80 @@ ui <- fluidPage(
                                        searchField = "label"))
       ),
       conditionalPanel("input.mode == 'hotspot'",
-        h5("Filter species (hotspot mode)"),
+        h5(tags$span("Filter species (hotspot mode)", tags$span("?", class="tip", `data-tip`="Restrict which species count toward the hotspot map. Leave all blank to include all species."))),
         checkboxInput("flt_threatened", "Only threatened (CR/EN/VU)", value = FALSE),
         if (length(orders_avail))
-          selectizeInput("flt_order", "Order",
-                         choices = c("", orders_avail), selected = "", multiple = TRUE,
-                         options = list(placeholder = "All orders"))
+          fluidRow(
+            column(4, tags$label("Order", style = "padding-top:7px;font-weight:600")),
+            column(8, selectizeInput("flt_order", NULL,
+                           choices = c("", orders_avail), selected = "", multiple = TRUE,
+                           options = list(placeholder = "All")))
+          )
         else helpText("Order filter unavailable — no metadata loaded."),
         if (length(families_avail))
-          selectizeInput("flt_family", "Family",
-                         choices = c("", families_avail), selected = "", multiple = TRUE,
-                         options = list(placeholder = "All families"))
+          fluidRow(
+            column(4, tags$label("Family", style = "padding-top:7px;font-weight:600")),
+            column(8, selectizeInput("flt_family", NULL,
+                           choices = c("", families_avail), selected = "", multiple = TRUE,
+                           options = list(placeholder = "All")))
+          )
         else helpText("Family filter unavailable — no metadata loaded."),
-        if (length(iucn_avail))
-          selectizeInput("flt_iucn", "IUCN status",
-                         choices = c("", iucn_avail), selected = "", multiple = TRUE,
-                         options = list(placeholder = "All categories"))
-        else helpText("IUCN filter unavailable — no metadata loaded.")
+        # IUCN filter temporarily disabled; keep code for easy restore.
+        # if (length(iucn_avail))
+        #   fluidRow(
+        #     column(4, tags$label("IUCN status", style = "padding-top:7px;font-weight:600")),
+        #     column(8, selectizeInput("flt_iucn", NULL,
+        #                    choices = c("", iucn_avail), selected = "", multiple = TRUE,
+        #                    options = list(placeholder = "All")))
+        #   )
+        # else helpText("IUCN filter unavailable — no metadata loaded."),
+        hr(),
+        h5(tags$span("Political unit", tags$span("?", class="tip", `data-tip`="Select a country, and optionally a state or county. Click 'Load boundary' to highlight that region and list all exposed species within it."))),
+        fluidRow(
+          column(4, tags$label("Country", style = "padding-top:7px;font-weight:600")),
+          column(8, selectizeInput("pol_country", NULL, choices = NULL,
+                                   selected = "", multiple = FALSE,
+                                   options = list(placeholder = "Select...")))
+        ),
+        fluidRow(
+          column(4, tags$label("State", style = "padding-top:7px;font-weight:600")),
+          column(8, selectizeInput("pol_state", NULL, choices = NULL,
+                                   selected = "", multiple = FALSE,
+                                   options = list(placeholder = "All")))
+        ),
+        fluidRow(
+          column(4, tags$label("County", style = "padding-top:7px;font-weight:600")),
+          column(8, selectizeInput("pol_county", NULL, choices = NULL,
+                                   selected = "", multiple = FALSE,
+                                   options = list(placeholder = "All")))
+        ),
+        fluidRow(
+          column(6, actionButton("load_pol_unit", "Load boundary", class = "btn-sm", width = "100%")),
+          column(6, actionButton("clear_polygon", "Clear",          class = "btn-sm", width = "100%"))
+        ),
+        hr(),
+        h5(tags$span("Upload shapefile", tags$span("?", class="tip", `data-tip`="Select all components of a shapefile at once (.shp, .dbf, .shx, .prj). The boundary will be drawn on the map and exposed species listed below."))),
+        tags$p(style = "font-size:11px;color:#666;margin-bottom:4px",
+               "Select all shapefile components (.shp, .dbf, .shx, .prj) at once."),
+        fileInput("shp_upload", NULL, multiple = TRUE,
+                  accept = c(".shp", ".dbf", ".shx", ".prj", ".cpg"),
+                  buttonLabel = "Browse…", placeholder = "No file selected")
       )
     ),
     mainPanel(width = 9,
       leafletOutput("map", height = "540px"),
+      conditionalPanel("input.mode == 'hotspot'",
+        div(style = "display:flex;justify-content:flex-end;margin-top:4px;margin-bottom:2px;",
+            div(style = "width:260px;",
+                sliderInput("hotspot_opacity", "Hotspot opacity", min = 0, max = 1, value = 0.95, step = 0.05)
+            )
+        )
+      ),
+      div(id = "app-progress-wrap",
+          div(style = "background:#e0e0e0;border-radius:4px;overflow:hidden",
+              div(id = "app-progress-bar")),
+          div(id = "app-progress-label")
+      ),
       uiOutput("status_msg"),
       uiOutput("exposure_msg"),
       conditionalPanel("input.mode == 'single'",
@@ -326,17 +507,14 @@ ui <- fluidPage(
           plotOutput("cell_trend", height = "220px"),
           hr()
         ),
-        div(id = "polygon_panel",
-            h4("Species in drawn polygon"),
-            p(style = "font-size:12px;color:#555",
-              "Use the polygon tool (top-left map toolbar) to select a region. ",
-              "Shows all unique species exposed for the current year & variables within the polygon."),
-            actionButton("clear_polygon", "Clear polygon", class = "btn-sm"),
-            br(), br(),
-            DTOutput("polygon_table"),
-            br(),
-            downloadButton("download_polygon",      "Download polygon table"),
-            downloadButton("download_map_raster_hs", "Download map raster")
+        conditionalPanel("output.polygon_active == 'yes'",
+          div(id = "polygon_panel",
+              h4("Species in selected area"),
+              DTOutput("polygon_table"),
+              br(),
+              downloadButton("download_polygon",       "Download polygon table"),
+              downloadButton("download_map_raster_hs", "Download map raster")
+          )
         )
       )
     )
@@ -348,6 +526,7 @@ server <- function(input, output, session) {
 
   exposure_msg_rv <- reactiveVal(NULL)
   status_msg_rv <- reactiveVal("Ready")
+  polygon_empty_reason_rv <- reactiveVal(NULL)
 
   set_status <- function(msg, done = FALSE) {
     stamp <- format(Sys.time(), "%H:%M:%S")
@@ -388,6 +567,51 @@ server <- function(input, output, session) {
                        choices = species_avail,
                        selected = species_avail[1],
                        server = TRUE)
+
+  country_choices <- if (nrow(geoboundaries_country_index)) {
+    setNames(as.list(geoboundaries_country_index$iso3),
+             paste0(geoboundaries_country_index$country, " (", geoboundaries_country_index$iso3, ")"))
+  } else {
+    list("United States (USA)" = "USA")
+  }
+  updateSelectizeInput(session, "pol_country", choices = country_choices, selected = "USA", server = TRUE)
+  updateSelectizeInput(session, "pol_state", choices = character(0), selected = "", server = TRUE)
+  updateSelectizeInput(session, "pol_county", choices = character(0), selected = "", server = TRUE)
+
+  gadm_cache <- new.env(parent = emptyenv())
+  shp_cache <- new.env(parent = emptyenv())
+  intersection_cache <- new.env(parent = emptyenv())
+
+  get_gadm_cached <- function(iso3, level) {
+    key <- paste0(toupper(iso3), "_", as.integer(level))
+    if (exists(key, envir = gadm_cache, inherits = FALSE)) return(get(key, envir = gadm_cache, inherits = FALSE))
+    v <- read_gadm_level(iso3, level)
+    assign(key, v, envir = gadm_cache)
+    v
+  }
+
+  avail_cells_all <- sort(unique(app_df$cell[!is.na(app_df$cell) & app_df$cell >= 1 & app_df$cell <= ncell(tpl)]))
+  avail_pts <- if (length(avail_cells_all)) {
+    xy <- terra::xyFromCell(tpl, avail_cells_all)
+    terra::vect(xy, type = "points", crs = terra::crs(tpl))
+  } else NULL
+
+  intersect_cached <- function(unit_key, unit_v) {
+    if (exists(unit_key, envir = intersection_cache, inherits = FALSE)) {
+      return(get(unit_key, envir = intersection_cache, inherits = FALSE))
+    }
+    if (is.null(avail_pts) || !length(avail_cells_all)) {
+      out <- integer(0)
+    } else {
+      inside <- tryCatch(
+        terra::is.related(avail_pts, unit_v, "intersects"),
+        error = function(e) rep(FALSE, length(avail_cells_all))
+      )
+      out <- avail_cells_all[inside]
+    }
+    assign(unit_key, out, envir = intersection_cache)
+    out
+  }
 
   # Re-filter species list when checkbox or year/vars change
   observe({
@@ -443,12 +667,13 @@ server <- function(input, output, session) {
       d <- apply_hotspot_filters(d,
                                  input$flt_order %||% character(0),
                                  input$flt_family %||% character(0),
-                                 input$flt_iucn %||% character(0),
+                                 # input$flt_iucn %||% character(0),
+                                 character(0),
                                  input$flt_threatened %||% FALSE)
     }
     d
   }) |> bindCache(input$year, input$sel_vars, input$mode,
-                  input$flt_order, input$flt_family, input$flt_iucn, input$flt_threatened)
+                  input$flt_order, input$flt_family, input$flt_threatened)
 
   species_summary_df <- reactive({
     req(input$mode == "single", input$species)
@@ -480,18 +705,14 @@ server <- function(input, output, session) {
   output$map <- renderLeaflet({
     leaflet() %>% addProviderTiles(providers$Esri.WorldStreetMap) %>%
       setView(lng = 0, lat = 15, zoom = 2) %>%
-      addDrawToolbar(
-        targetGroup          = "drawn",
-        polylineOptions      = FALSE,
-        rectangleOptions     = FALSE,
-        circleOptions        = FALSE,
-        markerOptions        = FALSE,
-        circleMarkerOptions  = FALSE,
-        polygonOptions = drawPolygonOptions(
-          showArea     = FALSE,
-          shapeOptions = drawShapeOptions(fillOpacity = 0.15, color = "#e67e00", weight = 2)
-        ),
-        editOptions = editToolbarOptions(remove = TRUE, edit = FALSE)
+      leaflet.extras::addDrawToolbar(
+        polylineOptions     = FALSE,
+        circleOptions       = FALSE,
+        markerOptions       = FALSE,
+        circleMarkerOptions = FALSE,
+        rectangleOptions    = FALSE,
+        polygonOptions      = leaflet.extras::drawPolygonOptions(shapeOptions = leaflet.extras::drawShapeOptions(fillOpacity = 0.1, color = "#e67e00", weight = 2)),
+        editOptions         = leaflet.extras::editToolbarOptions(edit = FALSE, remove = TRUE)
       )
   })
 
@@ -607,8 +828,9 @@ server <- function(input, output, session) {
             pal <- colorNumeric(cm_cols, domain = c(minN, maxN), na.color = "transparent")
             proxy %>% clearImages() %>% clearControls()
             proxy %>%
-              addRasterImage(rr, colors = pal, opacity = 0.75, layerId = "hotspot", method = "ngb") %>%
+              addRasterImage(rr, colors = pal, opacity = input$hotspot_opacity %||% 0.95, layerId = "hotspot", method = "ngb") %>%
               addLegend(position = "bottomright", pal = pal, values = vals,
+                        opacity = input$hotspot_opacity %||% 0.95,
                         title = "# Species<br>exposed", layerId = "legend_main")
             # store for download
             map_raster_rv(terra::rast(rr))
@@ -635,11 +857,12 @@ server <- function(input, output, session) {
   # Table recomputes reactively whenever year/vars change while polygon is drawn
   polygon_table_data <- reactive({
     cell_ids <- polygon_cells_rv()
-    req(!is.null(cell_ids), length(cell_ids) > 0)
+    req(!is.null(cell_ids))
+    if (length(cell_ids) == 0) return(data.frame())
     fd <- filtered_df()
     d  <- fd %>% filter(cell %in% cell_ids)
     d  <- ensure_prop_exposed(d)
-    req(nrow(d) > 0)
+    if (nrow(d) == 0) return(data.frame())
     pd <- d %>%
       dplyr::select(spName, var,
                     any_of(c("propExposed")),
@@ -656,6 +879,8 @@ server <- function(input, output, session) {
   })
   # Tracks the last raster(s) drawn on the map for download
   map_raster_rv <- reactiveVal(NULL)
+  adm1_cache <- reactiveVal(NULL)
+  adm2_cache <- reactiveVal(NULL)
 
   # Clear stale click/polygon state whenever the user switches mode
   observeEvent(input$mode, {
@@ -663,10 +888,207 @@ server <- function(input, output, session) {
     click_data(NULL)
     hotspot_diag_data(NULL)
     polygon_cells_rv(NULL)
+    polygon_empty_reason_rv(NULL)
     map_raster_rv(NULL)
-    # Remove drawn polygons from the map
+    # Remove selected polygon overlay from the map
     leafletProxy("map") %>% clearGroup("drawn")
   }, ignoreInit = TRUE)
+
+  observeEvent(input$pol_country, {
+    iso <- toupper(trimws(input$pol_country %||% ""))
+    polygon_cells_rv(NULL)
+    polygon_empty_reason_rv(NULL)
+    leafletProxy("map") %>% clearGroup("drawn")
+    if (!nzchar(iso)) {
+      adm1_cache(NULL)
+      adm2_cache(NULL)
+      updateSelectizeInput(session, "pol_state", choices = character(0), selected = "", server = TRUE)
+      updateSelectizeInput(session, "pol_county", choices = character(0), selected = "", server = TRUE)
+      return()
+    }
+    set_status(sprintf("Loading administrative units for %s...", iso))
+    tryCatch({
+      v1 <- get_gadm_cached(iso, 1L)
+      d1 <- as.data.frame(v1)
+      adm1_cache(d1)
+      s1 <- sort(unique(as.character(d1$NAME_1)))
+      s1 <- s1[!is.na(s1) & nzchar(s1)]
+      updateSelectizeInput(session, "pol_state",
+                           choices = c(list("(All states/provinces)" = ""), setNames(as.list(s1), s1)),
+                           selected = "", server = TRUE)
+
+      v2 <- tryCatch(get_gadm_cached(iso, 2L), error = function(e) NULL)
+      if (!is.null(v2)) {
+        d2 <- as.data.frame(v2)
+        adm2_cache(d2)
+      } else {
+        adm2_cache(NULL)
+      }
+      updateSelectizeInput(session, "pol_county", choices = character(0), selected = "", server = TRUE)
+      set_status(sprintf("Administrative units ready for %s", iso), done = TRUE)
+    }, error = function(e) {
+      adm1_cache(NULL)
+      adm2_cache(NULL)
+      updateSelectizeInput(session, "pol_state", choices = character(0), selected = "", server = TRUE)
+      updateSelectizeInput(session, "pol_county", choices = character(0), selected = "", server = TRUE)
+      exposure_msg_rv(paste("Could not load political units:", conditionMessage(e)))
+      set_status("Administrative unit load failed")
+    })
+  }, ignoreInit = TRUE)
+
+  observeEvent(input$pol_state, {
+    d2 <- adm2_cache()
+    st <- input$pol_state %||% ""
+    if (is.null(d2) || !nrow(d2) || !nzchar(st)) {
+      updateSelectizeInput(session, "pol_county",
+                           choices = list("(All counties/districts)" = ""),
+                           selected = "", server = TRUE)
+      return()
+    }
+    c2 <- d2 %>%
+      filter(NAME_1 == st) %>%
+      pull(NAME_2) %>%
+      as.character() %>%
+      unique() %>%
+      sort()
+    c2 <- c2[!is.na(c2) & nzchar(c2)]
+    updateSelectizeInput(session, "pol_county",
+                         choices = c(list("(All counties/districts)" = ""), setNames(as.list(c2), c2)),
+                         selected = "", server = TRUE)
+  }, ignoreInit = TRUE)
+
+  observeEvent(input$load_pol_unit, {
+    req(input$mode == "hotspot")
+    iso <- toupper(trimws(input$pol_country %||% ""))
+    req(nzchar(iso))
+    set_status("Loading selected boundary...")
+    show_progress(10, "Fetching boundary...")
+    tryCatch({
+      st <- trimws(input$pol_state %||% "")
+      ct <- trimws(input$pol_county %||% "")
+
+      unit_v <- NULL
+      label <- iso
+      unit_key <- NULL
+      if (nzchar(ct)) {
+        show_progress(20, "Loading ADM2 boundary...")
+        v2 <- get_gadm_cached(iso, 2L)
+        d2 <- as.data.frame(v2)
+        idx <- which(d2$NAME_1 == st & d2$NAME_2 == ct)
+        if (!length(idx)) stop("Selected county/district not found")
+        unit_v <- v2[idx, ]
+        label <- paste0(ct, ", ", st, " (", iso, ")")
+        unit_key <- paste0("ADM2|", iso, "|", st, "|", ct)
+      } else if (nzchar(st)) {
+        show_progress(20, "Loading state boundary...")
+        v1 <- get_gadm_cached(iso, 1L)
+        d1 <- as.data.frame(v1)
+        idx <- which(d1$NAME_1 == st)
+        if (!length(idx)) stop("Selected state/province not found")
+        unit_v <- v1[idx, ]
+        label <- paste0(st, " (", iso, ")")
+        unit_key <- paste0("ADM1|", iso, "|", st)
+      } else {
+        show_progress(20, "Loading country boundary...")
+        unit_v <- get_gadm_cached(iso, 0L)
+        label <- iso
+        unit_key <- paste0("ADM0|", iso)
+      }
+
+      show_progress(55, "Finding exposed cells in boundary...")
+      if (!length(avail_cells_all)) {
+        polygon_cells_rv(NULL)
+        polygon_empty_reason_rv("No valid raster cells are available to intersect.")
+        hide_progress()
+        set_status("No available cells for selection")
+        return()
+      }
+      cell_ids <- intersect_cached(unit_key, unit_v)
+      show_progress(85, "Drawing boundary on map...")
+      if (!length(cell_ids)) {
+        polygon_cells_rv(integer(0))
+        polygon_empty_reason_rv("No exposed raster cells intersect this selected boundary.")
+        hide_progress()
+        set_status("Boundary loaded, but no exposed cells intersect it", done = TRUE)
+      } else {
+        polygon_cells_rv(cell_ids)
+        polygon_empty_reason_rv(NULL)
+        hide_progress()
+        set_status(sprintf("Boundary loaded: %s (%d cells)", label, length(cell_ids)), done = TRUE)
+      }
+
+      gj <- spatvector_to_leaflet_geojson(unit_v)
+      leafletProxy("map") %>%
+        clearGroup("drawn") %>%
+        addGeoJSON(gj,
+                   group = "drawn",
+                   color = "#e67e00",
+                   weight = 2,
+                   fillColor = "#e67e00",
+                   fillOpacity = 0.15)
+      ext <- terra::ext(unit_v)
+      leafletProxy("map") %>% fitBounds(ext[1], ext[3], ext[2], ext[4])
+
+      click_data(NULL)
+      hotspot_diag_data(NULL)
+      click_info(list(cell = NA_integer_, lat = NA, lng = NA))
+    }, error = function(e) {
+      polygon_cells_rv(NULL)
+      hide_progress()
+      exposure_msg_rv(paste("Boundary selection failed:", conditionMessage(e)))
+      set_status("Boundary selection failed")
+    })
+  })
+
+  # Handle freehand polygon drawn by user on the map
+  observeEvent(input$map_draw_new_feature, ignoreNULL = TRUE, {
+    feat <- input$map_draw_new_feature
+    coords_raw <- tryCatch(feat$geometry$coordinates[[1]], error = function(e) NULL)
+    if (is.null(coords_raw) || length(coords_raw) < 3) return()
+
+    coord_mat <- tryCatch({
+      do.call(rbind, lapply(coords_raw, function(pt) c(as.numeric(pt[[1]]), as.numeric(pt[[2]]))))
+    }, error = function(e) NULL)
+    if (is.null(coord_mat) || nrow(coord_mat) < 3) return()
+
+    # Close ring if needed
+    if (!identical(coord_mat[1, ], coord_mat[nrow(coord_mat), ])) {
+      coord_mat <- rbind(coord_mat, coord_mat[1, ])
+    }
+
+    poly_v <- tryCatch(
+      terra::vect(list(list(coord_mat)), type = "polygons", crs = terra::crs(tpl)),
+      error = function(e) NULL
+    )
+    if (is.null(poly_v)) return()
+
+    avail_cells <- avail_cells_all
+    if (!length(avail_cells)) { polygon_cells_rv(NULL); polygon_empty_reason_rv("No valid raster cells are available to intersect."); return() }
+
+    pts <- avail_pts
+    inside <- tryCatch(
+      terra::is.related(pts, poly_v, "intersects"),
+      error = function(e) rep(FALSE, length(avail_cells))
+    )
+    cell_ids <- avail_cells[inside]
+    polygon_cells_rv(if (length(cell_ids)) cell_ids else integer(0))
+    if (length(cell_ids) == 0) {
+      polygon_empty_reason_rv("No exposed raster cells intersect the drawn polygon.")
+    } else {
+      polygon_empty_reason_rv(NULL)
+    }
+
+    click_data(NULL)
+    hotspot_diag_data(NULL)
+    click_info(list(cell = NA_integer_, lat = NA, lng = NA))
+    set_status(sprintf("Drawn polygon: %d cells selected", length(cell_ids)), done = TRUE)
+  })
+
+  observeEvent(input$map_draw_deleted_features, {
+    polygon_cells_rv(NULL)
+    polygon_empty_reason_rv(NULL)
+    set_status("Drawn polygon cleared", done = TRUE)
+  })
 
   observeEvent(input$map_click, ignoreNULL = TRUE, {
     set_status("Loading clicked cell...")
@@ -989,8 +1411,22 @@ sep = "")
 
   output$polygon_table <- renderDT({
     req(input$mode == "hotspot")
+    cell_ids <- polygon_cells_rv()
     d <- tryCatch(polygon_table_data(), error = function(e) NULL)
-    req(!is.null(d))
+    if (is.null(d) || nrow(d) == 0) {
+      msg <- polygon_empty_reason_rv()
+      if (is.null(msg) || !nzchar(msg)) {
+        if (is.null(cell_ids) || length(cell_ids) == 0) {
+          msg <- "No exposed raster cells intersect the selected area."
+        } else {
+          msg <- "Cells intersect the selected area, but no species pass the current year/variable/filter settings."
+        }
+      }
+      return(datatable(
+        data.frame(Message = msg),
+        rownames = FALSE, options = list(dom = "t", ordering = FALSE), class = "compact"
+      ))
+    }
     datatable(d, rownames = FALSE, filter = "top",
               options = list(pageLength = 30, dom = "ftp", scrollX = TRUE,
                              columnDefs = list(
@@ -1009,72 +1445,112 @@ sep = "")
     }
   )
 
-  # Helper: reset the draw toolbar so it no longer intercepts map clicks
-  reset_draw_toolbar <- function() {
-    leafletProxy("map") %>%
-      clearGroup("drawn") %>%
-      removeDrawToolbar(clearFeatures = TRUE) %>%
-      addDrawToolbar(
-        targetGroup         = "drawn",
-        polylineOptions     = FALSE,
-        rectangleOptions    = FALSE,
-        circleOptions       = FALSE,
-        markerOptions       = FALSE,
-        circleMarkerOptions = FALSE,
-        polygonOptions = drawPolygonOptions(
-          showArea     = FALSE,
-          shapeOptions = drawShapeOptions(fillOpacity = 0.15, color = "#e67e00", weight = 2)
-        ),
-        editOptions = editToolbarOptions(remove = TRUE, edit = FALSE)
-      )
-  }
-
   observeEvent(input$clear_polygon, {
     polygon_cells_rv(NULL)
-    reset_draw_toolbar()
+    polygon_empty_reason_rv(NULL)
+    leafletProxy("map") %>% clearGroup("drawn")
+    set_status("Selection cleared", done = TRUE)
   })
 
-  # Also handle delete via the toolbar's own delete button
-  observeEvent(input$map_draw_deleted_features, {
+  observeEvent(input$reset_all, {
+    updateRadioButtons(session, "mode", selected = "hotspot")
+    updateSelectInput(session, "year", selected = default_year)
+    updateCheckboxGroupInput(session, "sel_vars", selected = vars_avail)
+    updateCheckboxInput(session, "flt_exposed_only", value = FALSE)
+    updateSelectizeInput(session, "species", selected = species_avail[1], server = TRUE)
+    updateCheckboxInput(session, "flt_threatened", value = FALSE)
+    updateSelectizeInput(session, "flt_order", selected = "", server = TRUE)
+    updateSelectizeInput(session, "flt_family", selected = "", server = TRUE)
+    # updateSelectizeInput(session, "flt_iucn", selected = "", server = TRUE)
+    updateSelectizeInput(session, "pol_country", selected = "USA", server = TRUE)
+    updateSelectizeInput(session, "pol_state", selected = "", server = TRUE)
+    updateSelectizeInput(session, "pol_county", selected = "", server = TRUE)
     polygon_cells_rv(NULL)
-    reset_draw_toolbar()
-  })
-
-  observeEvent(input$map_draw_new_feature, ignoreNULL = TRUE, {
-    req(input$mode == "hotspot")
-    feat <- input$map_draw_new_feature
-    req(!is.null(feat))
-    # hide click panels while polygon is active
+    polygon_empty_reason_rv(NULL)
     click_data(NULL)
     hotspot_diag_data(NULL)
     click_info(list(cell = NA_integer_, lat = NA, lng = NA))
+    map_raster_rv(NULL)
+    exposure_msg_rv(NULL)
+    hide_progress()
+    leafletProxy("map") %>% clearGroup("drawn")
+    set_status("All controls reset", done = TRUE)
+  })
+
+  observeEvent(input$shp_upload, {
+    files <- input$shp_upload
+    req(!is.null(files))
+    shp_row <- files[grepl("\\.shp$", files$name, ignore.case = TRUE), ]
+    if (nrow(shp_row) == 0) {
+      showNotification("No .shp file found — please select all shapefile components.", type = "error")
+      return()
+    }
+    # Copy all uploaded files into a temp dir preserving original extensions
+    tmp_dir <- tempfile()
+    dir.create(tmp_dir)
+    for (i in seq_len(nrow(files))) {
+      file.copy(files$datapath[i], file.path(tmp_dir, files$name[i]))
+    }
+    uploaded_paths <- file.path(tmp_dir, files$name)
+    md5 <- tools::md5sum(uploaded_paths)
+    shp_hash <- paste(paste(names(md5), unname(md5), sep = "="), collapse = "|")
+    shp_path <- file.path(tmp_dir, shp_row$name[1])
+    set_status("Reading uploaded shapefile...")
+    show_progress(15, "Reading shapefile...")
     tryCatch({
-      geojson_str <- jsonlite::toJSON(feat, auto_unbox = TRUE)
-      tmp_geojson <- tempfile(fileext = ".geojson")
-      writeLines(as.character(geojson_str), tmp_geojson)
-      poly_vect <- terra::vect(tmp_geojson)
+      if (exists(shp_hash, envir = shp_cache, inherits = FALSE)) {
+        show_progress(60, "Using cached shapefile intersection...")
+        cached <- get(shp_hash, envir = shp_cache, inherits = FALSE)
+        cell_ids <- cached$cell_ids
+        gj <- cached$geojson
+        ext <- cached$ext
+      } else {
+        shp_v <- terra::vect(shp_path)
+        if (!identical(terra::crs(shp_v), terra::crs(tpl))) {
+          show_progress(40, "Shapefile CRS differs — reprojecting to raster CRS...")
+          set_status("Shapefile projection differs from raster; reprojecting now...")
+          showNotification("Uploaded shapefile projection differs from raster. Reprojecting to match raster CRS...", type = "message", duration = 4)
+          shp_v <- terra::project(shp_v, terra::crs(tpl))
+        } else {
+          show_progress(40, "Projection matches raster CRS...")
+        }
 
-      # Compute polygon cell IDs against ALL cells ever in app_df (year-independent)
-      # so the table can reactively refilter when year/vars change.
-      avail_cells <- unique(app_df$cell)
-      avail_cells <- avail_cells[!is.na(avail_cells) & avail_cells >= 1 &
-                                    avail_cells <= ncell(tpl)]
-      if (!length(avail_cells)) { polygon_cells_rv(NULL); return() }
+        show_progress(60, "Finding exposed cells in shape...")
+        if (!length(avail_cells_all)) {
+          cell_ids <- integer(0)
+        } else {
+          inside <- tryCatch(
+            terra::is.related(avail_pts, shp_v, "intersects"),
+            error = function(e) rep(FALSE, length(avail_cells_all))
+          )
+          cell_ids <- avail_cells_all[inside]
+        }
+        gj <- spatvector_to_leaflet_geojson(shp_v)
+        ext <- terra::ext(shp_v)
+        assign(shp_hash, list(cell_ids = cell_ids, geojson = gj, ext = ext), envir = shp_cache)
+      }
 
-      xy  <- terra::xyFromCell(tpl, avail_cells)
-      pts <- terra::vect(xy, type = "points", crs = terra::crs(tpl))
-      inside <- tryCatch(
-        terra::is.related(pts, poly_vect, "intersects"),
-        error = function(e) rep(FALSE, length(avail_cells))
-      )
-      cell_ids <- avail_cells[inside]
-      if (!length(cell_ids)) { polygon_cells_rv(NULL); return() }
+      polygon_cells_rv(if (length(cell_ids)) cell_ids else integer(0))
+      if (length(cell_ids) == 0) {
+        polygon_empty_reason_rv("No exposed raster cells intersect this uploaded shape.")
+      } else {
+        polygon_empty_reason_rv(NULL)
+      }
+      leafletProxy("map") %>%
+        clearGroup("drawn") %>%
+        addGeoJSON(gj, group = "drawn",
+                   color = "#e67e00", weight = 2,
+                   fillColor = "#e67e00", fillOpacity = 0.15)
+      leafletProxy("map") %>% fitBounds(ext[1], ext[3], ext[2], ext[4])
 
-      polygon_cells_rv(cell_ids)
-      set_status(sprintf("Polygon: %d cells selected", length(cell_ids)), done = TRUE)
+      click_data(NULL); hotspot_diag_data(NULL)
+      click_info(list(cell = NA_integer_, lat = NA, lng = NA))
+      hide_progress()
+      set_status(sprintf("Shapefile loaded: %d cells selected", length(cell_ids)), done = TRUE)
     }, error = function(e) {
-      polygon_cells_rv(NULL)
-      exposure_msg_rv(paste("Polygon query failed:", conditionMessage(e)))
+      hide_progress()
+      showNotification(paste("Shapefile read failed:", conditionMessage(e)), type = "error")
+      set_status("Shapefile read failed")
     })
   })
 }
