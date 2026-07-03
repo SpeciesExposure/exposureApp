@@ -1,0 +1,26 @@
+"species","range_size_cells","mean_pixels_on_map","mean_frac_range_exposed","years_present_of_4"
+"Corvus corax",9994,1755,0.02,1
+"Tyto alba",7289,1638,0.02,1
+"Ardea alba",8824,1612,0.02,2
+"Hirundo rustica",7158,1527,0.02,1
+"Bubulcus ibis",6923,1449,0.02,1
+"Himantopus himantopus",7553,1392,0.02,1
+"Aquila chrysaetos",7165,1379,0.02,1
+"Falco peregrinus",8692,1347,0.02,1
+"Anas platyrhynchos",4275,1342,0.02,2
+"Butorides striata",5727,1287,0.02,1
+"Nycticorax nycticorax",6199,1254,0.02,2
+"Ursus arctos",6482,1204,0.02,4
+"Lagopus lagopus",8323,1189,0.02,3
+"Ardea cinerea",5889,1184,0.02,1
+"Anas crecca",7832,1182,0.02,1
+"Saxicola torquatus",5531,1011,0.02,3
+"Sterna hirundo",5155,987,0.02,1
+"Gallinula chloropus",5886,952,0.02,2
+"Falco subbuteo",5487,914,0.02,1
+"Tachybaptus ruficollis",4644,889,0.02,4
+"Bucephala clangula",5306,889,0.02,1
+"Sus scrofa",4088,869,0.02,1
+"Surnia ulula",4439,868,0.02,2
+"Accipiter nisus",4063,838,0.02,1
+"Felis silvestris",3424,818,0.02,1

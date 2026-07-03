@@ -1,7 +1,8 @@
 #' Launch the Species Climate Exposure Shiny App
 #'
 #' @param intDir Path to the directory containing the app data files
-#'   (\code{allExpForShiny.qs}, \code{landTemplate.tif}, etc.).
+#'   (sharded \code{allExpForShiny_by_year/}, \code{allExpForShiny_manifest_v1.qs},
+#'   \code{landTemplate.tif}, etc.).
 #'   Defaults to the package's built-in \code{extdata} directory.
 #' @param launch.browser Logical; open the app in the default browser. Default \code{TRUE}.
 #' @param host Host IP address to listen on. Default \code{"127.0.0.1"}.
@@ -25,14 +26,6 @@ exposureApp <- function(intDir = NULL,
   }
 
   Sys.setenv(INT_DIR = intDir)
-
-  meta_path_v8 <- file.path(intDir, "spAttributes_v8.qs")
-  meta_path_v7 <- file.path(intDir, "spAttributes_v7.qs")
-  if (file.exists(meta_path_v8)) {
-    Sys.setenv(SP_META_PATH = meta_path_v8)
-  } else if (file.exists(meta_path_v7)) {
-    Sys.setenv(SP_META_PATH = meta_path_v7)
-  }
 
   app_dir <- system.file("app", package = "exposureApp")
   if (!nzchar(app_dir) || !dir.exists(app_dir)) {
