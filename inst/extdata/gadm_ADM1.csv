@@ -1,0 +1,3273 @@
+"id","GID_0","COUNTRY","GID_1","NAME_1","n_cells"
+1,"AFG","Afghanistan","AFG.1_1","Badakhshan",70
+2,"AFG","Afghanistan","AFG.2_1","Badghis",32
+3,"AFG","Afghanistan","AFG.3_1","Baghlan",32
+4,"AFG","Afghanistan","AFG.4_1","Balkh",29
+5,"AFG","Afghanistan","AFG.5_1","Bamyan",23
+6,"AFG","Afghanistan","AFG.6_1","Daykundi",28
+7,"AFG","Afghanistan","AFG.7_1","Farah",76
+8,"AFG","Afghanistan","AFG.8_1","Faryab",34
+9,"AFG","Afghanistan","AFG.9_1","Ghazni",38
+10,"AFG","Afghanistan","AFG.10_1","Ghor",56
+11,"AFG","Afghanistan","AFG.11_1","Hilmand",85
+12,"AFG","Afghanistan","AFG.12_1","Hirat",91
+13,"AFG","Afghanistan","AFG.13_1","Jawzjan",18
+14,"AFG","Afghanistan","AFG.14_1","Kabul",8
+15,"AFG","Afghanistan","AFG.15_1","Kandahar",81
+16,"AFG","Afghanistan","AFG.16_1","Kapisa",4
+17,"AFG","Afghanistan","AFG.17_1","Khost",7
+18,"AFG","Afghanistan","AFG.18_1","Kunar",5
+19,"AFG","Afghanistan","AFG.19_1","Kunduz",13
+20,"AFG","Afghanistan","AFG.20_1","Laghman",7
+21,"AFG","Afghanistan","AFG.21_1","Logar",6
+22,"AFG","Afghanistan","AFG.22_1","Nangarhar",12
+23,"AFG","Afghanistan","AFG.23_1","Nimroz",62
+24,"AFG","Afghanistan","AFG.24_1","Nuristan",16
+25,"AFG","Afghanistan","AFG.25_1","Paktika",32
+26,"AFG","Afghanistan","AFG.26_1","Paktya",9
+27,"AFG","Afghanistan","AFG.27_1","Panjshir",5
+28,"AFG","Afghanistan","AFG.28_1","Parwan",8
+29,"AFG","Afghanistan","AFG.29_1","Samangan",17
+30,"AFG","Afghanistan","AFG.30_1","Sari Pul",23
+31,"AFG","Afghanistan","AFG.31_1","Takhar",20
+32,"AFG","Afghanistan","AFG.32_1","Uruzgan",19
+33,"AFG","Afghanistan","AFG.33_1","Wardak",14
+34,"AFG","Afghanistan","AFG.34_1","Zabul",26
+35,"AGO","Angola","AGO.1_1","Bengo",47
+36,"AGO","Angola","AGO.2_1","Benguela",58
+37,"AGO","Angola","AGO.3_1","Bi<U+00E9>",96
+38,"AGO","Angola","AGO.4_1","Cabinda",9
+39,"AGO","Angola","AGO.5_1","Cuando Cubango",269
+40,"AGO","Angola","AGO.6_1","Cuanza Norte",31
+41,"AGO","Angola","AGO.7_1","Cuanza Sul",78
+42,"AGO","Angola","AGO.8_1","Cunene",110
+43,"AGO","Angola","AGO.9_1","Huambo",44
+44,"AGO","Angola","AGO.10_1","Hu<U+00ED>la",109
+45,"AGO","Angola","AGO.11_1","Luanda",7
+46,"AGO","Angola","AGO.12_1","Lunda Norte",143
+47,"AGO","Angola","AGO.13_1","Lunda Sul",102
+48,"AGO","Angola","AGO.14_1","Malanje",107
+49,"AGO","Angola","AGO.15_1","Moxico",269
+50,"AGO","Angola","AGO.16_1","Namibe",86
+51,"AGO","Angola","AGO.17_1","U<U+00ED>ge",83
+52,"AGO","Angola","AGO.18_1","Zaire",53
+54,"AIA","Anguilla","AIA.15_1","Dog Island",1
+62,"AIA","Anguilla","AIA.8_1","Sandy Hill",1
+63,"AIA","Anguilla","AIA.17_1","Scrub Island",1
+64,"AIA","Anguilla","AIA.18_1","Sombrero Island",1
+66,"AIA","Anguilla","AIA.10_1","Stoney Ground",1
+70,"AIA","Anguilla","AIA.14_1","West End",1
+71,"ALA","<U+00C5>land","ALA.1_2","Archipelago",18
+72,"ALA","<U+00C5>land","ALA.2_2","Countryside",9
+74,"ALB","Albania","ALB.1_1","Berat",2
+75,"ALB","Albania","ALB.2_1","Dib<U+00EB>r",4
+76,"ALB","Albania","ALB.3_1","Durr<U+00EB>s",2
+77,"ALB","Albania","ALB.4_1","Elbasan",6
+78,"ALB","Albania","ALB.5_1","Fier",3
+79,"ALB","Albania","ALB.6_1","Gjirokast<U+00EB>r",6
+80,"ALB","Albania","ALB.7_1","Kor<U+00E7><U+00EB>",7
+81,"ALB","Albania","ALB.8_1","Kuk<U+00EB>s",4
+82,"ALB","Albania","ALB.9_1","Lezh<U+00EB>",4
+83,"ALB","Albania","ALB.10_1","Shkod<U+00EB>r",5
+84,"ALB","Albania","ALB.11_1","Tiran<U+00EB>",5
+85,"ALB","Albania","ALB.12_1","Vlor<U+00EB>",7
+93,"ARE","United Arab Emirates","ARE.1_1","Abu Dhabi",114
+94,"ARE","United Arab Emirates","ARE.2_1","Ajman",1
+95,"ARE","United Arab Emirates","ARE.3_1","Dubai",8
+96,"ARE","United Arab Emirates","ARE.4_1","Fujairah",1
+97,"ARE","United Arab Emirates","ARE.5_1","Ras Al-Khaimah",6
+98,"ARE","United Arab Emirates","ARE.6_1","Sharjah",2
+99,"ARE","United Arab Emirates","ARE.7_1","Umm al-Qaywayn",2
+100,"ARG","Argentina","ARG.1_1","Buenos Aires",540
+101,"ARG","Argentina","ARG.2_1","Catamarca",147
+102,"ARG","Argentina","ARG.3_1","Chaco",148
+103,"ARG","Argentina","ARG.4_1","Chubut",441
+104,"ARG","Argentina","ARG.5_1","Ciudad de Buenos Aires",1
+105,"ARG","Argentina","ARG.6_1","C<U+00F3>rdoba",250
+106,"ARG","Argentina","ARG.7_1","Corrientes",131
+107,"ARG","Argentina","ARG.8_1","Entre R<U+00ED>os",117
+108,"ARG","Argentina","ARG.9_1","Formosa",107
+109,"ARG","Argentina","ARG.10_1","Jujuy",75
+110,"ARG","Argentina","ARG.11_1","La Pampa",220
+111,"ARG","Argentina","ARG.12_1","La Rioja",136
+112,"ARG","Argentina","ARG.13_1","Mendoza",236
+113,"ARG","Argentina","ARG.14_1","Misiones",46
+114,"ARG","Argentina","ARG.15_1","Neuqu<U+00E9>n",157
+115,"ARG","Argentina","ARG.16_1","R<U+00ED>o Negro",354
+116,"ARG","Argentina","ARG.17_1","Salta",222
+117,"ARG","Argentina","ARG.18_1","San Juan",134
+118,"ARG","Argentina","ARG.19_1","San Luis",120
+119,"ARG","Argentina","ARG.20_1","Santa Cruz",505
+120,"ARG","Argentina","ARG.21_1","Santa Fe",203
+121,"ARG","Argentina","ARG.22_1","Santiago del Estero",195
+122,"ARG","Argentina","ARG.23_1","Tierra del Fuego",64
+123,"ARG","Argentina","ARG.24_1","Tucum<U+00E1>n",34
+124,"ARM","Armenia","ARM.1_1","Aragatsotn",5
+125,"ARM","Armenia","ARM.2_1","Ararat",5
+126,"ARM","Armenia","ARM.3_1","Armavir",2
+128,"ARM","Armenia","ARM.5_1","Gegharkunik",10
+129,"ARM","Armenia","ARM.6_1","Kotayk",3
+130,"ARM","Armenia","ARM.7_1","Lori",8
+131,"ARM","Armenia","ARM.8_1","Shirak",5
+132,"ARM","Armenia","ARM.9_1","Syunik",8
+133,"ARM","Armenia","ARM.10_1","Tavush",3
+134,"ARM","Armenia","ARM.11_1","Vayots Dzor",4
+135,"ASM","American Samoa","ASM.1_1","Eastern",1
+136,"ASM","American Samoa","ASM.2_1","Manu'a",4
+137,"ASM","American Samoa","ASM.3_1","Unorganized",1
+138,"ASM","American Samoa","ASM.4_1","Western",2
+139,"ATF","French Southern Territories","ATF.1_1","<U+00CE>les Crozet",8
+140,"ATF","French Southern Territories","ATF.2_1","<U+00CE>les <U+00C9>parses",4
+141,"ATF","French Southern Territories","ATF.3_1","<U+00CE>les Saint Paul et Amsterdam",2
+142,"ATF","French Southern Territories","ATF.4_1","Kerguelen",40
+143,"ATG","Antigua and Barbuda","ATG.1_1","Barbuda",3
+144,"ATG","Antigua and Barbuda","ATG.2_1","Redonda",1
+146,"ATG","Antigua and Barbuda","ATG.4_1","Saint John",1
+148,"ATG","Antigua and Barbuda","ATG.6_1","Saint Paul",2
+150,"ATG","Antigua and Barbuda","ATG.8_1","Saint Philip",1
+151,"AUS","Australia","AUS.1_1","Ashmore and Cartier Islands",4
+152,"AUS","Australia","AUS.2_1","Australian Capital Territory",3
+153,"AUS","Australia","AUS.3_1","Coral Sea Islands Territory",19
+154,"AUS","Australia","AUS.4_1","Jervis Bay Territory",1
+155,"AUS","Australia","AUS.5_1","New South Wales",1260
+156,"AUS","Australia","AUS.6_1","Northern Territory",1962
+157,"AUS","Australia","AUS.7_1","Queensland",2637
+158,"AUS","Australia","AUS.8_1","South Australia",1567
+159,"AUS","Australia","AUS.9_1","Tasmania",189
+160,"AUS","Australia","AUS.10_1","Victoria",401
+161,"AUS","Australia","AUS.11_1","Western Australia",3879
+162,"AUT","Austria","AUT.1_1","Burgenland",9
+163,"AUT","Austria","AUT.2_1","K<U+00E4>rnten",18
+164,"AUT","Austria","AUT.3_1","Nieder<U+00F6>sterreich",38
+165,"AUT","Austria","AUT.4_1","Ober<U+00F6>sterreich",21
+166,"AUT","Austria","AUT.5_1","Salzburg",15
+167,"AUT","Austria","AUT.6_1","Steiermark",30
+168,"AUT","Austria","AUT.7_1","Tirol",21
+169,"AUT","Austria","AUT.8_1","Vorarlberg",4
+171,"AZE","Azerbaijan","AZE.1_1","Absheron",21
+172,"AZE","Azerbaijan","AZE.2_1","Aran",38
+173,"AZE","Azerbaijan","AZE.3_1","Daglig-Shirvan",10
+174,"AZE","Azerbaijan","AZE.4_1","Ganja-Qazakh",21
+175,"AZE","Azerbaijan","AZE.5_1","Kalbajar-Lachin",8
+176,"AZE","Azerbaijan","AZE.6_1","Lankaran",12
+177,"AZE","Azerbaijan","AZE.7_1","Nakhchivan",9
+178,"AZE","Azerbaijan","AZE.8_1","Quba-Khachmaz",12
+179,"AZE","Azerbaijan","AZE.9_1","Shaki-Zaqatala",15
+180,"AZE","Azerbaijan","AZE.10_1","Yukhari-Karabakh",12
+181,"BDI","Burundi","BDI.1_1","Bubanza",1
+182,"BDI","Burundi","BDI.2_1","Bujumbura Mairie",1
+183,"BDI","Burundi","BDI.3_1","Bujumbura Rural",1
+184,"BDI","Burundi","BDI.4_1","Bururi",6
+185,"BDI","Burundi","BDI.5_1","Cankuzo",1
+186,"BDI","Burundi","BDI.6_1","Cibitoke",3
+187,"BDI","Burundi","BDI.7_1","Gitega",3
+188,"BDI","Burundi","BDI.8_1","Karuzi",1
+189,"BDI","Burundi","BDI.9_1","Kayanza",2
+190,"BDI","Burundi","BDI.10_1","Kirundo",1
+191,"BDI","Burundi","BDI.11_1","Makamba",3
+193,"BDI","Burundi","BDI.13_1","Muyinga",4
+194,"BDI","Burundi","BDI.14_1","Mwaro",1
+195,"BDI","Burundi","BDI.15_1","Ngozi",2
+196,"BDI","Burundi","BDI.16_1","Rutana",1
+197,"BDI","Burundi","BDI.17_1","Ruyigi",5
+198,"BEL","Belgium","BEL.1_1","Bruxelles",1
+199,"BEL","Belgium","BEL.2_1","Vlaanderen",28
+200,"BEL","Belgium","BEL.3_1","Wallonie",36
+201,"BEN","Benin","BEN.1_1","Alibori",36
+202,"BEN","Benin","BEN.2_1","Atakora",29
+203,"BEN","Benin","BEN.3_1","Atlantique",5
+204,"BEN","Benin","BEN.4_1","Borgou",34
+205,"BEN","Benin","BEN.5_1","Collines",16
+206,"BEN","Benin","BEN.6_1","Donga",15
+207,"BEN","Benin","BEN.7_1","Kouffo",2
+208,"BEN","Benin","BEN.8_1","Littoral",1
+209,"BEN","Benin","BEN.9_1","Mono",3
+210,"BEN","Benin","BEN.10_1","Ou<U+00E9>m<U+00E9>",1
+211,"BEN","Benin","BEN.11_1","Plateau",5
+212,"BEN","Benin","BEN.12_1","Zou",7
+213,"BES","Bonaire, Sint Eustatius and Saba","BES.1_1","Bonaire",3
+214,"BES","Bonaire, Sint Eustatius and Saba","BES.2_1","Saba",1
+215,"BES","Bonaire, Sint Eustatius and Saba","BES.3_1","Sint Eustatius",3
+216,"BFA","Burkina Faso","BFA.1_1","Boucle du Mouhoun",47
+217,"BFA","Burkina Faso","BFA.2_1","Cascades",26
+218,"BFA","Burkina Faso","BFA.7_1","Centre",3
+219,"BFA","Burkina Faso","BFA.3_1","Centre-Est",20
+220,"BFA","Burkina Faso","BFA.4_1","Centre-Nord",28
+221,"BFA","Burkina Faso","BFA.5_1","Centre-Ouest",26
+222,"BFA","Burkina Faso","BFA.6_1","Centre-Sud",16
+223,"BFA","Burkina Faso","BFA.8_1","Est",60
+224,"BFA","Burkina Faso","BFA.9_1","Haut-Bassins",33
+225,"BFA","Burkina Faso","BFA.10_1","Nord",23
+226,"BFA","Burkina Faso","BFA.11_1","Plateau-Central",12
+227,"BFA","Burkina Faso","BFA.12_1","Sahel",47
+228,"BFA","Burkina Faso","BFA.13_1","Sud-Ouest",22
+229,"BGD","Bangladesh","BGD.1_1","Barisal",16
+230,"BGD","Bangladesh","BGD.2_1","Chittagong",52
+231,"BGD","Bangladesh","BGD.3_1","Dhaka",30
+232,"BGD","Bangladesh","BGD.4_1","Khulna",34
+233,"BGD","Bangladesh","BGD.8_1","Mymensingh",16
+234,"BGD","Bangladesh","BGD.5_1","Rajshahi",27
+235,"BGD","Bangladesh","BGD.6_1","Rangpur",24
+236,"BGD","Bangladesh","BGD.7_1","Sylhet",20
+237,"BGR","Bulgaria","BGR.1_1","Blagoevgrad",10
+238,"BGR","Bulgaria","BGR.2_1","Burgas",20
+239,"BGR","Bulgaria","BGR.3_1","Dobrich",10
+240,"BGR","Bulgaria","BGR.4_1","Gabrovo",4
+241,"BGR","Bulgaria","BGR.5_1","Grad Sofiya",1
+242,"BGR","Bulgaria","BGR.6_1","Haskovo",11
+243,"BGR","Bulgaria","BGR.7_1","Kardzhali",5
+244,"BGR","Bulgaria","BGR.8_1","Kyustendil",6
+245,"BGR","Bulgaria","BGR.9_1","Lovech",7
+246,"BGR","Bulgaria","BGR.10_1","Montana",6
+247,"BGR","Bulgaria","BGR.11_1","Pazardzhik",8
+248,"BGR","Bulgaria","BGR.12_1","Pernik",4
+249,"BGR","Bulgaria","BGR.13_1","Pleven",9
+250,"BGR","Bulgaria","BGR.14_1","Plovdiv",10
+251,"BGR","Bulgaria","BGR.15_1","Razgrad",7
+252,"BGR","Bulgaria","BGR.16_1","Ruse",4
+253,"BGR","Bulgaria","BGR.17_1","Shumen",5
+254,"BGR","Bulgaria","BGR.18_1","Silistra",4
+255,"BGR","Bulgaria","BGR.19_1","Sliven",5
+256,"BGR","Bulgaria","BGR.20_1","Smolyan",6
+257,"BGR","Bulgaria","BGR.21_1","Sofia",14
+258,"BGR","Bulgaria","BGR.22_1","Stara Zagora",10
+259,"BGR","Bulgaria","BGR.23_1","Targovishte",5
+260,"BGR","Bulgaria","BGR.24_1","Varna",8
+261,"BGR","Bulgaria","BGR.25_1","Veliko Tarnovo",6
+262,"BGR","Bulgaria","BGR.26_1","Vidin",5
+263,"BGR","Bulgaria","BGR.27_1","Vratsa",7
+264,"BGR","Bulgaria","BGR.28_1","Yambol",5
+266,"BHR","Bahrain","BHR.3_1","Muharraq",1
+268,"BHR","Bahrain","BHR.5_1","Southern",6
+269,"BHS","Bahamas","BHS.1_1","Acklins",8
+270,"BHS","Bahamas","BHS.2_1","Berry Islands",6
+271,"BHS","Bahamas","BHS.3_1","Biminis",23
+272,"BHS","Bahamas","BHS.4_1","Black Point",4
+273,"BHS","Bahamas","BHS.5_1","Cat Island",6
+274,"BHS","Bahamas","BHS.6_1","Central Abaco",2
+275,"BHS","Bahamas","BHS.7_1","Central Andros",3
+276,"BHS","Bahamas","BHS.8_1","Central Eleuthera",1
+277,"BHS","Bahamas","BHS.9_1","City of Freeport",1
+278,"BHS","Bahamas","BHS.10_1","Crooked Island",10
+279,"BHS","Bahamas","BHS.11_1","East Grand Bahama",5
+280,"BHS","Bahamas","BHS.12_1","Exuma",12
+281,"BHS","Bahamas","BHS.13_1","Grand Cay",2
+283,"BHS","Bahamas","BHS.15_1","Hope Town",8
+284,"BHS","Bahamas","BHS.16_1","Inagua",12
+285,"BHS","Bahamas","BHS.17_1","Long Island",8
+286,"BHS","Bahamas","BHS.18_1","Mangrove Cay",2
+287,"BHS","Bahamas","BHS.19_1","Mayaguana",7
+288,"BHS","Bahamas","BHS.20_1","Moore's Island",1
+289,"BHS","Bahamas","BHS.21_1","New Providence",8
+290,"BHS","Bahamas","BHS.22_1","North Abaco",2
+291,"BHS","Bahamas","BHS.23_1","North Andros",11
+292,"BHS","Bahamas","BHS.24_1","North Eleuthera",4
+293,"BHS","Bahamas","BHS.25_1","Ragged Island",11
+294,"BHS","Bahamas","BHS.26_1","Rum Cay",2
+295,"BHS","Bahamas","BHS.27_1","San Salvador",4
+296,"BHS","Bahamas","BHS.28_1","South Abaco",5
+297,"BHS","Bahamas","BHS.29_1","South Andros",11
+298,"BHS","Bahamas","BHS.30_1","South Eleuthera",4
+299,"BHS","Bahamas","BHS.31_1","Spanish Wells",2
+300,"BHS","Bahamas","BHS.32_1","West Grand Bahama",7
+301,"BIH","Bosnia and Herzegovina","BIH.1_1","Br<U+010D>ko",1
+302,"BIH","Bosnia and Herzegovina","BIH.2_1","Federacija Bosna i Hercegovina",44
+303,"BIH","Bosnia and Herzegovina","BIH.3_1","Repuplika Srpska",47
+305,"BLM","Saint-Barth<U+00E9>lemy","BLM.2_1","Sous le Vent",1
+306,"BLR","Belarus","BLR.1_1","Brest",66
+307,"BLR","Belarus","BLR.2_1","Gomel",85
+308,"BLR","Belarus","BLR.3_1","Grodno",57
+309,"BLR","Belarus","BLR.5_1","Minsk",84
+310,"BLR","Belarus","BLR.7_1","Minsk",5
+311,"BLR","Belarus","BLR.4_1","Mogilev",65
+312,"BLR","Belarus","BLR.6_1","Vitebsk",89
+313,"BLZ","Belize","BLZ.1_1","Belize",11
+314,"BLZ","Belize","BLZ.2_1","Cayo",9
+315,"BLZ","Belize","BLZ.3_1","Corozal",5
+316,"BLZ","Belize","BLZ.4_1","Orange Walk",8
+317,"BLZ","Belize","BLZ.5_1","Stann Creek",10
+318,"BLZ","Belize","BLZ.6_1","Toledo",9
+327,"BMU","Bermuda","BMU.9_1","Smiths",1
+328,"BMU","Bermuda","BMU.10_1","Southampton",1
+329,"BMU","Bermuda","BMU.11_1","Warwick",1
+330,"BOL","Bolivia","BOL.3_1","Beni",274
+331,"BOL","Bolivia","BOL.1_1","Chuquisaca",70
+332,"BOL","Bolivia","BOL.2_1","Cochabamba",73
+333,"BOL","Bolivia","BOL.4_1","La Paz",174
+334,"BOL","Bolivia","BOL.5_1","Oruro",73
+335,"BOL","Bolivia","BOL.6_1","Pando",83
+336,"BOL","Bolivia","BOL.7_1","Potos<U+00ED>",163
+337,"BOL","Bolivia","BOL.8_1","Santa Cruz",505
+338,"BOL","Bolivia","BOL.9_1","Tarija",53
+339,"BRA","Brazil","BRA.1_1","Acre",221
+340,"BRA","Brazil","BRA.2_1","Alagoas",43
+341,"BRA","Brazil","BRA.3_1","Amap<U+00E1>",198
+342,"BRA","Brazil","BRA.4_1","Amazonas",2031
+343,"BRA","Brazil","BRA.5_1","Bahia",775
+344,"BRA","Brazil","BRA.6_1","Cear<U+00E1>",209
+345,"BRA","Brazil","BRA.7_1","Distrito Federal",8
+346,"BRA","Brazil","BRA.8_1","Esp<U+00ED>rito Santo",78
+347,"BRA","Brazil","BRA.9_1","Goi<U+00E1>s",464
+348,"BRA","Brazil","BRA.10_1","Maranh<U+00E3>o",452
+349,"BRA","Brazil","BRA.12_1","Mato Grosso",1202
+350,"BRA","Brazil","BRA.11_1","Mato Grosso do Sul",497
+351,"BRA","Brazil","BRA.13_1","Minas Gerais",803
+352,"BRA","Brazil","BRA.14_1","Par<U+00E1>",1645
+353,"BRA","Brazil","BRA.15_1","Para<U+00ED>ba",75
+354,"BRA","Brazil","BRA.16_1","Paran<U+00E1>",283
+355,"BRA","Brazil","BRA.17_1","Pernambuco",133
+356,"BRA","Brazil","BRA.18_1","Piau<U+00ED>",331
+357,"BRA","Brazil","BRA.19_1","Rio de Janeiro",79
+358,"BRA","Brazil","BRA.20_1","Rio Grande do Norte",78
+359,"BRA","Brazil","BRA.21_1","Rio Grande do Sul",435
+360,"BRA","Brazil","BRA.22_1","Rond<U+00F4>nia",317
+361,"BRA","Brazil","BRA.23_1","Roraima",293
+362,"BRA","Brazil","BRA.24_1","Santa Catarina",155
+363,"BRA","Brazil","BRA.25_1","S<U+00E3>o Paulo",363
+364,"BRA","Brazil","BRA.26_1","Sergipe",33
+365,"BRA","Brazil","BRA.27_1","Tocantins",364
+373,"BRB","Barbados","BRB.8_1","Saint Michael",1
+374,"BRB","Barbados","BRB.9_1","Saint Peter",1
+375,"BRB","Barbados","BRB.10_1","Saint Philip",1
+377,"BRN","Brunei","BRN.1_1","Belait",4
+378,"BRN","Brunei","BRN.2_1","Brunei and Muara",2
+379,"BRN","Brunei","BRN.3_1","Temburong",2
+380,"BRN","Brunei","BRN.4_1","Tutong",3
+381,"BTN","Bhutan","BTN.1_1","Bumthang",4
+382,"BTN","Bhutan","BTN.2_1","Chhukha",4
+383,"BTN","Bhutan","BTN.3_1","Dagana",2
+384,"BTN","Bhutan","BTN.4_1","Gasa",6
+385,"BTN","Bhutan","BTN.5_1","Haa",2
+386,"BTN","Bhutan","BTN.6_1","Lhuentse",3
+387,"BTN","Bhutan","BTN.7_1","Monggar",3
+388,"BTN","Bhutan","BTN.8_1","Paro",2
+389,"BTN","Bhutan","BTN.9_1","Pema Gatshel",2
+390,"BTN","Bhutan","BTN.10_1","Punakha",1
+391,"BTN","Bhutan","BTN.11_1","Samdrup Jongkhar",2
+392,"BTN","Bhutan","BTN.12_1","Samtse",2
+393,"BTN","Bhutan","BTN.13_1","Sarpang",1
+394,"BTN","Bhutan","BTN.14_1","Thimphu",3
+395,"BTN","Bhutan","BTN.19_1","Trashi Yangtse",2
+396,"BTN","Bhutan","BTN.15_1","Trashigang",3
+397,"BTN","Bhutan","BTN.16_1","Trongsa",3
+398,"BTN","Bhutan","BTN.17_1","Tsirang",2
+399,"BTN","Bhutan","BTN.18_1","Wangdue Phodrang",4
+400,"BTN","Bhutan","BTN.20_1","Zhemgang",5
+401,"BWA","Botswana","BWA.1_1","Central",200
+402,"BWA","Botswana","BWA.2_1","Chobe",29
+404,"BWA","Botswana","BWA.4_1","Gaborone",1
+405,"BWA","Botswana","BWA.5_1","Ghanzi",156
+407,"BWA","Botswana","BWA.7_1","Kgalagadi",151
+408,"BWA","Botswana","BWA.8_1","Kgatleng",11
+409,"BWA","Botswana","BWA.9_1","Kweneng",56
+411,"BWA","Botswana","BWA.11_1","North-East",8
+412,"BWA","Botswana","BWA.12_1","North-West",156
+414,"BWA","Botswana","BWA.14_1","South-East",3
+415,"BWA","Botswana","BWA.15_1","Southern",39
+417,"CAF","Central African Republic","CAF.1_1","Bamingui-Bangoran",81
+418,"CAF","Central African Republic","CAF.2_1","Bangui",1
+419,"CAF","Central African Republic","CAF.3_1","Basse-Kotto",22
+420,"CAF","Central African Republic","CAF.4_1","Haut-Mbomou",73
+421,"CAF","Central African Republic","CAF.5_1","Haute-Kotto",113
+422,"CAF","Central African Republic","CAF.6_1","K<U+00E9>mo",22
+423,"CAF","Central African Republic","CAF.7_1","Lobaye",24
+424,"CAF","Central African Republic","CAF.8_1","Mamb<U+00E9>r<U+00E9>-Kad<U+00E9><U+00EF>",35
+425,"CAF","Central African Republic","CAF.9_1","Mbomou",81
+426,"CAF","Central African Republic","CAF.10_1","Nana-Gr<U+00E9>bizi",24
+427,"CAF","Central African Republic","CAF.11_1","Nana-Mamb<U+00E9>r<U+00E9>",36
+428,"CAF","Central African Republic","CAF.12_1","Ombella-M'Poko",44
+429,"CAF","Central African Republic","CAF.13_1","Ouaka",65
+430,"CAF","Central African Republic","CAF.15_1","Ouham",65
+431,"CAF","Central African Republic","CAF.14_1","Ouham-Pend<U+00E9>",42
+432,"CAF","Central African Republic","CAF.16_1","Sangha-Mba<U+00E9>r<U+00E9>",26
+433,"CAF","Central African Republic","CAF.17_1","Vakaga",61
+434,"CAN","Canada","CAN.1_1","Alberta",1498
+435,"CAN","Canada","CAN.2_1","British Columbia",2232
+436,"CAN","Canada","CAN.3_1","Manitoba",1479
+437,"CAN","Canada","CAN.4_1","New Brunswick",160
+438,"CAN","Canada","CAN.5_1","Newfoundland and Labrador",1078
+439,"CAN","Canada","CAN.6_1","Northwest Territories",4743
+440,"CAN","Canada","CAN.7_1","Nova Scotia",170
+441,"CAN","Canada","CAN.8_1","Nunavut",10523
+442,"CAN","Canada","CAN.9_1","Ontario",2226
+443,"CAN","Canada","CAN.10_1","Prince Edward Island",29
+444,"CAN","Canada","CAN.11_1","Qu<U+00E9>bec",3661
+445,"CAN","Canada","CAN.12_1","Saskatchewan",1445
+446,"CAN","Canada","CAN.13_1","Yukon",1416
+447,"CHE","Switzerland","CHE.1_1","Aargau",2
+449,"CHE","Switzerland","CHE.3_1","Appenzell Innerrhoden",1
+452,"CHE","Switzerland","CHE.6_1","Bern",9
+453,"CHE","Switzerland","CHE.7_1","Fribourg",4
+455,"CHE","Switzerland","CHE.9_1","Glarus",2
+456,"CHE","Switzerland","CHE.10_1","Graub<U+00FC>nden",15
+457,"CHE","Switzerland","CHE.11_1","Jura",2
+458,"CHE","Switzerland","CHE.12_1","Lucerne",4
+459,"CHE","Switzerland","CHE.13_1","Neuch<U+00E2>tel",1
+461,"CHE","Switzerland","CHE.15_1","Obwalden",2
+462,"CHE","Switzerland","CHE.16_1","Sankt Gallen",3
+464,"CHE","Switzerland","CHE.18_1","Schwyz",1
+465,"CHE","Switzerland","CHE.19_1","Solothurn",3
+466,"CHE","Switzerland","CHE.20_1","Thurgau",2
+467,"CHE","Switzerland","CHE.21_1","Ticino",4
+468,"CHE","Switzerland","CHE.22_1","Uri",3
+469,"CHE","Switzerland","CHE.23_1","Valais",10
+470,"CHE","Switzerland","CHE.24_1","Vaud",4
+471,"CHE","Switzerland","CHE.25_1","Zug",1
+472,"CHE","Switzerland","CHE.26_1","Z<U+00FC>rich",3
+473,"CHL","Chile","CHL.2_1","Antofagasta",197
+474,"CHL","Chile","CHL.3_1","Araucan<U+00ED>a",56
+475,"CHL","Chile","CHL.4_1","Arica y Parinacota",23
+476,"CHL","Chile","CHL.5_1","Atacama",118
+477,"CHL","Chile","CHL.1_1","Ays<U+00E9>n del General Iba<U+00F1>ez del Cam",263
+478,"CHL","Chile","CHL.6_1","B<U+00ED>o-B<U+00ED>o",47
+479,"CHL","Chile","CHL.7_1","Coquimbo",72
+480,"CHL","Chile","CHL.8_1","Libertador General Bernardo O'Hi",25
+481,"CHL","Chile","CHL.9_1","Los Lagos",119
+482,"CHL","Chile","CHL.10_1","Los R<U+00ED>os",32
+483,"CHL","Chile","CHL.11_1","Magallanes y Ant<U+00E1>rtica Chilena",451
+484,"CHL","Chile","CHL.12_1","Maule",54
+485,"CHL","Chile","CHL.13_1","<U+00D1>uble",24
+486,"CHL","Chile","CHL.14_1","Santiago Metropolitan",27
+487,"CHL","Chile","CHL.15_1","Tarapac<U+00E1>",62
+488,"CHL","Chile","CHL.16_1","Valpara<U+00ED>so",36
+489,"CHN","China","CHN.1_1","Anhui",217
+490,"CHN","China","CHN.2_1","Beijing",30
+491,"CHN","China","CHN.3_1","Chongqing",125
+492,"CHN","China","CHN.4_1","Fujian",202
+493,"CHN","China","CHN.5_1","Gansu",668
+494,"CHN","China","CHN.6_1","Guangdong",293
+495,"CHN","China","CHN.7_1","Guangxi",341
+496,"CHN","China","CHN.8_1","Guizhou",252
+497,"CHN","China","CHN.9_1","Hainan",70
+498,"CHN","China","CHN.10_1","Hebei",317
+499,"CHN","China","CHN.11_1","Heilongjiang",880
+500,"CHN","China","CHN.12_1","Henan",255
+501,"CHN","China","CHN.HKG","Hong Kong",6
+502,"CHN","China","CHN.13_1","Hubei",281
+503,"CHN","China","CHN.14_1","Hunan",310
+504,"CHN","China","CHN.15_1","Jiangsu",169
+505,"CHN","China","CHN.16_1","Jiangxi",243
+506,"CHN","China","CHN.17_1","Jilin",341
+507,"CHN","China","CHN.18_1","Liaoning",289
+508,"CHN","China","CHN.MAC","Macau",1
+509,"CHN","China","CHN.19_1","Nei Mongol",2069
+510,"CHN","China","CHN.20_1","Ningxia Hui",84
+511,"CHN","China","CHN.21_1","Qinghai",1143
+512,"CHN","China","CHN.22_1","Shaanxi",322
+513,"CHN","China","CHN.23_1","Shandong",293
+514,"CHN","China","CHN.24_1","Shanghai",26
+515,"CHN","China","CHN.25_1","Shanxi",257
+516,"CHN","China","CHN.26_1","Sichuan",730
+517,"CHN","China","CHN.27_1","Tianjin",24
+518,"CHN","China","CHN.28_1","Xinjiang Uygur",2744
+519,"Z02","China","Z02.28_1","Xinjiang Uygur",8
+520,"Z03","China","Z03.28_1","Xinjiang Uygur",38
+521,"CHN","China","CHN.29_1","Xizang",1716
+522,"Z03","China","Z03.29_1","Xizang",7
+523,"Z08","China","Z08.29_1","Xizang",3
+524,"CHN","China","CHN.30_1","Yunnan",548
+525,"CHN","China","CHN.31_1","Zhejiang",194
+526,"CIV","C<U+00F4>te d'Ivoire","CIV.1_1","Abidjan",2
+527,"CIV","C<U+00F4>te d'Ivoire","CIV.2_1","Bas-Sassandra",41
+528,"CIV","C<U+00F4>te d'Ivoire","CIV.3_1","Como<U+00E9>",21
+529,"CIV","C<U+00F4>te d'Ivoire","CIV.4_1","Dengu<U+00E9>l<U+00E9>",27
+530,"CIV","C<U+00F4>te d'Ivoire","CIV.5_1","G<U+00F4>h-Djiboua",20
+531,"CIV","C<U+00F4>te d'Ivoire","CIV.6_1","Lacs",32
+532,"CIV","C<U+00F4>te d'Ivoire","CIV.7_1","Lagunes",31
+533,"CIV","C<U+00F4>te d'Ivoire","CIV.8_1","Montagnes",39
+534,"CIV","C<U+00F4>te d'Ivoire","CIV.9_1","Sassandra-Marahou<U+00E9>",32
+535,"CIV","C<U+00F4>te d'Ivoire","CIV.10_1","Savanes",54
+536,"CIV","C<U+00F4>te d'Ivoire","CIV.11_1","Vall<U+00E9>e du Bandama",38
+537,"CIV","C<U+00F4>te d'Ivoire","CIV.12_1","Woroba",44
+538,"CIV","C<U+00F4>te d'Ivoire","CIV.13_1","Yamoussoukro",3
+539,"CIV","C<U+00F4>te d'Ivoire","CIV.14_1","Zanzan",51
+540,"CMR","Cameroon","CMR.1_1","Adamaoua",83
+541,"CMR","Cameroon","CMR.2_1","Centre",89
+542,"CMR","Cameroon","CMR.3_1","Est",137
+543,"CMR","Cameroon","CMR.4_1","Extr<U+00EA>me-Nord",43
+544,"CMR","Cameroon","CMR.5_1","Littoral",30
+545,"CMR","Cameroon","CMR.7_1","Nord",88
+546,"CMR","Cameroon","CMR.6_1","Nord-Ouest",22
+547,"CMR","Cameroon","CMR.8_1","Ouest",18
+548,"CMR","Cameroon","CMR.10_1","Sud",63
+549,"CMR","Cameroon","CMR.9_1","Sud-Ouest",37
+550,"COD","Democratic Republic of the Congo","COD.1_1","Bas-Uele",197
+551,"COD","Democratic Republic of the Congo","COD.2_1","<U+00C9>quateur",134
+552,"COD","Democratic Republic of the Congo","COD.3_1","Haut-Katanga",160
+553,"COD","Democratic Republic of the Congo","COD.4_1","Haut-Lomami",141
+554,"COD","Democratic Republic of the Congo","COD.5_1","Haut-Uele",118
+555,"COD","Democratic Republic of the Congo","COD.6_1","Ituri",82
+556,"COD","Democratic Republic of the Congo","COD.9_1","Kasa<U+00EF>",125
+557,"COD","Democratic Republic of the Congo","COD.7_1","Kasa<U+00EF>-Central",75
+558,"COD","Democratic Republic of the Congo","COD.8_1","Kasa<U+00EF>-Oriental",13
+559,"COD","Democratic Republic of the Congo","COD.10_1","Kinshasa",14
+560,"COD","Democratic Republic of the Congo","COD.11_1","Kongo-Central",73
+561,"COD","Democratic Republic of the Congo","COD.12_1","Kwango",118
+562,"COD","Democratic Republic of the Congo","COD.13_1","Kwilu",101
+563,"COD","Democratic Republic of the Congo","COD.14_1","Lomami",69
+564,"COD","Democratic Republic of the Congo","COD.15_1","Lualaba",166
+565,"COD","Democratic Republic of the Congo","COD.16_1","Mai-Ndombe",167
+566,"COD","Democratic Republic of the Congo","COD.17_1","Maniema",166
+567,"COD","Democratic Republic of the Congo","COD.18_1","Mongala",70
+568,"COD","Democratic Republic of the Congo","COD.19_1","Nord-Kivu",79
+569,"COD","Democratic Republic of the Congo","COD.20_1","Nord-Ubangi",69
+570,"COD","Democratic Republic of the Congo","COD.21_1","Sankuru",138
+571,"COD","Democratic Republic of the Congo","COD.22_1","Sud-Kivu",84
+572,"COD","Democratic Republic of the Congo","COD.23_1","Sud-Ubangi",67
+573,"COD","Democratic Republic of the Congo","COD.24_1","Tanganyika",174
+574,"COD","Democratic Republic of the Congo","COD.25_1","Tshopo",260
+575,"COD","Democratic Republic of the Congo","COD.26_1","Tshuapa",177
+576,"COG","Republic of the Congo","COG.1_1","Bouenza",17
+578,"COG","Republic of the Congo","COG.4_1","Cuvette",57
+579,"COG","Republic of the Congo","COG.3_1","Cuvette-Ouest",32
+580,"COG","Republic of the Congo","COG.5_1","Kouilou",23
+581,"COG","Republic of the Congo","COG.6_1","L<U+00E9>koumou",29
+582,"COG","Republic of the Congo","COG.7_1","Likouala",85
+583,"COG","Republic of the Congo","COG.8_1","Niari",33
+584,"COG","Republic of the Congo","COG.9_1","Plateaux",53
+585,"COG","Republic of the Congo","COG.10_1","Pointe Noire",1
+586,"COG","Republic of the Congo","COG.11_1","Pool",45
+587,"COG","Republic of the Congo","COG.12_1","Sangha",76
+588,"COK","Cook Islands","COK.1_1","Aitutaki",3
+589,"COK","Cook Islands","COK.2_1","Atiu",3
+590,"COK","Cook Islands","COK.3_1","Mangaia",1
+591,"COK","Cook Islands","COK.4_1","Manihiki",2
+592,"COK","Cook Islands","COK.5_1","Mauke",1
+593,"COK","Cook Islands","COK.6_1","Mitiaro",1
+594,"COK","Cook Islands","COK.7_1","Palmerston",2
+595,"COK","Cook Islands","COK.8_1","Penhryn",4
+596,"COK","Cook Islands","COK.9_1","Pukapuka",4
+597,"COK","Cook Islands","COK.10_1","Rakahanga",2
+598,"COK","Cook Islands","COK.11_1","Rarotonga",4
+599,"COL","Colombia","COL.1_2","Amazonas",140
+600,"COL","Colombia","COL.2_2","Antioquia",82
+601,"COL","Colombia","COL.3_2","Arauca",30
+602,"COL","Colombia","COL.4_2","Atl<U+00E1>ntico",4
+603,"COL","Colombia","COL.5_2","Bogot<U+00E1> D.C.",4
+604,"COL","Colombia","COL.6_2","Bol<U+00ED>var",38
+605,"COL","Colombia","COL.7_2","Boyac<U+00E1>",28
+606,"COL","Colombia","COL.8_2","Caldas",9
+607,"COL","Colombia","COL.9_2","Caquet<U+00E1>",116
+608,"COL","Colombia","COL.10_2","Casanare",56
+609,"COL","Colombia","COL.11_2","Cauca",38
+610,"COL","Colombia","COL.12_2","Cesar",28
+611,"COL","Colombia","COL.13_2","Choc<U+00F3>",75
+612,"COL","Colombia","COL.14_2","C<U+00F3>rdoba",40
+613,"COL","Colombia","COL.15_2","Cundinamarca",29
+614,"COL","Colombia","COL.16_2","Guain<U+00ED>a",94
+615,"COL","Colombia","COL.17_2","Guaviare",70
+616,"COL","Colombia","COL.18_2","Huila",26
+617,"COL","Colombia","COL.19_2","La Guajira",36
+618,"COL","Colombia","COL.20_2","Magdalena",37
+619,"COL","Colombia","COL.21_2","Meta",112
+620,"COL","Colombia","COL.22_2","Nari<U+00F1>o",46
+621,"COL","Colombia","COL.23_2","Norte de Santander",29
+622,"COL","Colombia","COL.24_2","Putumayo",36
+623,"COL","Colombia","COL.25_2","Quind<U+00ED>o",2
+624,"COL","Colombia","COL.26_2","Risaralda",4
+625,"COL","Colombia","COL.27_1","San Andr<U+00E9>s y Providencia",7
+626,"COL","Colombia","COL.28_2","Santander",42
+627,"COL","Colombia","COL.29_2","Sucre",16
+628,"COL","Colombia","COL.30_2","Tolima",30
+629,"COL","Colombia","COL.31_2","Valle del Cauca",34
+630,"COL","Colombia","COL.32_2","Vaup<U+00E9>s",69
+631,"COL","Colombia","COL.33_2","Vichada",130
+632,"COM","Comoros","COM.3_1","Mwali",3
+633,"COM","Comoros","COM.2_1","Njaz<U+00ED>dja",6
+634,"COM","Comoros","COM.1_1","Nzwani",5
+635,"CPV","Cabo Verde","CPV.1_1","Boa Vista",3
+636,"CPV","Cabo Verde","CPV.2_1","Brava",1
+637,"CPV","Cabo Verde","CPV.3_1","Maio",2
+638,"CPV","Cabo Verde","CPV.4_1","Mosteiros",1
+640,"CPV","Cabo Verde","CPV.6_1","Porto Novo",3
+642,"CPV","Cabo Verde","CPV.8_1","Ribeira Brava",2
+643,"CPV","Cabo Verde","CPV.9_1","Ribeira Grande",1
+645,"CPV","Cabo Verde","CPV.11_1","Sal",2
+648,"CPV","Cabo Verde","CPV.14_1","Santa Cruz",1
+649,"CPV","Cabo Verde","CPV.15_1","S<U+00E3>o Domingos",3
+650,"CPV","Cabo Verde","CPV.16_1","S<U+00E3>o Filipe",1
+654,"CPV","Cabo Verde","CPV.20_1","S<U+00E3>o Vicente",4
+655,"CPV","Cabo Verde","CPV.21_1","Tarrafal",3
+656,"CPV","Cabo Verde","CPV.22_1","Tarrafal de S<U+00E3>o Nicolau",1
+657,"CRI","Costa Rica","CRI.1_1","Alajuela",13
+658,"CRI","Costa Rica","CRI.2_1","Cartago",4
+659,"CRI","Costa Rica","CRI.3_1","Guanacaste",19
+660,"CRI","Costa Rica","CRI.4_1","Heredia",5
+661,"CRI","Costa Rica","CRI.5_1","Lim<U+00F3>n",17
+662,"CRI","Costa Rica","CRI.6_1","Puntarenas",26
+663,"CRI","Costa Rica","CRI.7_1","San Jos<U+00E9>",8
+664,"CUB","Cuba","CUB.1_1","Camag<U+00FC>ey",41
+665,"CUB","Cuba","CUB.2_1","Ciego de <U+00C1>vila",18
+666,"CUB","Cuba","CUB.3_1","Cienfuegos",8
+667,"CUB","Cuba","CUB.4_1","Ciudad de la Habana",2
+668,"CUB","Cuba","CUB.5_1","Granma",16
+669,"CUB","Cuba","CUB.6_1","Guant<U+00E1>namo",12
+670,"CUB","Cuba","CUB.7_1","Holgu<U+00ED>n",17
+671,"CUB","Cuba","CUB.8_1","Isla de la Juventud",21
+672,"CUB","Cuba","CUB.9_1","La Habana",5
+673,"CUB","Cuba","CUB.10_1","Las Tunas",14
+674,"CUB","Cuba","CUB.11_1","Matanzas",30
+675,"CUB","Cuba","CUB.12_1","Mayabeque",9
+676,"CUB","Cuba","CUB.13_1","Pinar del R<U+00ED>o",30
+677,"CUB","Cuba","CUB.14_1","Sancti Sp<U+00ED>ritus",15
+678,"CUB","Cuba","CUB.15_1","Santiago de Cuba",15
+679,"CUB","Cuba","CUB.16_1","Villa Clara",20
+683,"CYM","Cayman Islands","CYM.6_1","North Side",1
+684,"CYM","Cayman Islands","CYM.8_1","Sister Islands",5
+685,"CYM","Cayman Islands","CYM.7_1","West Bay",1
+686,"CYP","Cyprus","CYP.1_1","Famagusta",2
+687,"CYP","Cyprus","CYP.2_1","Larnaca",2
+688,"CYP","Cyprus","CYP.3_1","Limassol",3
+689,"CYP","Cyprus","CYP.4_1","Nicosia",3
+690,"CYP","Cyprus","CYP.5_1","Paphos",5
+691,"CZE","Czechia","CZE.1_1","Jiho<U+010D>esk<U+00FD>",21
+692,"CZE","Czechia","CZE.2_1","Jihomoravsk<U+00FD>",15
+693,"CZE","Czechia","CZE.3_1","Karlovarsk<U+00FD>",6
+694,"CZE","Czechia","CZE.4_1","Kraj Vyso<U+010D>ina",13
+695,"CZE","Czechia","CZE.5_1","Kr<U+00E1>lov<U+00E9>hradeck<U+00FD>",11
+696,"CZE","Czechia","CZE.6_1","Libereck<U+00FD>",7
+697,"CZE","Czechia","CZE.7_1","Moravskoslezsk<U+00FD>",11
+698,"CZE","Czechia","CZE.8_1","Olomouck<U+00FD>",10
+699,"CZE","Czechia","CZE.9_1","Pardubick<U+00FD>",8
+700,"CZE","Czechia","CZE.10_1","Plze<U+0148>sk<U+00FD>",15
+701,"CZE","Czechia","CZE.11_1","Prague",1
+702,"CZE","Czechia","CZE.12_1","St<U+0159>edo<U+010D>esk<U+00FD>",22
+703,"CZE","Czechia","CZE.13_1","<U+00DA>steck<U+00FD>",13
+704,"CZE","Czechia","CZE.14_1","Zl<U+00ED>nsk<U+00FD>",8
+705,"DEU","Germany","DEU.1_1","Baden-W<U+00FC>rttemberg",70
+706,"DEU","Germany","DEU.2_1","Bayern",145
+707,"DEU","Germany","DEU.3_1","Berlin",1
+708,"DEU","Germany","DEU.4_1","Brandenburg",65
+709,"DEU","Germany","DEU.5_1","Bremen",1
+710,"DEU","Germany","DEU.6_1","Hamburg",1
+711,"DEU","Germany","DEU.7_1","Hessen",42
+712,"DEU","Germany","DEU.8_1","Mecklenburg-Vorpommern",64
+713,"DEU","Germany","DEU.9_1","Niedersachsen",111
+714,"DEU","Germany","DEU.10_1","Nordrhein-Westfalen",72
+715,"DEU","Germany","DEU.11_1","Rheinland-Pfalz",41
+716,"DEU","Germany","DEU.12_1","Saarland",3
+717,"DEU","Germany","DEU.14_1","Sachsen",36
+718,"DEU","Germany","DEU.13_1","Sachsen-Anhalt",42
+719,"DEU","Germany","DEU.15_1","Schleswig-Holstein",49
+720,"DEU","Germany","DEU.16_1","Th<U+00FC>ringen",32
+721,"DJI","Djibouti","DJI.1_2","Ali Sabieh",4
+722,"DJI","Djibouti","DJI.6_1","Arta",3
+723,"DJI","Djibouti","DJI.2_1","Dikhil",8
+724,"DJI","Djibouti","DJI.3_1","Djiboutii",2
+725,"DJI","Djibouti","DJI.4_1","Obock",7
+726,"DJI","Djibouti","DJI.5_1","Tadjoura",10
+734,"DMA","Dominica","DMA.8_1","Saint Patrick",2
+735,"DMA","Dominica","DMA.9_1","Saint Paul",1
+736,"DMA","Dominica","DMA.10_1","Saint Peter",1
+737,"DNK","Denmark","DNK.1_1","Hovedstaden",16
+738,"DNK","Denmark","DNK.2_1","Midtjylland",41
+739,"DNK","Denmark","DNK.3_1","Nordjylland",39
+740,"DNK","Denmark","DNK.4_1","Sj<U+00E6>lland",35
+741,"DNK","Denmark","DNK.5_1","Syddanmark",47
+742,"DOM","Dominican Republic","DOM.1_1","Azua",4
+744,"DOM","Dominican Republic","DOM.3_1","Barahona",4
+745,"DOM","Dominican Republic","DOM.4_1","Dajab<U+00F3>n",1
+746,"DOM","Dominican Republic","DOM.5_1","Distrito Nacional",1
+747,"DOM","Dominican Republic","DOM.6_1","Duarte",2
+748,"DOM","Dominican Republic","DOM.7_1","El Seybo",4
+749,"DOM","Dominican Republic","DOM.8_1","Espaillat",1
+750,"DOM","Dominican Republic","DOM.9_1","Hato Mayor",1
+751,"DOM","Dominican Republic","DOM.10_1","Independencia",4
+752,"DOM","Dominican Republic","DOM.11_1","La Altagracia",9
+753,"DOM","Dominican Republic","DOM.12_1","La Estrelleta",2
+754,"DOM","Dominican Republic","DOM.13_1","La Romana",1
+755,"DOM","Dominican Republic","DOM.14_1","La Vega",3
+756,"DOM","Dominican Republic","DOM.15_1","Mar<U+00ED>a Trinidad S<U+00E1>nchez",2
+757,"DOM","Dominican Republic","DOM.16_1","Monse<U+00F1>or Nouel",1
+758,"DOM","Dominican Republic","DOM.17_1","Monte Cristi",5
+759,"DOM","Dominican Republic","DOM.18_1","Monte Plata",3
+760,"DOM","Dominican Republic","DOM.19_1","Pedernales",6
+761,"DOM","Dominican Republic","DOM.20_1","Peravia",3
+762,"DOM","Dominican Republic","DOM.21_1","Puerto Plata",5
+763,"DOM","Dominican Republic","DOM.22_1","Salcedo",2
+764,"DOM","Dominican Republic","DOM.23_1","Saman<U+00E1>",6
+765,"DOM","Dominican Republic","DOM.24_1","San Crist<U+00F3>bal",2
+766,"DOM","Dominican Republic","DOM.25_1","San Jos<U+00E9> de Ocoa",3
+767,"DOM","Dominican Republic","DOM.26_1","San Juan",5
+768,"DOM","Dominican Republic","DOM.27_1","San Pedro de Macor<U+00ED>s",3
+769,"DOM","Dominican Republic","DOM.28_1","S<U+00E1>nchez Ram<U+00ED>rez",2
+770,"DOM","Dominican Republic","DOM.30_1","Santiago",6
+771,"DOM","Dominican Republic","DOM.29_1","Santiago Rodr<U+00ED>guez",1
+772,"DOM","Dominican Republic","DOM.31_1","Santo Domingo",3
+773,"DOM","Dominican Republic","DOM.32_1","Valverde",1
+774,"DZA","Algeria","DZA.1_1","Adrar",625
+775,"DZA","Algeria","DZA.2_1","A<U+00EF>n Defla",8
+776,"DZA","Algeria","DZA.3_1","A<U+00EF>n T<U+00E9>mouchent",5
+777,"DZA","Algeria","DZA.4_1","Alger",3
+778,"DZA","Algeria","DZA.5_1","Annaba",3
+779,"DZA","Algeria","DZA.6_1","Batna",16
+780,"DZA","Algeria","DZA.7_1","B<U+00E9>char",239
+781,"DZA","Algeria","DZA.8_1","B<U+00E9>ja<U+00EF>a",8
+782,"DZA","Algeria","DZA.9_1","Biskra",32
+783,"DZA","Algeria","DZA.10_1","Blida",2
+784,"DZA","Algeria","DZA.11_1","Bordj Bou Arr<U+00E9>ridj",6
+785,"DZA","Algeria","DZA.12_1","Bouira",8
+786,"DZA","Algeria","DZA.13_1","Boumerd<U+00E8>s",5
+787,"DZA","Algeria","DZA.14_1","Chlef",8
+788,"DZA","Algeria","DZA.15_1","Constantine",4
+789,"DZA","Algeria","DZA.16_1","Djelfa",50
+790,"DZA","Algeria","DZA.17_1","El Bayadh",111
+791,"DZA","Algeria","DZA.18_1","El Oued",67
+792,"DZA","Algeria","DZA.19_1","El Tarf",7
+793,"DZA","Algeria","DZA.20_1","Gharda<U+00EF>a",128
+794,"DZA","Algeria","DZA.21_1","Guelma",5
+795,"DZA","Algeria","DZA.22_1","Illizi",427
+796,"DZA","Algeria","DZA.23_1","Jijel",7
+797,"DZA","Algeria","DZA.24_1","Khenchela",16
+798,"DZA","Algeria","DZA.25_1","Laghouat",44
+799,"DZA","Algeria","DZA.26_1","M'Sila",29
+800,"DZA","Algeria","DZA.27_1","Mascara",11
+801,"DZA","Algeria","DZA.28_1","M<U+00E9>d<U+00E9>a",15
+802,"DZA","Algeria","DZA.29_1","Mila",4
+803,"DZA","Algeria","DZA.30_1","Mostaganem",5
+804,"DZA","Algeria","DZA.31_1","Na<U+00E2>ma",46
+805,"DZA","Algeria","DZA.32_1","Oran",8
+806,"DZA","Algeria","DZA.33_1","Ouargla",235
+807,"DZA","Algeria","DZA.34_1","Oum el Bouaghi",10
+808,"DZA","Algeria","DZA.35_1","Relizane",9
+809,"DZA","Algeria","DZA.36_1","Sa<U+00EF>da",7
+810,"DZA","Algeria","DZA.37_1","S<U+00E9>tif",12
+811,"DZA","Algeria","DZA.38_1","Sidi Bel Abb<U+00E8>s",15
+812,"DZA","Algeria","DZA.39_1","Skikda",12
+813,"DZA","Algeria","DZA.40_1","Souk Ahras",8
+814,"DZA","Algeria","DZA.41_1","Tamanghasset",852
+815,"DZA","Algeria","DZA.42_1","T<U+00E9>bessa",20
+816,"DZA","Algeria","DZA.43_1","Tiaret",31
+817,"DZA","Algeria","DZA.44_1","Tindouf",239
+818,"DZA","Algeria","DZA.45_1","Tipaza",5
+819,"DZA","Algeria","DZA.46_1","Tissemsilt",6
+820,"DZA","Algeria","DZA.47_1","Tizi Ouzou",5
+821,"DZA","Algeria","DZA.48_1","Tlemcen",16
+822,"ECU","Ecuador","ECU.1_1","Azuay",10
+823,"ECU","Ecuador","ECU.2_1","Bolivar",3
+824,"ECU","Ecuador","ECU.3_1","Ca<U+00F1>ar",5
+825,"ECU","Ecuador","ECU.4_1","Carchi",5
+826,"ECU","Ecuador","ECU.5_1","Chimborazo",9
+827,"ECU","Ecuador","ECU.6_1","Cotopaxi",8
+828,"ECU","Ecuador","ECU.7_1","El Oro",8
+829,"ECU","Ecuador","ECU.8_1","Esmeraldas",26
+830,"ECU","Ecuador","ECU.9_1","Gal<U+00E1>pagos",47
+831,"ECU","Ecuador","ECU.10_1","Guayas",27
+832,"ECU","Ecuador","ECU.11_1","Imbabura",6
+833,"ECU","Ecuador","ECU.12_1","Loja",17
+834,"ECU","Ecuador","ECU.13_1","Los Rios",11
+835,"ECU","Ecuador","ECU.14_1","Manabi",33
+836,"ECU","Ecuador","ECU.15_1","Morona Santiago",31
+837,"ECU","Ecuador","ECU.16_1","Napo",16
+838,"ECU","Ecuador","ECU.17_1","Orellana",27
+839,"ECU","Ecuador","ECU.18_1","Pastaza",39
+840,"ECU","Ecuador","ECU.19_1","Pichincha",12
+841,"ECU","Ecuador","ECU.20_1","Santa Elena",10
+842,"ECU","Ecuador","ECU.21_1","Santo Domingo de los Tsachilas",5
+843,"ECU","Ecuador","ECU.22_1","Sucumbios",26
+844,"ECU","Ecuador","ECU.23_1","Tungurahua",4
+845,"ECU","Ecuador","ECU.24_1","Zamora Chinchipe",12
+846,"EGY","Egypt","EGY.1_1","Ad Daqahliyah",7
+847,"EGY","Egypt","EGY.2_1","Al Bahr al Ahmar",175
+848,"EGY","Egypt","EGY.3_1","Al Buhayrah",15
+849,"EGY","Egypt","EGY.4_1","Al Fayyum",8
+850,"EGY","Egypt","EGY.5_1","Al Gharbiyah",3
+851,"EGY","Egypt","EGY.6_1","Al Iskandariyah",7
+852,"EGY","Egypt","EGY.7_1","Al Isma`iliyah",8
+853,"EGY","Egypt","EGY.8_1","Al Jizah",52
+854,"EGY","Egypt","EGY.9_1","Al Minufiyah",4
+855,"EGY","Egypt","EGY.10_1","Al Minya",45
+856,"EGY","Egypt","EGY.11_1","Al Qahirah",6
+857,"EGY","Egypt","EGY.12_1","Al Qalyubiyah",1
+858,"EGY","Egypt","EGY.13_1","Al Uqsur",1
+859,"EGY","Egypt","EGY.14_1","Al Wadi al Jadid",614
+860,"EGY","Egypt","EGY.15_1","As Suways",14
+861,"EGY","Egypt","EGY.16_1","Ash Sharqiyah",7
+862,"EGY","Egypt","EGY.17_1","Aswan",87
+863,"EGY","Egypt","EGY.18_1","Asyut",25
+864,"EGY","Egypt","EGY.19_1","Bani Suwayf",17
+865,"EGY","Egypt","EGY.20_1","Bur Sa`id",3
+866,"EGY","Egypt","EGY.21_1","Dumyat",4
+867,"EGY","Egypt","EGY.22_1","Janub Sina'",54
+868,"EGY","Egypt","EGY.23_1","Kafr ash Shaykh",8
+869,"EGY","Egypt","EGY.24_1","Matrouh",246
+870,"EGY","Egypt","EGY.25_1","Qina",20
+871,"EGY","Egypt","EGY.26_1","Shamal Sina'",43
+872,"EGY","Egypt","EGY.27_1","Suhaj",14
+873,"ERI","Eritrea","ERI.6_1","Anseba",30
+874,"ERI","Eritrea","ERI.5_1","Debub",15
+875,"ERI","Eritrea","ERI.3_1","Debubawi Keyih Bahri",41
+876,"ERI","Eritrea","ERI.4_1","Gash Barka",42
+877,"ERI","Eritrea","ERI.1_1","Maekel",1
+878,"ERI","Eritrea","ERI.2_1","Semenawi Keyih Bahri",79
+879,"ESH","Western Sahara","ESH.1_1","Boujdour",65
+880,"ESH","Western Sahara","ESH.2_1","Es Semara",99
+881,"ESH","Western Sahara","ESH.3_1","Laayoune",50
+882,"ESH","Western Sahara","ESH.4_1","Oued el Dahab",197
+883,"ESP","Spain","ESP.1_1","Andaluc<U+00ED>a",167
+884,"ESP","Spain","ESP.2_1","Arag<U+00F3>n",82
+885,"ESP","Spain","ESP.3_1","Cantabria",11
+886,"ESP","Spain","ESP.4_1","Castilla-La Mancha",129
+887,"ESP","Spain","ESP.5_1","Castilla y Le<U+00F3>n",162
+888,"ESP","Spain","ESP.6_1","Catalu<U+00F1>a",68
+889,"ESP","Spain","ESP.7_1","Ceuta y Melilla",1
+890,"ESP","Spain","ESP.8_1","Comunidad de Madrid",15
+891,"ESP","Spain","ESP.9_1","Comunidad Foral de Navarra",17
+892,"ESP","Spain","ESP.10_1","Comunidad Valenciana",51
+893,"ESP","Spain","ESP.11_1","Extremadura",70
+894,"ESP","Spain","ESP.12_1","Galicia",67
+895,"ESP","Spain","ESP.13_1","Islas Baleares",28
+896,"ESP","Spain","ESP.14_1","Islas Canarias",46
+897,"ESP","Spain","ESP.15_1","La Rioja",9
+898,"ESP","Spain","ESP.16_1","Pa<U+00ED>s Vasco",14
+899,"ESP","Spain","ESP.17_1","Principado de Asturias",27
+900,"ESP","Spain","ESP.18_1","Regi<U+00F3>n de Murcia",23
+901,"EST","Estonia","EST.1_1","Harju",20
+902,"EST","Estonia","EST.2_1","Hiiu",7
+903,"EST","Estonia","EST.3_1","Ida-Viru",10
+904,"EST","Estonia","EST.4_1","J<U+00E4>rva",7
+905,"EST","Estonia","EST.5_1","J<U+00F5>geva",7
+906,"EST","Estonia","EST.7_1","L<U+00E4><U+00E4>ne",12
+907,"EST","Estonia","EST.6_1","L<U+00E4><U+00E4>ne-Viru",12
+908,"EST","Estonia","EST.8_1","P<U+00E4>rnu",17
+909,"EST","Estonia","EST.9_1","Peipsi",3
+910,"EST","Estonia","EST.10_1","P<U+00F5>lva",5
+911,"EST","Estonia","EST.11_1","Rapla",6
+912,"EST","Estonia","EST.12_1","Saare",23
+913,"EST","Estonia","EST.13_1","Tartu",10
+914,"EST","Estonia","EST.14_1","Valga",6
+915,"EST","Estonia","EST.15_1","Viljandi",7
+916,"EST","Estonia","EST.16_1","V<U+00F5>ru",6
+918,"ETH","Ethiopia","ETH.2_1","Afar",122
+919,"ETH","Ethiopia","ETH.3_1","Amhara",209
+920,"ETH","Ethiopia","ETH.4_1","Benshangul-Gumaz",67
+921,"ETH","Ethiopia","ETH.5_1","Dire Dawa",2
+922,"ETH","Ethiopia","ETH.6_1","Gambela Peoples",43
+923,"ETH","Ethiopia","ETH.7_1","Harari People",1
+924,"ETH","Ethiopia","ETH.8_1","Oromia",426
+925,"ETH","Ethiopia","ETH.9_1","Somali",406
+926,"ETH","Ethiopia","ETH.10_1","Southern Nations, Nationalities",138
+927,"ETH","Ethiopia","ETH.11_1","Tigray",69
+928,"FIN","Finland","FIN.1_1","Eastern Finland",177
+929,"FIN","Finland","FIN.2_1","Lapland",335
+930,"FIN","Finland","FIN.3_1","Oulu",198
+931,"FIN","Finland","FIN.4_1","Southern Finland",78
+932,"FIN","Finland","FIN.5_1","Western Finland",283
+933,"FJI","Fiji","FJI.1_1","Central",8
+934,"FJI","Fiji","FJI.2_1","Eastern",64
+935,"FJI","Fiji","FJI.3_1","Northern",39
+936,"FJI","Fiji","FJI.4_1","Rotuma",3
+937,"FJI","Fiji","FJI.5_1","Western",27
+938,"FRA","France","FRA.1_1","Auvergne-Rh<U+00F4>ne-Alpes",136
+939,"FRA","France","FRA.2_1","Bourgogne-Franche-Comt<U+00E9>",92
+940,"FRA","France","FRA.3_1","Bretagne",79
+941,"FRA","France","FRA.4_1","Centre-Val de Loire",74
+942,"FRA","France","FRA.5_1","Corse",26
+943,"FRA","France","FRA.6_1","Grand Est",111
+944,"FRA","France","FRA.7_1","Hauts-de-France",66
+945,"FRA","France","FRA.8_1","<U+00CE>le-de-France",23
+946,"FRA","France","FRA.9_1","Normandie",73
+947,"FRA","France","FRA.10_1","Nouvelle-Aquitaine",167
+948,"FRA","France","FRA.11_1","Occitanie",136
+949,"FRA","France","FRA.12_1","Pays de la Loire",73
+950,"FRA","France","FRA.13_1","Provence-Alpes-C<U+00F4>te d'Azur",67
+951,"FRO","Faroe Islands","FRO.1_1","Eysturoyar",1
+952,"FRO","Faroe Islands","FRO.2_1","Norder<U+00F8>erne",6
+953,"FRO","Faroe Islands","FRO.3_1","Sandoyar",1
+954,"FRO","Faroe Islands","FRO.4_1","Streymoyar",3
+955,"FRO","Faroe Islands","FRO.5_1","Su<U+00F0>uroyar",5
+956,"FRO","Faroe Islands","FRO.6_1","V<U+00E5>g<U+00F8>",2
+957,"FSM","Micronesia","FSM.1_1","Chuuk",32
+958,"FSM","Micronesia","FSM.2_1","Kosrae",2
+959,"FSM","Micronesia","FSM.3_1","Pohnpei",19
+960,"FSM","Micronesia","FSM.4_1","Yap",25
+961,"GAB","Gabon","GAB.1_1","Estuaire",30
+962,"GAB","Gabon","GAB.2_1","Haut-Ogoou<U+00E9>",46
+963,"GAB","Gabon","GAB.3_1","Moyen-Ogoou<U+00E9>",24
+964,"GAB","Gabon","GAB.4_1","Ngouni<U+00E9>",48
+965,"GAB","Gabon","GAB.5_1","Nyanga",33
+966,"GAB","Gabon","GAB.6_1","Ogoou<U+00E9>-Ivindo",57
+967,"GAB","Gabon","GAB.7_1","Ogoou<U+00E9>-Lolo",37
+968,"GAB","Gabon","GAB.8_1","Ogoou<U+00E9>-Maritime",43
+969,"GAB","Gabon","GAB.9_1","Wouleu-Ntem",50
+970,"GBR","United Kingdom","GBR.2_1","Northern Ireland",41
+971,"GBR","United Kingdom","GBR.3_1","Scotland",297
+972,"GBR","United Kingdom","GBR.4_1","Wales",63
+973,"GBR","United Kingdom","GBR.1_1","(unnamed GBR.1_1)",337
+975,"GEO","Georgia","GEO.1_1","Abkhazia",21
+976,"GEO","Georgia","GEO.2_1","Ajaria",6
+977,"GEO","Georgia","GEO.3_1","Guria",4
+978,"GEO","Georgia","GEO.4_1","Imereti",11
+979,"GEO","Georgia","GEO.5_1","Kakheti",21
+980,"GEO","Georgia","GEO.6_1","Kvemo Kartli",11
+981,"GEO","Georgia","GEO.7_1","Mtskheta-Mtianeti",13
+982,"GEO","Georgia","GEO.8_1","Racha-Lechkhumi-Kvemo Svaneti",8
+983,"GEO","Georgia","GEO.9_1","Samegrelo-Zemo Svaneti",15
+984,"GEO","Georgia","GEO.10_1","Samtskhe-Javakheti",10
+985,"GEO","Georgia","GEO.11_1","Shida Kartli",9
+987,"GGY","Guernsey","GGY.1_1","Alderney",1
+998,"GGY","Guernsey","GGY.15_1","Vale",3
+999,"GHA","Ghana","GHA1_2","Ahafo",5
+1000,"GHA","Ghana","GHA2_2","Ashanti",34
+1001,"GHA","Ghana","GHA3_2","Bono",17
+1002,"GHA","Ghana","GHA4_2","Bono East",30
+1003,"GHA","Ghana","GHA5_2","Central",15
+1004,"GHA","Ghana","GHA6_2","Eastern",24
+1005,"GHA","Ghana","GHA7_2","Greater Accra",7
+1006,"GHA","Ghana","GHA8_2","North East",12
+1007,"GHA","Ghana","GHA9_2","Northern",34
+1008,"GHA","Ghana","GHA10_2","Oti",13
+1009,"GHA","Ghana","GHA11_2","Savannah",45
+1010,"GHA","Ghana","GHA12_2","Upper East",11
+1011,"GHA","Ghana","GHA13_2","Upper West",25
+1012,"GHA","Ghana","GHA14_2","Volta",15
+1013,"GHA","Ghana","GHA15_2","Western",23
+1014,"GHA","Ghana","GHA16_2","Western North",12
+1015,"GIN","Guinea","GIN.1_1","Bok<U+00E9>",53
+1016,"GIN","Guinea","GIN.2_1","Conakry",3
+1017,"GIN","Guinea","GIN.3_1","Faranah",48
+1018,"GIN","Guinea","GIN.4_1","Kankan",97
+1019,"GIN","Guinea","GIN.5_1","Kindia",36
+1020,"GIN","Guinea","GIN.6_1","Lab<U+00E9>",30
+1021,"GIN","Guinea","GIN.7_1","Mamou",24
+1022,"GIN","Guinea","GIN.8_1","Nz<U+00E9>r<U+00E9>kor<U+00E9>",48
+1023,"GLP","Guadeloupe","GLP.1_1","Basse-Terre",4
+1024,"GLP","Guadeloupe","GLP.2_1","Pointe-<U+00E0>-Pitre",8
+1026,"GMB","Gambia","GMB.2_1","Lower River",4
+1027,"GMB","Gambia","GMB.3_1","Maccarthy Island",4
+1028,"GMB","Gambia","GMB.4_1","North Bank",2
+1029,"GMB","Gambia","GMB.5_1","Upper River",3
+1030,"GMB","Gambia","GMB.6_1","Western",3
+1031,"GNB","Guinea-Bissau","GNB.1_1","Bafat<U+00E1>",9
+1032,"GNB","Guinea-Bissau","GNB.2_1","Biombo",1
+1033,"GNB","Guinea-Bissau","GNB.3_1","Bissau",1
+1034,"GNB","Guinea-Bissau","GNB.4_1","Bolama",10
+1035,"GNB","Guinea-Bissau","GNB.5_1","Cacheu",11
+1036,"GNB","Guinea-Bissau","GNB.6_1","Gab<U+00FA>",11
+1037,"GNB","Guinea-Bissau","GNB.7_1","Oio",6
+1038,"GNB","Guinea-Bissau","GNB.8_1","Quinara",6
+1039,"GNB","Guinea-Bissau","GNB.9_1","Tombali",7
+1040,"GNQ","Equatorial Guinea","GNQ.1_1","Annob<U+00F3>n",1
+1041,"GNQ","Equatorial Guinea","GNQ.2_1","Bioko Norte",3
+1042,"GNQ","Equatorial Guinea","GNQ.3_1","Bioko Sur",5
+1043,"GNQ","Equatorial Guinea","GNQ.4_1","Centro Sur",10
+1044,"GNQ","Equatorial Guinea","GNQ.5_1","Ki<U+00E9>-Ntem",4
+1045,"GNQ","Equatorial Guinea","GNQ.6_1","Litoral",15
+1046,"GNQ","Equatorial Guinea","GNQ.7_1","Wele-Nzas",8
+1047,"GRC","Greece","GRC.1_1","Aegean",98
+1048,"GRC","Greece","GRC.2_1","Athos",4
+1049,"GRC","Greece","GRC.3_1","Attica",19
+1050,"GRC","Greece","GRC.4_1","Crete",38
+1051,"GRC","Greece","GRC.5_1","Epirus and Western Macedonia",34
+1052,"GRC","Greece","GRC.6_1","Macedonia and Thrace",77
+1053,"GRC","Greece","GRC.7_1","Peloponnese, Western Greece and",91
+1054,"GRC","Greece","GRC.8_1","Thessaly and Central Greece",79
+1055,"GRD","Grenada","GRD.1_1","Carriacou",1
+1056,"GRD","Grenada","GRD.2_1","Saint Andrew",1
+1058,"GRD","Grenada","GRD.4_1","Saint George",2
+1059,"GRD","Grenada","GRD.5_1","Saint John",1
+1061,"GRD","Grenada","GRD.7_1","Saint Patrick",1
+1062,"GRL","Greenland","GRL.1_1","Kujalleq",162
+1063,"GRL","Greenland","GRL.2_1","Northeast Greenland National Par",6173
+1064,"GRL","Greenland","GRL.3_1","Qaasuitsup",2973
+1065,"GRL","Greenland","GRL.4_1","Qeqqata",365
+1066,"GRL","Greenland","GRL.5_1","Sermersooq",2001
+1067,"GTM","Guatemala","GTM.1_1","Alta Verapaz",14
+1068,"GTM","Guatemala","GTM.2_1","Baja Verapaz",3
+1069,"GTM","Guatemala","GTM.3_1","Chimaltenango",2
+1070,"GTM","Guatemala","GTM.4_1","Chiquimula",3
+1071,"GTM","Guatemala","GTM.5_1","El Progreso",3
+1072,"GTM","Guatemala","GTM.6_1","Escuintla",10
+1073,"GTM","Guatemala","GTM.7_1","Guatemala",3
+1074,"GTM","Guatemala","GTM.8_1","Huehuetenango",9
+1075,"GTM","Guatemala","GTM.9_1","Izabal",15
+1076,"GTM","Guatemala","GTM.10_1","Jalapa",2
+1077,"GTM","Guatemala","GTM.11_1","Jutiapa",4
+1078,"GTM","Guatemala","GTM.12_1","Pet<U+00E9>n",45
+1079,"GTM","Guatemala","GTM.13_1","Quezaltenango",4
+1080,"GTM","Guatemala","GTM.14_1","Quich<U+00E9>",8
+1081,"GTM","Guatemala","GTM.15_1","Retalhuleu",4
+1083,"GTM","Guatemala","GTM.17_1","San Marcos",5
+1084,"GTM","Guatemala","GTM.18_1","Santa Rosa",6
+1085,"GTM","Guatemala","GTM.19_1","Solol<U+00E1>",1
+1086,"GTM","Guatemala","GTM.20_1","Suchitep<U+00E9>quez",3
+1087,"GTM","Guatemala","GTM.21_1","Totonicap<U+00E1>n",2
+1088,"GTM","Guatemala","GTM.22_1","Zacapa",4
+1089,"GUF","French Guiana","GUF.1_1","Cayenne",62
+1090,"GUF","French Guiana","GUF.2_1","Saint-Laurent-du-Maroni",55
+1100,"GUM","Guam","GUM.10_1","Merizo",1
+1108,"GUM","Guam","GUM.18_1","Yigo",1
+1109,"GUM","Guam","GUM.19_1","Yona",2
+1110,"GUY","Guyana","GUY.1_1","Barima-Waini",29
+1111,"GUY","Guyana","GUY.2_1","Cuyuni-Mazaruni",63
+1112,"GUY","Guyana","GUY.3_1","Demerara-Mahaica",3
+1113,"GUY","Guyana","GUY.4_1","East Berbice-Corentyne",44
+1114,"GUY","Guyana","GUY.5_1","Essequibo Islands-West Demerara",4
+1115,"GUY","Guyana","GUY.6_1","Mahaica-Berbice",7
+1116,"GUY","Guyana","GUY.7_1","Pomeroon-Supenaam",12
+1117,"GUY","Guyana","GUY.8_1","Potaro-Siparuni",24
+1118,"GUY","Guyana","GUY.9_1","Upper Demerara-Berbice",21
+1119,"GUY","Guyana","GUY.10_1","Upper Takutu-Upper Essequibo",75
+1120,"HND","Honduras","HND.1_1","Atl<U+00E1>ntida",7
+1121,"HND","Honduras","HND.2_1","Choluteca",7
+1122,"HND","Honduras","HND.3_1","Col<U+00F3>n",15
+1123,"HND","Honduras","HND.4_1","Comayagua",7
+1124,"HND","Honduras","HND.5_1","Cop<U+00E1>n",4
+1125,"HND","Honduras","HND.6_1","Cort<U+00E9>s",10
+1126,"HND","Honduras","HND.7_1","El Para<U+00ED>so",10
+1127,"HND","Honduras","HND.8_1","Francisco Moraz<U+00E1>n",10
+1128,"HND","Honduras","HND.9_1","Gracias a Dios",36
+1129,"HND","Honduras","HND.10_1","Intibuc<U+00E1>",3
+1130,"HND","Honduras","HND.11_1","Islas de la Bah<U+00ED>a",11
+1131,"HND","Honduras","HND.12_1","La Paz",4
+1132,"HND","Honduras","HND.13_1","Lempira",6
+1133,"HND","Honduras","HND.14_1","Ocotepeque",3
+1134,"HND","Honduras","HND.15_1","Olancho",32
+1135,"HND","Honduras","HND.16_1","Santa B<U+00E1>rbara",7
+1136,"HND","Honduras","HND.17_1","Valle",1
+1137,"HND","Honduras","HND.18_1","Yoro",9
+1138,"HRV","Croatia","HRV.1_1","Bjelovarska-Bilogorska",5
+1139,"HRV","Croatia","HRV.2_1","Brodsko-Posavska",5
+1140,"HRV","Croatia","HRV.3_1","Dubrovacko-Neretvanska",15
+1141,"HRV","Croatia","HRV.4_1","Grad Zagreb",2
+1142,"HRV","Croatia","HRV.5_1","Istarska",10
+1143,"HRV","Croatia","HRV.6_1","Karlovacka",6
+1144,"HRV","Croatia","HRV.7_1","Koprivni<U+010D>ko-Kri<U+017E>eva<U+010D>ka",4
+1145,"HRV","Croatia","HRV.8_1","Krapinsko-Zagorska",3
+1146,"HRV","Croatia","HRV.9_1","Licko-Senjska",8
+1147,"HRV","Croatia","HRV.10_1","Medimurska",2
+1148,"HRV","Croatia","HRV.11_1","Osjecko-Baranjska",8
+1149,"HRV","Croatia","HRV.12_1","Po<U+017E>e<U+0161>ko-Slavonska",3
+1150,"HRV","Croatia","HRV.13_1","Primorsko-Goranska",14
+1151,"HRV","Croatia","HRV.14_1","<U+0160>ibensko-Kninska",5
+1152,"HRV","Croatia","HRV.15_1","Sisacko-Moslavacka",10
+1153,"HRV","Croatia","HRV.16_1","Splitsko-Dalmatinska",21
+1154,"HRV","Croatia","HRV.17_1","Vara<U+017E>dinska",1
+1155,"HRV","Croatia","HRV.18_1","Viroviticko-Podravska",4
+1156,"HRV","Croatia","HRV.19_1","Vukovarsko-Srijemska",4
+1157,"HRV","Croatia","HRV.20_1","Zadarska",17
+1158,"HRV","Croatia","HRV.21_1","Zagreba<U+010D>ka",4
+1159,"HTI","Haiti","HTI.1_1","Centre",4
+1160,"HTI","Haiti","HTI.2_1","Grand'Anse",7
+1161,"HTI","Haiti","HTI.3_1","L'Artibonite",7
+1162,"HTI","Haiti","HTI.4_1","Nippes",5
+1163,"HTI","Haiti","HTI.7_1","Nord",5
+1164,"HTI","Haiti","HTI.5_1","Nord-Est",2
+1165,"HTI","Haiti","HTI.6_1","Nord-Ouest",13
+1166,"HTI","Haiti","HTI.8_1","Ouest",16
+1167,"HTI","Haiti","HTI.10_1","Sud",7
+1168,"HTI","Haiti","HTI.9_1","Sud-Est",7
+1169,"HUN","Hungary","HUN.1_1","B<U+00E1>cs-Kiskun",15
+1170,"HUN","Hungary","HUN.2_1","Baranya",7
+1171,"HUN","Hungary","HUN.3_1","B<U+00E9>k<U+00E9>s",12
+1172,"HUN","Hungary","HUN.4_1","Borsod-Aba<U+00FA>j-Zempl<U+00E9>n",13
+1173,"HUN","Hungary","HUN.5_1","Budapest",1
+1174,"HUN","Hungary","HUN.6_1","Csongr<U+00E1>d",5
+1175,"HUN","Hungary","HUN.7_1","Fej<U+00E9>r",9
+1176,"HUN","Hungary","HUN.8_1","Gyor-Moson-Sopron",8
+1177,"HUN","Hungary","HUN.9_1","Hajd<U+00FA>-Bihar",14
+1178,"HUN","Hungary","HUN.10_1","Heves",7
+1179,"HUN","Hungary","HUN.11_1","J<U+00E1>sz-Nagykun-Szolnok",10
+1180,"HUN","Hungary","HUN.12_1","Kom<U+00E1>rom-Esztergom",3
+1181,"HUN","Hungary","HUN.13_1","N<U+00F3>gr<U+00E1>d",5
+1182,"HUN","Hungary","HUN.14_1","Pest",13
+1183,"HUN","Hungary","HUN.15_1","Somogy",11
+1184,"HUN","Hungary","HUN.16_1","Szabolcs-Szatm<U+00E1>r-Bereg",9
+1185,"HUN","Hungary","HUN.17_1","Tolna",7
+1186,"HUN","Hungary","HUN.18_1","Vas",7
+1187,"HUN","Hungary","HUN.19_1","Veszpr<U+00E9>m",8
+1188,"HUN","Hungary","HUN.20_1","Zala",7
+1189,"IDN","Indonesia","IDN.1_1","Aceh",118
+1190,"IDN","Indonesia","IDN.2_1","Bali",17
+1191,"IDN","Indonesia","IDN.3_1","Bangka Belitung",53
+1192,"IDN","Indonesia","IDN.4_1","Banten",22
+1193,"IDN","Indonesia","IDN.5_1","Bengkulu",40
+1194,"IDN","Indonesia","IDN.6_1","Gorontalo",26
+1195,"IDN","Indonesia","IDN.7_1","Jakarta Raya",7
+1196,"IDN","Indonesia","IDN.8_1","Jambi",65
+1197,"IDN","Indonesia","IDN.9_1","Jawa Barat",66
+1198,"IDN","Indonesia","IDN.10_1","Jawa Tengah",62
+1199,"IDN","Indonesia","IDN.11_1","Jawa Timur",118
+1200,"IDN","Indonesia","IDN.12_1","Kalimantan Barat",222
+1201,"IDN","Indonesia","IDN.13_1","Kalimantan Selatan",69
+1202,"IDN","Indonesia","IDN.14_1","Kalimantan Tengah",209
+1203,"IDN","Indonesia","IDN.34_1","Kalimantan Timur",190
+1204,"IDN","Indonesia","IDN.35_1","Kalimantan Utara",100
+1205,"IDN","Indonesia","IDN.16_1","Kepulauan Riau",93
+1206,"IDN","Indonesia","IDN.17_1","Lampung",61
+1207,"IDN","Indonesia","IDN.19_1","Maluku",198
+1208,"IDN","Indonesia","IDN.18_1","Maluku Utara",121
+1209,"IDN","Indonesia","IDN.20_1","Nusa Tenggara Barat",55
+1210,"IDN","Indonesia","IDN.21_1","Nusa Tenggara Timur",140
+1211,"IDN","Indonesia","IDN.23_1","Papua",490
+1212,"IDN","Indonesia","IDN.22_1","Papua Barat",220
+1213,"IDN","Indonesia","IDN.24_1","Riau",142
+1214,"IDN","Indonesia","IDN.25_1","Sulawesi Barat",36
+1215,"IDN","Indonesia","IDN.26_1","Sulawesi Selatan",133
+1216,"IDN","Indonesia","IDN.27_1","Sulawesi Tengah",154
+1217,"IDN","Indonesia","IDN.28_1","Sulawesi Tenggara",95
+1218,"IDN","Indonesia","IDN.29_1","Sulawesi Utara",62
+1219,"IDN","Indonesia","IDN.30_1","Sumatera Barat",89
+1220,"IDN","Indonesia","IDN.31_1","Sumatera Selatan",124
+1221,"IDN","Indonesia","IDN.32_1","Sumatera Utara",129
+1222,"IDN","Indonesia","IDN.33_1","Yogyakarta",6
+1227,"IMN","Isle of Man","IMN.5_2","Bride",1
+1234,"IMN","Isle of Man","IMN.12_2","Malew",1
+1236,"IMN","Isle of Man","IMN.14_2","Michael",1
+1237,"IMN","Isle of Man","IMN.15_2","Onchan",1
+1241,"IMN","Isle of Man","IMN.19_2","Port Saint Mary",1
+1244,"IND","India","IND.1_1","Andaman and Nicobar",59
+1245,"IND","India","IND.2_1","Andhra Pradesh",240
+1246,"IND","India","IND.3_1","Arunachal Pradesh",23
+1247,"Z07","India","Z07.3_1","Arunachal Pradesh",99
+1248,"IND","India","IND.4_1","Assam",116
+1249,"IND","India","IND.5_1","Bihar",137
+1251,"IND","India","IND.7_1","Chhattisgarh",194
+1252,"IND","India","IND.8_1","Dadra and Nagar Haveli",1
+1253,"IND","India","IND.9_1","Daman and Diu",1
+1254,"IND","India","IND.10_1","Goa",6
+1255,"IND","India","IND.11_1","Gujarat",298
+1256,"IND","India","IND.12_1","Haryana",65
+1257,"IND","India","IND.13_1","Himachal Pradesh",84
+1260,"Z01","India","Z01.14_1","Jammu and Kashmir",161
+1261,"IND","India","IND.15_1","Jharkhand",115
+1262,"IND","India","IND.16_1","Karnataka",263
+1263,"IND","India","IND.17_1","Kerala",63
+1264,"IND","India","IND.18_1","Lakshadweep",14
+1265,"IND","India","IND.19_1","Madhya Pradesh",431
+1266,"IND","India","IND.20_1","Maharashtra",435
+1267,"IND","India","IND.21_1","Manipur",34
+1268,"IND","India","IND.22_1","Meghalaya",31
+1269,"IND","India","IND.23_1","Mizoram",35
+1270,"IND","India","IND.24_1","Nagaland",24
+1271,"IND","India","IND.25_1","NCT of Delhi",2
+1272,"IND","India","IND.26_1","Odisha",222
+1273,"IND","India","IND.27_1","Puducherry",3
+1274,"IND","India","IND.28_1","Punjab",81
+1275,"IND","India","IND.29_1","Rajasthan",496
+1276,"IND","India","IND.30_1","Sikkim",12
+1277,"IND","India","IND.31_1","Tamil Nadu",196
+1278,"IND","India","IND.32_1","Telangana",157
+1279,"IND","India","IND.33_1","Tripura",14
+1280,"IND","India","IND.34_1","Uttar Pradesh",352
+1281,"IND","India","IND.35_1","Uttarakhand",77
+1283,"Z09","India","Z09.35_1","Uttarakhand",2
+1284,"IND","India","IND.36_1","West Bengal",124
+1285,"IRL","Ireland","IRL.1_1","Carlow",3
+1286,"IRL","Ireland","IRL.2_1","Cavan",5
+1287,"IRL","Ireland","IRL.3_1","Clare",9
+1288,"IRL","Ireland","IRL.5_1","Donegal",24
+1289,"IRL","Ireland","IRL.6_1","Dublin",3
+1290,"IRL","Ireland","IRL.7_1","Galway",17
+1291,"IRL","Ireland","IRL.8_1","Kerry",18
+1292,"IRL","Ireland","IRL.9_1","Kildare",4
+1293,"IRL","Ireland","IRL.10_1","Kilkenny",4
+1294,"IRL","Ireland","IRL.11_1","Laois",5
+1295,"IRL","Ireland","IRL.12_1","Leitrim",3
+1296,"IRL","Ireland","IRL.13_1","Limerick",8
+1297,"IRL","Ireland","IRL.14_1","Longford",3
+1298,"IRL","Ireland","IRL.15_1","Louth",2
+1299,"IRL","Ireland","IRL.16_1","Mayo",22
+1300,"IRL","Ireland","IRL.17_1","Meath",6
+1301,"IRL","Ireland","IRL.18_1","Monaghan",2
+1302,"IRL","Ireland","IRL.19_1","Offaly",4
+1303,"IRL","Ireland","IRL.20_1","Roscommon",6
+1304,"IRL","Ireland","IRL.21_1","Sligo",7
+1305,"IRL","Ireland","IRL.22_1","Tipperary",10
+1306,"IRL","Ireland","IRL.23_1","Waterford",5
+1307,"IRL","Ireland","IRL.24_1","Westmeath",4
+1308,"IRL","Ireland","IRL.25_1","Wexford",9
+1309,"IRL","Ireland","IRL.26_1","Wicklow",6
+1310,"IRL","Ireland","IRL.4_1","(unnamed IRL.4_1)",23
+1311,"IRN","Iran","IRN.1_1","Alborz",7
+1312,"IRN","Iran","IRN.2_1","Ardebil",26
+1313,"IRN","Iran","IRN.3_1","Bushehr",46
+1314,"IRN","Iran","IRN.4_1","Chahar Mahall and Bakhtiari",22
+1315,"IRN","Iran","IRN.5_1","East Azarbaijan",82
+1316,"IRN","Iran","IRN.6_1","Esfahan",171
+1317,"IRN","Iran","IRN.7_1","Fars",188
+1318,"IRN","Iran","IRN.8_1","Gilan",31
+1319,"IRN","Iran","IRN.9_1","Golestan",34
+1320,"IRN","Iran","IRN.10_1","Hamadan",32
+1321,"IRN","Iran","IRN.11_1","Hormozgan",132
+1322,"IRN","Iran","IRN.12_1","Ilam",28
+1323,"IRN","Iran","IRN.13_1","Kerman",276
+1324,"IRN","Iran","IRN.14_1","Kermanshah",36
+1325,"IRN","Iran","IRN.15_1","Khuzestan",102
+1326,"IRN","Iran","IRN.16_1","Kohgiluyeh and Buyer Ahmad",18
+1327,"IRN","Iran","IRN.17_1","Kordestan",49
+1328,"IRN","Iran","IRN.18_1","Lorestan",44
+1329,"IRN","Iran","IRN.19_1","Markazi",46
+1330,"IRN","Iran","IRN.20_1","Mazandaran",47
+1331,"IRN","Iran","IRN.21_1","North Khorasan",40
+1332,"IRN","Iran","IRN.22_1","Qazvin",23
+1333,"IRN","Iran","IRN.23_1","Qom",19
+1334,"IRN","Iran","IRN.24_1","Razavi Khorasan",220
+1335,"IRN","Iran","IRN.25_1","Semnan",149
+1336,"IRN","Iran","IRN.26_1","Sistan and Baluchestan",260
+1337,"IRN","Iran","IRN.27_1","South Khorasan",124
+1338,"IRN","Iran","IRN.28_1","Tehran",23
+1339,"IRN","Iran","IRN.29_1","West Azarbaijan",59
+1340,"IRN","Iran","IRN.30_1","Yazd",194
+1341,"IRN","Iran","IRN.31_1","Zanjan",37
+1342,"IRQ","Iraq","IRQ.1_1","Al-Anbar",210
+1343,"IRQ","Iraq","IRQ.2_1","Al-Basrah",28
+1344,"IRQ","Iraq","IRQ.3_1","Al-Muthannia",79
+1345,"IRQ","Iraq","IRQ.4_1","Al-Qadisiyah",11
+1346,"IRQ","Iraq","IRQ.5_1","An-Najaf",42
+1347,"IRQ","Iraq","IRQ.6_1","Arbil",23
+1348,"IRQ","Iraq","IRQ.7_1","As-Sulaymaniyah",28
+1349,"IRQ","Iraq","IRQ.8_1","At-Ta'mim",15
+1350,"IRQ","Iraq","IRQ.9_1","Babil",13
+1351,"IRQ","Iraq","IRQ.10_1","Baghdad",1
+1352,"IRQ","Iraq","IRQ.11_1","Dhi-Qar",22
+1353,"IRQ","Iraq","IRQ.12_1","Dihok",11
+1354,"IRQ","Iraq","IRQ.13_1","Diyala",32
+1355,"IRQ","Iraq","IRQ.14_1","Karbala'",8
+1356,"IRQ","Iraq","IRQ.15_1","Maysan",25
+1357,"IRQ","Iraq","IRQ.16_1","Ninawa",59
+1358,"IRQ","Iraq","IRQ.17_1","Sala ad-Din",41
+1359,"IRQ","Iraq","IRQ.18_1","Wasit",27
+1360,"ISL","Iceland","ISL.1_1","Austurland",88
+1361,"ISL","Iceland","ISL.3_1","H<U+00F6>fu<U+00F0>borgarsv<U+00E6><U+00F0>i",3
+1362,"ISL","Iceland","ISL.2_1","Nor<U+00F0>urland eystra",88
+1363,"ISL","Iceland","ISL.4_1","Nor<U+00F0>urland vestra",46
+1364,"ISL","Iceland","ISL.5_1","Su<U+00F0>urland",86
+1365,"ISL","Iceland","ISL.6_1","Su<U+00F0>urnes",7
+1366,"ISL","Iceland","ISL.7_1","Vestfir<U+00F0>ir",55
+1367,"ISL","Iceland","ISL.8_1","Vesturland",43
+1369,"ISR","Israel","ISR.2_1","HaDarom",24
+1370,"ISR","Israel","ISR.3_1","Haifa",2
+1371,"ISR","Israel","ISR.4_1","HaMerkaz",4
+1372,"ISR","Israel","ISR.5_1","HaZafon",6
+1374,"ISR","Israel","ISR.7_1","Tel Aviv",1
+1375,"ITA","Italy","ITA.1_1","Abruzzo",21
+1376,"ITA","Italy","ITA.2_1","Apulia",50
+1377,"ITA","Italy","ITA.3_1","Basilicata",20
+1378,"ITA","Italy","ITA.4_1","Calabria",40
+1379,"ITA","Italy","ITA.5_1","Campania",33
+1380,"ITA","Italy","ITA.6_1","Emilia-Romagna",47
+1381,"ITA","Italy","ITA.7_1","Friuli-Venezia Giulia",15
+1382,"ITA","Italy","ITA.8_1","Lazio",42
+1383,"ITA","Italy","ITA.9_1","Liguria",13
+1384,"ITA","Italy","ITA.10_1","Lombardia",42
+1385,"ITA","Italy","ITA.11_1","Marche",22
+1386,"ITA","Italy","ITA.12_1","Molise",10
+1387,"ITA","Italy","ITA.13_1","Piemonte",48
+1388,"ITA","Italy","ITA.14_1","Sardegna",66
+1389,"ITA","Italy","ITA.15_1","Sicily",83
+1390,"ITA","Italy","ITA.16_1","Toscana",53
+1391,"ITA","Italy","ITA.17_1","Trentino-Alto Adige",26
+1392,"ITA","Italy","ITA.18_1","Umbria",13
+1393,"ITA","Italy","ITA.19_1","Valle d'Aosta",6
+1394,"ITA","Italy","ITA.20_1","Veneto",38
+1395,"JAM","Jamaica","JAM.1_1","Clarendon",3
+1396,"JAM","Jamaica","JAM.2_1","Hanover",1
+1398,"JAM","Jamaica","JAM.4_1","Manchester",1
+1399,"JAM","Jamaica","JAM.5_1","Portland",2
+1400,"JAM","Jamaica","JAM.6_1","Saint Andrew",2
+1401,"JAM","Jamaica","JAM.7_1","Saint Ann",2
+1402,"JAM","Jamaica","JAM.8_1","Saint Catherine",3
+1403,"JAM","Jamaica","JAM.9_1","Saint Elizabeth",5
+1404,"JAM","Jamaica","JAM.10_1","Saint James",2
+1405,"JAM","Jamaica","JAM.11_1","Saint Mary",2
+1406,"JAM","Jamaica","JAM.12_1","Saint Thomas",6
+1407,"JAM","Jamaica","JAM.13_1","Trelawny",2
+1408,"JAM","Jamaica","JAM.14_1","Westmoreland",3
+1413,"JEY","Jersey","JEY.5_1","Saint John",1
+1417,"JEY","Jersey","JEY.9_1","Saint Ouen",2
+1420,"JEY","Jersey","JEY.12_1","Trinity",2
+1421,"JOR","Jordan","JOR.1_1","Ajlun",1
+1422,"JOR","Jordan","JOR.2_1","Amman",12
+1423,"JOR","Jordan","JOR.3_1","Aqaba",10
+1424,"JOR","Jordan","JOR.4_1","Balqa",3
+1425,"JOR","Jordan","JOR.5_1","Irbid",3
+1427,"JOR","Jordan","JOR.7_1","Karak",5
+1428,"JOR","Jordan","JOR.8_1","Ma`an",50
+1429,"JOR","Jordan","JOR.9_1","Madaba",1
+1430,"JOR","Jordan","JOR.10_1","Mafraq",41
+1431,"JOR","Jordan","JOR.11_1","Tafilah",3
+1432,"JOR","Jordan","JOR.12_1","Zarqa",6
+1433,"JPN","Japan","JPN.1_1","Aichi",8
+1434,"JPN","Japan","JPN.2_1","Akita",26
+1435,"JPN","Japan","JPN.3_1","Aomori",29
+1436,"JPN","Japan","JPN.4_1","Chiba",10
+1437,"JPN","Japan","JPN.5_1","Ehime",13
+1438,"JPN","Japan","JPN.6_1","Fukui",10
+1439,"JPN","Japan","JPN.7_1","Fukuoka",14
+1440,"JPN","Japan","JPN.8_1","Fukushima",27
+1441,"JPN","Japan","JPN.9_1","Gifu",16
+1442,"JPN","Japan","JPN.10_1","Gunma",7
+1443,"JPN","Japan","JPN.11_1","Hiroshima",14
+1444,"JPN","Japan","JPN.12_1","Hokkaido",203
+1445,"JPN","Japan","JPN.13_1","Hy<U+014D>go",18
+1446,"JPN","Japan","JPN.14_1","Ibaraki",15
+1447,"JPN","Japan","JPN.15_1","Ishikawa",19
+1448,"JPN","Japan","JPN.16_1","Iwate",30
+1449,"JPN","Japan","JPN.17_1","Kagawa",3
+1450,"JPN","Japan","JPN.18_1","Kagoshima",62
+1451,"JPN","Japan","JPN.19_1","Kanagawa",5
+1452,"JPN","Japan","JPN.20_1","Kochi",24
+1453,"JPN","Japan","JPN.21_1","Kumamoto",14
+1454,"JPN","Japan","JPN.22_1","Kyoto",9
+1455,"JPN","Japan","JPN.23_1","Mie",19
+1456,"JPN","Japan","JPN.24_1","Miyagi",19
+1457,"JPN","Japan","JPN.25_1","Miyazaki",14
+1458,"JPN","Japan","JPN.26_1","Nagano",27
+1459,"JPN","Japan","JPN.27_1","Naoasaki",31
+1460,"JPN","Japan","JPN.28_1","Nara",4
+1461,"JPN","Japan","JPN.29_1","Niigata",35
+1462,"JPN","Japan","JPN.30_1","Oita",17
+1463,"JPN","Japan","JPN.31_1","Okayama",15
+1464,"JPN","Japan","JPN.32_1","Okinawa",50
+1465,"JPN","Japan","JPN.33_1","Osaka",4
+1466,"JPN","Japan","JPN.34_1","Saga",7
+1467,"JPN","Japan","JPN.35_1","Saitama",8
+1468,"JPN","Japan","JPN.36_1","Shiga",7
+1469,"JPN","Japan","JPN.37_1","Shimane",23
+1470,"JPN","Japan","JPN.38_1","Shizuoka",23
+1471,"JPN","Japan","JPN.39_1","Tochigi",12
+1472,"JPN","Japan","JPN.40_1","Tokushima",11
+1473,"JPN","Japan","JPN.41_1","Tokyo",26
+1474,"JPN","Japan","JPN.42_1","Tottori",11
+1475,"JPN","Japan","JPN.43_1","Toyama",8
+1476,"JPN","Japan","JPN.44_1","Wakayama",13
+1477,"JPN","Japan","JPN.45_1","Yamagata",17
+1478,"JPN","Japan","JPN.46_1","Yamaguchi",24
+1479,"JPN","Japan","JPN.47_1","Yamanashi",6
+1480,"KAZ","Kazakhstan","KAZ.1_1","Almaty",410
+1481,"KAZ","Kazakhstan","KAZ.2_1","Aqmola",307
+1482,"KAZ","Kazakhstan","KAZ.3_1","Aqt<U+00F6>be",590
+1483,"KAZ","Kazakhstan","KAZ.4_1","Atyrau",247
+1484,"KAZ","Kazakhstan","KAZ.5_1","East Kazakhstan",548
+1485,"KAZ","Kazakhstan","KAZ.6_1","Mangghystau",323
+1486,"KAZ","Kazakhstan","KAZ.7_1","North Kazakhstan",217
+1487,"KAZ","Kazakhstan","KAZ.8_1","Pavlodar",259
+1488,"KAZ","Kazakhstan","KAZ.9_1","Qaraghandy",826
+1489,"KAZ","Kazakhstan","KAZ.10_1","Qostanay",416
+1490,"KAZ","Kazakhstan","KAZ.11_1","Qyzylorda",416
+1491,"KAZ","Kazakhstan","KAZ.12_1","South Kazakhstan",211
+1492,"KAZ","Kazakhstan","KAZ.13_1","West Kazakhstan",310
+1493,"KAZ","Kazakhstan","KAZ.14_1","Zhambyl",257
+1494,"KEN","Kenya","KEN.1_1","Baringo",15
+1495,"KEN","Kenya","KEN.2_1","Bomet",3
+1496,"KEN","Kenya","KEN.3_1","Bungoma",2
+1497,"KEN","Kenya","KEN.4_1","Busia",3
+1498,"KEN","Kenya","KEN.5_1","Elgeyo-Marakwet",2
+1499,"KEN","Kenya","KEN.6_1","Embu",3
+1500,"KEN","Kenya","KEN.7_1","Garissa",56
+1501,"KEN","Kenya","KEN.8_1","Homa Bay",6
+1502,"KEN","Kenya","KEN.9_1","Isiolo",33
+1503,"KEN","Kenya","KEN.10_1","Kajiado",29
+1504,"KEN","Kenya","KEN.11_1","Kakamega",3
+1505,"KEN","Kenya","KEN.12_1","Kericho",4
+1506,"KEN","Kenya","KEN.13_1","Kiambu",4
+1507,"KEN","Kenya","KEN.14_1","Kilifi",18
+1508,"KEN","Kenya","KEN.15_1","Kirinyaga",2
+1509,"KEN","Kenya","KEN.16_1","Kisii",2
+1510,"KEN","Kenya","KEN.17_1","Kisumu",4
+1511,"KEN","Kenya","KEN.18_1","Kitui",41
+1512,"KEN","Kenya","KEN.19_1","Kwale",13
+1513,"KEN","Kenya","KEN.20_1","Laikipia",13
+1514,"KEN","Kenya","KEN.21_1","Lamu",13
+1515,"KEN","Kenya","KEN.22_1","Machakos",8
+1516,"KEN","Kenya","KEN.23_1","Makueni",11
+1517,"KEN","Kenya","KEN.24_1","Mandera",33
+1518,"KEN","Kenya","KEN.25_1","Marsabit",96
+1519,"KEN","Kenya","KEN.26_1","Meru",9
+1520,"KEN","Kenya","KEN.27_1","Migori",4
+1521,"KEN","Kenya","KEN.28_1","Mombasa",1
+1522,"KEN","Kenya","KEN.29_1","Murang'a",3
+1523,"KEN","Kenya","KEN.30_1","Nairobi",1
+1524,"KEN","Kenya","KEN.31_1","Nakuru",10
+1525,"KEN","Kenya","KEN.32_1","Nandi",3
+1526,"KEN","Kenya","KEN.33_1","Narok",21
+1527,"KEN","Kenya","KEN.34_1","Nyamira",1
+1528,"KEN","Kenya","KEN.35_1","Nyandarua",4
+1529,"KEN","Kenya","KEN.36_1","Nyeri",5
+1530,"KEN","Kenya","KEN.37_1","Samburu",30
+1531,"KEN","Kenya","KEN.38_1","Siaya",4
+1532,"KEN","Kenya","KEN.39_1","Taita Taveta",22
+1533,"KEN","Kenya","KEN.40_1","Tana River",53
+1534,"KEN","Kenya","KEN.41_1","Tharaka-Nithi",3
+1535,"KEN","Kenya","KEN.42_1","Trans Nzoia",4
+1536,"KEN","Kenya","KEN.43_1","Turkana",82
+1537,"KEN","Kenya","KEN.44_1","Uasin Gishu",6
+1538,"KEN","Kenya","KEN.45_1","Vihiga",1
+1539,"KEN","Kenya","KEN.46_1","Wajir",74
+1540,"KEN","Kenya","KEN.47_1","West Pokot",13
+1541,"KGZ","Kyrgyzstan","KGZ.1_1","Batken",30
+1542,"KGZ","Kyrgyzstan","KGZ.2_1","Bi<U+0161>kek",1
+1543,"KGZ","Kyrgyzstan","KGZ.3_1","Ch<U+00FC>y",35
+1544,"KGZ","Kyrgyzstan","KGZ.4_1","Jalal-Abad",55
+1545,"KGZ","Kyrgyzstan","KGZ.5_1","Naryn",80
+1546,"KGZ","Kyrgyzstan","KGZ.7_1","Osh",53
+1548,"KGZ","Kyrgyzstan","KGZ.8_1","Talas",18
+1549,"KGZ","Kyrgyzstan","KGZ.9_1","Ysyk-K<U+00F6>l",72
+1550,"KHM","Cambodia","KHM.1_1","B<U+00E2>nt<U+00E9>ay M<U+00E9>anchey",8
+1551,"KHM","Cambodia","KHM.2_1","Batd<U+00E2>mb<U+00E2>ng",18
+1552,"KHM","Cambodia","KHM.3_1","K<U+00E2>mp<U+00F3>ng Cham",7
+1553,"KHM","Cambodia","KHM.4_1","K<U+00E2>mp<U+00F3>ng Chhnang",8
+1554,"KHM","Cambodia","KHM.5_1","K<U+00E2>mp<U+00F3>ng Sp<U+0153>",9
+1555,"KHM","Cambodia","KHM.6_1","K<U+00E2>mp<U+00F3>ng Thum",18
+1556,"KHM","Cambodia","KHM.7_1","K<U+00E2>mp<U+00F4>t",8
+1557,"KHM","Cambodia","KHM.8_1","K<U+00E2>ndal",3
+1558,"KHM","Cambodia","KHM.9_1","Ka<U+00F4>h Kong",17
+1559,"KHM","Cambodia","KHM.10_1","Kep",1
+1560,"KHM","Cambodia","KHM.11_1","Kr<U+00E2>ch<U+00E9>h",13
+1561,"KHM","Cambodia","KHM.12_1","Krong Pailin",1
+1562,"KHM","Cambodia","KHM.13_1","Krong Preah Sihanouk",13
+1563,"KHM","Cambodia","KHM.14_1","M<U+00F4>nd<U+00F3>l Kiri",19
+1564,"KHM","Cambodia","KHM.15_1","Otdar Mean Chey",8
+1565,"KHM","Cambodia","KHM.16_1","Phnom Penh",1
+1566,"KHM","Cambodia","KHM.17_1","Pouthisat",16
+1567,"KHM","Cambodia","KHM.18_1","Preah Vih<U+00E9>ar",19
+1568,"KHM","Cambodia","KHM.19_1","Prey V<U+00EA>ng",7
+1569,"KHM","Cambodia","KHM.20_1","R<U+00F4>t<U+00E2>n<U+00F4>kiri",16
+1570,"KHM","Cambodia","KHM.21_1","Siemr<U+00E9>ab",16
+1571,"KHM","Cambodia","KHM.22_1","St<U+0153>ng Tr<U+00EA>ng",17
+1572,"KHM","Cambodia","KHM.23_1","Svay Rieng",3
+1573,"KHM","Cambodia","KHM.24_1","Tak<U+00EA>v",3
+1574,"KHM","Cambodia","KHM.25_1","Tbong Khmum",6
+1581,"KNA","Saint Kitts and Nevis","KNA.7_1","Saint John Figtree",1
+1588,"KNA","Saint Kitts and Nevis","KNA.14_1","Trinity Palmetto Point",2
+1589,"KOR","South Korea","KOR.1_1","Busan",2
+1590,"KOR","South Korea","KOR.2_1","Chungcheongbuk-do",14
+1591,"KOR","South Korea","KOR.3_1","Chungcheongnam-do",22
+1592,"KOR","South Korea","KOR.4_1","Daegu",1
+1593,"KOR","South Korea","KOR.5_1","Daejeon",1
+1594,"KOR","South Korea","KOR.6_1","Gangwon-do",30
+1595,"KOR","South Korea","KOR.7_1","Gwangju",1
+1596,"KOR","South Korea","KOR.8_1","Gyeonggi-do",17
+1597,"KOR","South Korea","KOR.9_1","Gyeongsangbuk-do",36
+1598,"KOR","South Korea","KOR.10_1","Gyeongsangnam-do",24
+1599,"KOR","South Korea","KOR.11_1","Incheon",11
+1600,"KOR","South Korea","KOR.12_1","Jeju",13
+1601,"KOR","South Korea","KOR.13_1","Jeollabuk-do",20
+1602,"KOR","South Korea","KOR.14_1","Jeollanam-do",53
+1605,"KOR","South Korea","KOR.17_1","Ulsan",3
+1606,"KWT","Kuwait","KWT.1_1","Al Ahmadi",11
+1608,"KWT","Kuwait","KWT.3_1","Al Jahrah",22
+1610,"KWT","Kuwait","KWT.5_1","Hawalli",1
+1611,"KWT","Kuwait","KWT.6_1","Mubarak Al-Kabeer",1
+1612,"LAO","Laos","LAO.1_1","Attapu",13
+1613,"LAO","Laos","LAO.2_1","Bokeo",10
+1614,"LAO","Laos","LAO.3_1","Bolikhamxai",21
+1615,"LAO","Laos","LAO.4_1","Champasak",21
+1616,"LAO","Laos","LAO.5_1","Houaphan",24
+1617,"LAO","Laos","LAO.6_1","Khammouan",23
+1618,"LAO","Laos","LAO.7_1","Louang Namtha",14
+1619,"LAO","Laos","LAO.8_1","Louangphrabang",29
+1620,"LAO","Laos","LAO.9_1","Oud<U+00F4>mxai",16
+1621,"LAO","Laos","LAO.10_1","Ph<U+00F4>ngsali",22
+1622,"LAO","Laos","LAO.11_1","Saravan",16
+1623,"LAO","Laos","LAO.12_1","Savannakh<U+00E9>t",25
+1624,"LAO","Laos","LAO.14_1","Vientiane",19
+1625,"LAO","Laos","LAO.13_1","Vientiane [prefecture]",5
+1626,"LAO","Laos","LAO.15_1","Xaignabouri",20
+1627,"LAO","Laos","LAO.16_1","Xais<U+00F4>mboun",11
+1628,"LAO","Laos","LAO.17_1","X<U+00E9>kong",9
+1629,"LAO","Laos","LAO.18_1","Xiangkhoang",18
+1630,"LBN","Lebanon","LBN.1_1","Akkar",2
+1631,"LBN","Lebanon","LBN.2_1","Baalbak - Hermel",4
+1632,"LBN","Lebanon","LBN.3_1","Beirut",1
+1633,"LBN","Lebanon","LBN.4_1","Bekaa",2
+1634,"LBN","Lebanon","LBN.5_1","Mount Lebanon",3
+1635,"LBN","Lebanon","LBN.6_1","Nabatiyeh",3
+1636,"LBN","Lebanon","LBN.7_1","North",4
+1637,"LBN","Lebanon","LBN.8_1","South",3
+1638,"LBR","Liberia","LBR.1_1","Bomi",2
+1639,"LBR","Liberia","LBR.2_1","Bong",10
+1640,"LBR","Liberia","LBR.3_1","Gbapolu",12
+1641,"LBR","Liberia","LBR.5_1","Grand Bassa",11
+1642,"LBR","Liberia","LBR.4_1","Grand Cape Mount",7
+1643,"LBR","Liberia","LBR.6_1","Grand Gedeh",15
+1644,"LBR","Liberia","LBR.7_1","Grand Kru",7
+1645,"LBR","Liberia","LBR.8_1","Lofa",14
+1646,"LBR","Liberia","LBR.9_1","Margibi",4
+1647,"LBR","Liberia","LBR.10_1","Maryland",5
+1648,"LBR","Liberia","LBR.11_1","Montserrado",5
+1649,"LBR","Liberia","LBR.12_1","Nimba",16
+1650,"LBR","Liberia","LBR.14_1","River Gee",6
+1651,"LBR","Liberia","LBR.13_1","Rivercess",9
+1652,"LBR","Liberia","LBR.15_1","Sinoe",14
+1653,"LBY","Libya","LBY.1_1","Al Butnan",132
+1654,"LBY","Libya","LBY.2_1","Al Jabal al Akhdar",11
+1655,"LBY","Libya","LBY.3_1","Al Jabal al Gharbi",128
+1656,"LBY","Libya","LBY.4_1","Al Jifarah",2
+1657,"LBY","Libya","LBY.5_1","Al Jufrah",160
+1658,"LBY","Libya","LBY.6_1","Al Kufrah",612
+1659,"LBY","Libya","LBY.7_1","Al Marj",17
+1660,"LBY","Libya","LBY.8_1","Al Marqab",16
+1661,"LBY","Libya","LBY.9_1","Al Wahat",291
+1662,"LBY","Libya","LBY.10_1","An Nuqat al Khams",12
+1663,"LBY","Libya","LBY.11_1","Az Zawiyah",6
+1664,"LBY","Libya","LBY.12_1","Benghazi",33
+1665,"LBY","Libya","LBY.13_1","Darnah",31
+1666,"LBY","Libya","LBY.14_1","Ghat",75
+1667,"LBY","Libya","LBY.15_1","Misratah",45
+1668,"LBY","Libya","LBY.16_1","Murzuq",377
+1669,"LBY","Libya","LBY.17_1","Nalut",99
+1670,"LBY","Libya","LBY.18_1","Sabha",27
+1671,"LBY","Libya","LBY.19_1","Surt",127
+1672,"LBY","Libya","LBY.20_1","Tripoli",7
+1673,"LBY","Libya","LBY.21_1","Wadi al Hayat",50
+1674,"LBY","Libya","LBY.22_1","Wadi ash Shati'",138
+1677,"LCA","Saint Lucia","LCA.3_1","Castries",1
+1680,"LCA","Saint Lucia","LCA.6_1","Gros Islet",1
+1681,"LCA","Saint Lucia","LCA.7_1","Laborie",1
+1684,"LCA","Saint Lucia","LCA.10_1","Vieux Fort",3
+1685,"LIE","Liechtenstein","LIE.1_1","Balzers",1
+1696,"LKA","Sri Lanka","LKA.1_1","Ampara",9
+1697,"LKA","Sri Lanka","LKA.2_1","Anuradhapura",10
+1698,"LKA","Sri Lanka","LKA.3_1","Badulla",3
+1699,"LKA","Sri Lanka","LKA.4_1","Batticaloa",7
+1700,"LKA","Sri Lanka","LKA.5_1","Colombo",2
+1701,"LKA","Sri Lanka","LKA.6_1","Galle",3
+1702,"LKA","Sri Lanka","LKA.7_1","Gampaha",2
+1703,"LKA","Sri Lanka","LKA.8_1","Hambantota",7
+1704,"LKA","Sri Lanka","LKA.9_1","Jaffna",8
+1705,"LKA","Sri Lanka","LKA.10_1","Kalutara",4
+1706,"LKA","Sri Lanka","LKA.11_1","Kandy",3
+1707,"LKA","Sri Lanka","LKA.12_1","Kegalle",3
+1708,"LKA","Sri Lanka","LKA.13_1","Kilinochchi",4
+1709,"LKA","Sri Lanka","LKA.14_1","Kurunegala",6
+1710,"LKA","Sri Lanka","LKA.15_1","Mannar",6
+1711,"LKA","Sri Lanka","LKA.16_1","Matale",3
+1712,"LKA","Sri Lanka","LKA.17_1","Matara",3
+1713,"LKA","Sri Lanka","LKA.18_1","Moneragala",7
+1714,"LKA","Sri Lanka","LKA.19_1","Mullaitivu",4
+1715,"LKA","Sri Lanka","LKA.20_1","Nuwara Eliya",2
+1716,"LKA","Sri Lanka","LKA.21_1","Polonnaruwa",4
+1717,"LKA","Sri Lanka","LKA.22_1","Puttalam",9
+1718,"LKA","Sri Lanka","LKA.23_1","Ratnapura",4
+1719,"LKA","Sri Lanka","LKA.24_1","Trincomalee",5
+1720,"LKA","Sri Lanka","LKA.25_1","Vavuniya",3
+1721,"LSO","Lesotho","LSO.1_1","Berea",2
+1722,"LSO","Lesotho","LSO.2_1","Butha-Buthe",2
+1723,"LSO","Lesotho","LSO.3_1","Leribe",4
+1724,"LSO","Lesotho","LSO.4_1","Mafeteng",5
+1725,"LSO","Lesotho","LSO.5_1","Maseru",6
+1726,"LSO","Lesotho","LSO.6_1","Mohale's Hoek",5
+1727,"LSO","Lesotho","LSO.7_1","Mokhotlong",6
+1728,"LSO","Lesotho","LSO.8_1","Qacha's Nek",5
+1729,"LSO","Lesotho","LSO.9_1","Quthing",4
+1730,"LSO","Lesotho","LSO.10_1","Thaba-Tseka",6
+1731,"LTU","Lithuania","LTU.1_1","Alytaus",11
+1732,"LTU","Lithuania","LTU.2_1","Kauno",18
+1733,"LTU","Lithuania","LTU.3_1","Klaipedos",14
+1734,"LTU","Lithuania","LTU.4_1","Marijampoles",10
+1735,"LTU","Lithuania","LTU.5_1","Panevezio",18
+1736,"LTU","Lithuania","LTU.6_1","<U+0160>iauliai",19
+1737,"LTU","Lithuania","LTU.7_1","Taurages",10
+1738,"LTU","Lithuania","LTU.8_1","Tel<U+0161>iai",11
+1739,"LTU","Lithuania","LTU.9_1","Utenos",18
+1740,"LTU","Lithuania","LTU.10_1","Vilniaus",17
+1741,"LUX","Luxembourg","LUX.1_1","Diekirch",3
+1742,"LUX","Luxembourg","LUX.2_1","Grevenmacher",1
+1743,"LUX","Luxembourg","LUX.3_1","Luxembourg",1
+1744,"LVA","Latvia","LVA.1_1","Kurzeme",42
+1745,"LVA","Latvia","LVA.2_1","Latgale",32
+1746,"LVA","Latvia","LVA.3_1","Riga",31
+1747,"LVA","Latvia","LVA.4_1","Vidzeme",36
+1748,"LVA","Latvia","LVA.5_1","Zemgale",27
+1749,"MAR","Morocco","MAR.1_1","Chaouia - Ouardigha",28
+1750,"MAR","Morocco","MAR.2_1","Doukkala - Abda",30
+1751,"MAR","Morocco","MAR.3_1","F<U+00E8>s - Boulemane",29
+1752,"MAR","Morocco","MAR.4_1","Gharb - Chrarda - B<U+00E9>ni Hssen",14
+1753,"MAR","Morocco","MAR.5_1","Grand Casablanca",2
+1754,"MAR","Morocco","MAR.6_1","Guelmim - Es-Semara",96
+1755,"MAR","Morocco","MAR.7_1","La<U+00E2>youne - Boujdour - Sakia El H",11
+1756,"MAR","Morocco","MAR.8_1","Marrakech - Tensift - Al Haouz",53
+1757,"MAR","Morocco","MAR.9_1","Mekn<U+00E8>s - Tafilalet",90
+1758,"MAR","Morocco","MAR.10_1","Oriental",95
+1759,"MAR","Morocco","MAR.11_1","Rabat - Sal<U+00E9> - Zemmour - Zaer",19
+1760,"MAR","Morocco","MAR.12_1","Souss - Massa - Dra<U+00E2>",114
+1761,"MAR","Morocco","MAR.13_1","Tadla - Azilal",25
+1762,"MAR","Morocco","MAR.14_1","Tanger - T<U+00E9>touan",26
+1763,"MAR","Morocco","MAR.15_1","Taza - Al Hoceima - Taounate",38
+1764,"MDA","Moldova","MDA.1_1","Anenii Noi",2
+1768,"MDA","Moldova","MDA.5_1","Briceni",2
+1769,"MDA","Moldova","MDA.6_1","Cahul",1
+1770,"MDA","Moldova","MDA.7_1","Calarasi",1
+1771,"MDA","Moldova","MDA.8_1","Cantemir",2
+1772,"MDA","Moldova","MDA.9_1","Causeni",3
+1773,"MDA","Moldova","MDA.10_1","Chi<U+015F>in<U+0103>u",1
+1774,"MDA","Moldova","MDA.11_1","Cimi<U+015F>lia",1
+1776,"MDA","Moldova","MDA.13_1","Donduseni",2
+1778,"MDA","Moldova","MDA.15_1","Dub<U+0103>sari",2
+1779,"MDA","Moldova","MDA.16_1","Edine<U+0163>",2
+1780,"MDA","Moldova","MDA.17_1","F<U+0103>le<U+015F>ti",2
+1781,"MDA","Moldova","MDA.18_1","Flore<U+015F>ti",3
+1782,"MDA","Moldova","MDA.19_1","G<U+0103>g<U+0103>uzia",5
+1783,"MDA","Moldova","MDA.20_1","Glodeni",1
+1784,"MDA","Moldova","MDA.21_1","H<U+00EE>ncesti",4
+1785,"MDA","Moldova","MDA.22_1","Ialoveni",1
+1787,"MDA","Moldova","MDA.24_1","Nisporeni",1
+1788,"MDA","Moldova","MDA.25_1","Ocni<U+0163>a",3
+1789,"MDA","Moldova","MDA.26_1","Orhei",2
+1790,"MDA","Moldova","MDA.27_1","Rezina",1
+1791,"MDA","Moldova","MDA.28_1","R<U+00EE><U+015F>cani",3
+1792,"MDA","Moldova","MDA.29_1","S<U+00EE>ngerei",2
+1793,"MDA","Moldova","MDA.30_1","<U+015E>old<U+0103>ne<U+015F>ti",1
+1794,"MDA","Moldova","MDA.31_1","Soroca",2
+1795,"MDA","Moldova","MDA.32_1","<U+015E>tefan Voda",3
+1796,"MDA","Moldova","MDA.33_1","Str<U+0103><U+015F>eni",2
+1797,"MDA","Moldova","MDA.34_1","Taraclia",1
+1798,"MDA","Moldova","MDA.35_1","Telene<U+015F>ti",1
+1799,"MDA","Moldova","MDA.36_1","Transnistria",8
+1800,"MDA","Moldova","MDA.37_1","Ungheni",4
+1801,"MDG","Madagascar","MDG.1_1","Antananarivo",88
+1802,"MDG","Madagascar","MDG.2_1","Antsiranana",88
+1803,"MDG","Madagascar","MDG.3_1","Fianarantsoa",151
+1804,"MDG","Madagascar","MDG.4_1","Mahajanga",233
+1805,"MDG","Madagascar","MDG.5_1","Toamasina",114
+1806,"MDG","Madagascar","MDG.6_1","Toliary",259
+1807,"MEX","M<U+00E9>xico","MEX.1_1","Aguascalientes",6
+1808,"MEX","M<U+00E9>xico","MEX.3_1","Baja California",153
+1809,"MEX","M<U+00E9>xico","MEX.2_1","Baja California Sur",162
+1810,"MEX","M<U+00E9>xico","MEX.4_1","Campeche",86
+1811,"MEX","M<U+00E9>xico","MEX.5_1","Chiapas",103
+1812,"MEX","M<U+00E9>xico","MEX.6_1","Chihuahua",366
+1813,"MEX","M<U+00E9>xico","MEX.7_1","Coahuila",222
+1814,"MEX","M<U+00E9>xico","MEX.8_1","Colima",17
+1815,"MEX","M<U+00E9>xico","MEX.9_1","Distrito Federal",2
+1816,"MEX","M<U+00E9>xico","MEX.10_1","Durango",178
+1817,"MEX","M<U+00E9>xico","MEX.11_1","Guanajuato",41
+1818,"MEX","M<U+00E9>xico","MEX.12_1","Guerrero",94
+1819,"MEX","M<U+00E9>xico","MEX.13_1","Hidalgo",31
+1820,"MEX","M<U+00E9>xico","MEX.14_1","Jalisco",117
+1821,"MEX","M<U+00E9>xico","MEX.15_1","M<U+00E9>xico",30
+1822,"MEX","M<U+00E9>xico","MEX.16_1","Michoac<U+00E1>n",88
+1823,"MEX","M<U+00E9>xico","MEX.17_1","Morelos",6
+1824,"MEX","M<U+00E9>xico","MEX.18_1","Nayarit",49
+1825,"MEX","M<U+00E9>xico","MEX.19_1","Nuevo Le<U+00F3>n",92
+1826,"MEX","M<U+00E9>xico","MEX.20_1","Oaxaca",150
+1827,"MEX","M<U+00E9>xico","MEX.21_1","Puebla",46
+1828,"MEX","M<U+00E9>xico","MEX.22_1","Quer<U+00E9>taro",18
+1829,"MEX","M<U+00E9>xico","MEX.23_1","Quintana Roo",84
+1830,"MEX","M<U+00E9>xico","MEX.24_1","San Luis Potos<U+00ED>",87
+1831,"MEX","M<U+00E9>xico","MEX.25_1","Sinaloa",92
+1832,"MEX","M<U+00E9>xico","MEX.26_1","Sonora",295
+1833,"MEX","M<U+00E9>xico","MEX.27_1","Tabasco",37
+1834,"MEX","M<U+00E9>xico","MEX.28_1","Tamaulipas",118
+1835,"MEX","M<U+00E9>xico","MEX.29_1","Tlaxcala",4
+1836,"MEX","M<U+00E9>xico","MEX.30_1","Veracruz",112
+1837,"MEX","M<U+00E9>xico","MEX.31_1","Yucat<U+00E1>n",66
+1838,"MEX","M<U+00E9>xico","MEX.32_1","Zacatecas",106
+1839,"MHL","Marshall Islands","MHL.1_1","Ailinglaplap",2
+1840,"MHL","Marshall Islands","MHL.2_1","Ailuk",2
+1841,"MHL","Marshall Islands","MHL.3_1","Arno",5
+1842,"MHL","Marshall Islands","MHL.4_1","Aur",1
+1843,"MHL","Marshall Islands","MHL.5_1","Ebon",2
+1844,"MHL","Marshall Islands","MHL.6_1","Enewetok",5
+1845,"MHL","Marshall Islands","MHL.7_1","Jabat",2
+1846,"MHL","Marshall Islands","MHL.8_1","Jaluit",5
+1847,"MHL","Marshall Islands","MHL.9_1","Kwajalein",10
+1848,"MHL","Marshall Islands","MHL.10_1","Lae",2
+1849,"MHL","Marshall Islands","MHL.11_1","Lib",1
+1850,"MHL","Marshall Islands","MHL.12_1","Likiep",5
+1851,"MHL","Marshall Islands","MHL.13_1","Majuro",2
+1852,"MHL","Marshall Islands","MHL.14_1","Maloelap",5
+1853,"MHL","Marshall Islands","MHL.15_1","Mejit",1
+1854,"MHL","Marshall Islands","MHL.16_1","Mili",5
+1855,"MHL","Marshall Islands","MHL.17_1","Namorik",1
+1856,"MHL","Marshall Islands","MHL.18_1","Namu",4
+1857,"MHL","Marshall Islands","MHL.20_1","Ujae",2
+1858,"MHL","Marshall Islands","MHL.21_1","Utirik",7
+1859,"MHL","Marshall Islands","MHL.22_1","Wotho",2
+1860,"MHL","Marshall Islands","MHL.23_1","Wotje",6
+1861,"MHL","Marshall Islands","MHL.19_1","(unnamed MHL.19_1)",12
+1864,"MKD","North Macedonia","MKD.3_1","Berovo",1
+1865,"MKD","North Macedonia","MKD.4_1","Bitola",1
+1872,"MKD","North Macedonia","MKD.11_1","<U+010C>a<U+0161>ka",2
+1876,"MKD","North Macedonia","MKD.15_1","<U+010C>u<U+010D>er Sandevo",1
+1878,"MKD","North Macedonia","MKD.17_1","Debarca",1
+1880,"MKD","North Macedonia","MKD.19_1","Demir Hisar",1
+1882,"MKD","North Macedonia","MKD.21_1","Dolneni",1
+1887,"MKD","North Macedonia","MKD.27_1","Gradsko",1
+1889,"MKD","North Macedonia","MKD.29_1","Jegunovtse",1
+1892,"MKD","North Macedonia","MKD.32_1","Kavadartsi",1
+1893,"MKD","North Macedonia","MKD.33_1","Ki<U+010D>evo",1
+1895,"MKD","North Macedonia","MKD.35_1","Ko<U+010D>ani",1
+1898,"MKD","North Macedonia","MKD.38_1","Kriva Palanka",1
+1903,"MKD","North Macedonia","MKD.43_1","Lipkovo",1
+1906,"MKD","North Macedonia","MKD.46_1","Makedonski Brod",1
+1907,"MKD","North Macedonia","MKD.47_1","Mavrovo and Rostu<U+0161>a",1
+1908,"MKD","North Macedonia","MKD.48_1","Mogila",1
+1909,"MKD","North Macedonia","MKD.49_1","Negotino",1
+1910,"MKD","North Macedonia","MKD.50_1","Novatsi",1
+1911,"MKD","North Macedonia","MKD.51_1","Novo Selo",1
+1912,"MKD","North Macedonia","MKD.52_1","Ohrid",1
+1916,"MKD","North Macedonia","MKD.57_1","Prilep",2
+1917,"MKD","North Macedonia","MKD.58_1","Probi<U+0161>tip",1
+1918,"MKD","North Macedonia","MKD.59_1","Radovi<U+0161>",1
+1919,"MKD","North Macedonia","MKD.60_1","Rankovce",1
+1920,"MKD","North Macedonia","MKD.61_1","Resen",1
+1925,"MKD","North Macedonia","MKD.66_1","Staro Nagori<U+010D>ane",1
+1926,"MKD","North Macedonia","MKD.67_1","<U+0160>tip",1
+1927,"MKD","North Macedonia","MKD.68_1","Struga",2
+1928,"MKD","North Macedonia","MKD.69_1","Strumitsa",1
+1929,"MKD","North Macedonia","MKD.70_1","Studeni<U+010D>ani",1
+1931,"MKD","North Macedonia","MKD.72_1","Sveti Nikole",1
+1934,"MKD","North Macedonia","MKD.75_1","Valandovo",1
+1935,"MKD","North Macedonia","MKD.76_1","Vasilevo",1
+1938,"MKD","North Macedonia","MKD.79_1","Vinitsa",1
+1939,"MKD","North Macedonia","MKD.81_1","Vrap<U+010D>i<U+0161>te",1
+1940,"MKD","North Macedonia","MKD.83_1","Zelenikovo",1
+1941,"MKD","North Macedonia","MKD.84_1","<U+017D>elino",1
+1944,"MLI","Mali","MLI.2_1","Gao",242
+1945,"MLI","Mali","MLI.3_1","Kayes",164
+1946,"MLI","Mali","MLI.4_1","Kidal",200
+1947,"MLI","Mali","MLI.5_1","Koulikoro",120
+1948,"MLI","Mali","MLI.6_1","Mopti",109
+1949,"MLI","Mali","MLI.7_1","S<U+00E9>gou",82
+1950,"MLI","Mali","MLI.8_1","Sikasso",93
+1951,"MLI","Mali","MLI.9_1","Timbuktu",696
+1953,"MLT","Malta","MLT.2_1","G<U+0127>awdex",2
+1955,"MLT","Malta","MLT.4_1","Tramuntana",1
+1956,"MLT","Malta","MLT.5_1","Xlokk",1
+1957,"MMR","Myanmar","MMR.1_1","Ayeyarwady",63
+1958,"MMR","Myanmar","MMR.2_1","Bago",54
+1959,"MMR","Myanmar","MMR.3_1","Chin",46
+1960,"MMR","Myanmar","MMR.4_1","Kachin",128
+1961,"MMR","Myanmar","MMR.5_1","Kayah",15
+1962,"MMR","Myanmar","MMR.6_1","Kayin",39
+1963,"MMR","Myanmar","MMR.7_1","Magway",62
+1964,"MMR","Myanmar","MMR.8_1","Mandalay",50
+1965,"MMR","Myanmar","MMR.9_1","Mon",24
+1967,"MMR","Myanmar","MMR.11_1","Rakhine",70
+1968,"MMR","Myanmar","MMR.12_1","Sagaing",132
+1969,"MMR","Myanmar","MMR.13_1","Shan",223
+1970,"MMR","Myanmar","MMR.14_1","Tanintharyi",114
+1971,"MMR","Myanmar","MMR.15_1","Yangon",17
+1973,"MNE","Montenegro","MNE.2_1","Bar",1
+1974,"MNE","Montenegro","MNE.3_1","Berane",1
+1975,"MNE","Montenegro","MNE.4_1","Bijelo Polje",1
+1976,"MNE","Montenegro","MNE.5_1","Budva",1
+1977,"MNE","Montenegro","MNE.6_1","Cetinje",3
+1978,"MNE","Montenegro","MNE.7_1","Danilovgrad",1
+1979,"MNE","Montenegro","MNE.8_1","Herceg Novi",2
+1980,"MNE","Montenegro","MNE.9_1","Kola<U+0161>in",1
+1982,"MNE","Montenegro","MNE.11_1","Mojkovac",1
+1983,"MNE","Montenegro","MNE.12_1","Nik<U+0161>ic",3
+1984,"MNE","Montenegro","MNE.13_1","Plav",1
+1985,"MNE","Montenegro","MNE.14_1","Pljevlja",3
+1986,"MNE","Montenegro","MNE.15_1","Plu<U+017E>ine",1
+1987,"MNE","Montenegro","MNE.16_1","Podgorica",3
+1988,"MNE","Montenegro","MNE.17_1","Ro<U+017E>aje",1
+1989,"MNE","Montenegro","MNE.18_1","<U+0160>avnik",1
+1991,"MNE","Montenegro","MNE.20_1","Ulcinj",2
+1992,"MNE","Montenegro","MNE.21_1","<U+017D>abljak",1
+1993,"MNG","Mongolia","MNG.1_1","Arhangay",106
+1994,"MNG","Mongolia","MNG.2_1","Bayan-<U+00D6>lgiy",92
+1995,"MNG","Mongolia","MNG.3_1","Bayanhongor",217
+1996,"MNG","Mongolia","MNG.4_1","Bulgan",98
+1997,"MNG","Mongolia","MNG.5_1","Darhan-Uul",7
+1998,"MNG","Mongolia","MNG.6_1","Dornod",244
+1999,"MNG","Mongolia","MNG.7_1","Dornogovi",196
+2000,"MNG","Mongolia","MNG.8_1","Dundgovi",135
+2001,"MNG","Mongolia","MNG.9_1","Dzavhan",158
+2002,"MNG","Mongolia","MNG.10_1","Govi-Altay",262
+2003,"MNG","Mongolia","MNG.11_1","Govis<U+00FC>mber",9
+2004,"MNG","Mongolia","MNG.12_1","Hentiy",157
+2005,"MNG","Mongolia","MNG.13_1","Hovd",145
+2006,"MNG","Mongolia","MNG.14_1","H<U+00F6>vsg<U+00F6>l",205
+2007,"MNG","Mongolia","MNG.15_1","<U+00D6>mn<U+00F6>govi",289
+2008,"MNG","Mongolia","MNG.16_1","Orhon",1
+2009,"MNG","Mongolia","MNG.17_1","<U+00D6>v<U+00F6>rhangay",116
+2010,"MNG","Mongolia","MNG.18_1","Selenge",88
+2011,"MNG","Mongolia","MNG.19_1","S<U+00FC>hbaatar",150
+2012,"MNG","Mongolia","MNG.20_1","T<U+00F6>v",136
+2013,"MNG","Mongolia","MNG.21_1","Ulaanbaatar",9
+2014,"MNG","Mongolia","MNG.22_1","Uvs",137
+2015,"MNP","Northern Mariana Islands","MNP.1_1","Northern Islands",12
+2016,"MNP","Northern Mariana Islands","MNP.2_1","Rota",2
+2017,"MNP","Northern Mariana Islands","MNP.3_1","Saipan",2
+2018,"MNP","Northern Mariana Islands","MNP.4_1","Tinian",2
+2019,"MOZ","Mozambique","MOZ.1_1","Cabo Delgado",115
+2020,"MOZ","Mozambique","MOZ.2_1","Gaza",110
+2021,"MOZ","Mozambique","MOZ.3_1","Inhambane",110
+2022,"MOZ","Mozambique","MOZ.4_1","Manica",91
+2023,"MOZ","Mozambique","MOZ.6_1","Maputo",34
+2024,"MOZ","Mozambique","MOZ.5_1","Maputo City",3
+2025,"MOZ","Mozambique","MOZ.7_1","Nampula",120
+2026,"MOZ","Mozambique","MOZ.8_1","Nassa",175
+2027,"MOZ","Mozambique","MOZ.9_1","Sofala",101
+2028,"MOZ","Mozambique","MOZ.10_1","Tete",131
+2029,"MOZ","Mozambique","MOZ.11_1","Zambezia",153
+2030,"MRT","Mauritania","MRT.1_1","Adrar",308
+2031,"MRT","Mauritania","MRT.2_1","Assaba",50
+2032,"MRT","Mauritania","MRT.3_1","Brakna",44
+2033,"MRT","Mauritania","MRT.4_1","Dakhlet Nouadhibou",26
+2034,"MRT","Mauritania","MRT.5_1","Gorgol",18
+2035,"MRT","Mauritania","MRT.6_1","Guidimaka",17
+2036,"MRT","Mauritania","MRT.7_1","Hodh ech Chargui",257
+2037,"MRT","Mauritania","MRT.8_1","Hodh el Gharbi",64
+2038,"MRT","Mauritania","MRT.9_1","Inchiri",65
+2039,"MRT","Mauritania","MRT.10_1","Nouakchott",3
+2040,"MRT","Mauritania","MRT.11_1","Tagant",131
+2041,"MRT","Mauritania","MRT.12_1","Tiris Zemmour",372
+2042,"MRT","Mauritania","MRT.13_1","Trarza",102
+2045,"MSR","Montserrat","MSR.3_1","Saint Peter",2
+2047,"MTQ","Martinique","MTQ.2_1","Le Marin",1
+2048,"MTQ","Martinique","MTQ.3_1","Le Trinit<U+00E9>",3
+2049,"MTQ","Martinique","MTQ.4_1","Saint-Pierre",2
+2050,"MUS","Mauritius","MUS.1_1","Agalega Islands",1
+2051,"MUS","Mauritius","MUS.2_1","Black River",1
+2052,"MUS","Mauritius","MUS.3_1","Flacq",2
+2053,"MUS","Mauritius","MUS.4_1","Grand Port",1
+2055,"MUS","Mauritius","MUS.6_1","Pamplemousses",1
+2057,"MUS","Mauritius","MUS.8_1","Port Louis",1
+2058,"MUS","Mauritius","MUS.9_1","Rivi<U+00E8>re du Rempart",2
+2059,"MUS","Mauritius","MUS.10_1","Rodriguez",3
+2060,"MUS","Mauritius","MUS.11_1","Saint Brandon",5
+2061,"MUS","Mauritius","MUS.12_1","Savanne",2
+2062,"MWI","Malawi","MWI.1_1","Balaka",3
+2063,"MWI","Malawi","MWI.2_1","Blantyre",2
+2064,"MWI","Malawi","MWI.3_1","Chikwawa",7
+2065,"MWI","Malawi","MWI.4_1","Chiradzulu",1
+2066,"MWI","Malawi","MWI.5_1","Chitipa",4
+2067,"MWI","Malawi","MWI.6_1","Dedza",7
+2068,"MWI","Malawi","MWI.7_1","Dowa",3
+2069,"MWI","Malawi","MWI.8_1","Karonga",11
+2070,"MWI","Malawi","MWI.9_1","Kasungu",10
+2072,"MWI","Malawi","MWI.11_1","Lilongwe",9
+2073,"MWI","Malawi","MWI.12_1","Machinga",5
+2074,"MWI","Malawi","MWI.13_1","Mangochi",12
+2075,"MWI","Malawi","MWI.14_1","Mchinji",4
+2076,"MWI","Malawi","MWI.15_1","Mulanje",2
+2078,"MWI","Malawi","MWI.17_1","Mzimba",14
+2079,"MWI","Malawi","MWI.18_1","Neno",3
+2080,"MWI","Malawi","MWI.19_1","Nkhata Bay",17
+2081,"MWI","Malawi","MWI.20_1","Nkhotakota",10
+2082,"MWI","Malawi","MWI.21_1","Nsanje",3
+2083,"MWI","Malawi","MWI.22_1","Ntcheu",4
+2084,"MWI","Malawi","MWI.23_1","Ntchisi",2
+2085,"MWI","Malawi","MWI.24_1","Phalombe",2
+2086,"MWI","Malawi","MWI.25_1","Rumphi",11
+2087,"MWI","Malawi","MWI.26_1","Salima",5
+2088,"MWI","Malawi","MWI.27_1","Thyolo",2
+2089,"MWI","Malawi","MWI.28_1","Zomba",4
+2090,"MYS","Malaysia","MYS.1_1","Johor",42
+2091,"MYS","Malaysia","MYS.2_1","Kedah",17
+2092,"MYS","Malaysia","MYS.3_1","Kelantan",20
+2093,"MYS","Malaysia","MYS.4_1","Kuala Lumpur",1
+2094,"MYS","Malaysia","MYS.5_1","Labuan",2
+2095,"MYS","Malaysia","MYS.6_1","Melaka",4
+2096,"MYS","Malaysia","MYS.7_1","Negeri Sembilan",9
+2097,"MYS","Malaysia","MYS.8_1","Pahang",50
+2098,"MYS","Malaysia","MYS.9_1","Perak",33
+2099,"MYS","Malaysia","MYS.10_1","Perlis",1
+2100,"MYS","Malaysia","MYS.11_1","Pulau Pinang",4
+2102,"MYS","Malaysia","MYS.13_1","Sabah",138
+2103,"MYS","Malaysia","MYS.14_1","Sarawak",182
+2104,"MYS","Malaysia","MYS.15_1","Selangor",16
+2105,"MYS","Malaysia","MYS.16_1","Trengganu",24
+2113,"MYT","Mayotte","MYT.8_1","Dzaoudzi",1
+2114,"MYT","Mayotte","MYT.9_1","Kani-Keli",1
+2118,"MYT","Mayotte","MYT.13_1","Mtsamboro",1
+2120,"MYT","Mayotte","MYT.15_1","Pamandzi",1
+2121,"MYT","Mayotte","MYT.16_1","Sada",1
+2123,"NAM","Namibia","NAM.1_1","!Karas",245
+2124,"NAM","Namibia","NAM.2_1","Erongo",96
+2125,"NAM","Namibia","NAM.3_1","Hardap",161
+2126,"NAM","Namibia","NAM.4_1","Kavango",66
+2127,"NAM","Namibia","NAM.5_1","Khomas",54
+2128,"NAM","Namibia","NAM.6_1","Kunene",170
+2129,"NAM","Namibia","NAM.7_1","Ohangwena",10
+2130,"NAM","Namibia","NAM.8_1","Omaheke",120
+2131,"NAM","Namibia","NAM.9_1","Omusati",35
+2132,"NAM","Namibia","NAM.10_1","Oshana",11
+2133,"NAM","Namibia","NAM.11_1","Oshikoto",54
+2134,"NAM","Namibia","NAM.12_1","Otjozondjupa",138
+2135,"NAM","Namibia","NAM.13_1","Zambezi",19
+2136,"NCL","New Caledonia","NCL.1_1","<U+00CE>les Loyaut<U+00E9>",22
+2137,"NCL","New Caledonia","NCL.2_1","Nord",40
+2138,"NCL","New Caledonia","NCL.3_1","Sud",31
+2139,"NER","Niger","NER.1_1","Agadez",856
+2140,"NER","Niger","NER.2_1","Diffa",196
+2141,"NER","Niger","NER.3_1","Dosso",42
+2142,"NER","Niger","NER.4_1","Maradi",56
+2144,"NER","Niger","NER.6_1","Tahoua",145
+2145,"NER","Niger","NER.7_1","Tillab<U+00E9>ry",118
+2146,"NER","Niger","NER.8_1","Zinder",200
+2147,"NGA","Nigeria","NGA.1_1","Abia",6
+2148,"NGA","Nigeria","NGA.2_1","Adamawa",44
+2149,"NGA","Nigeria","NGA.3_1","Akwa Ibom",10
+2150,"NGA","Nigeria","NGA.4_1","Anambra",5
+2151,"NGA","Nigeria","NGA.5_1","Bauchi",65
+2152,"NGA","Nigeria","NGA.6_1","Bayelsa",17
+2153,"NGA","Nigeria","NGA.7_1","Benue",42
+2154,"NGA","Nigeria","NGA.8_1","Borno",97
+2155,"NGA","Nigeria","NGA.9_1","Cross River",28
+2156,"NGA","Nigeria","NGA.10_1","Delta",26
+2157,"NGA","Nigeria","NGA.11_1","Ebonyi",8
+2158,"NGA","Nigeria","NGA.12_1","Edo",27
+2159,"NGA","Nigeria","NGA.13_1","Ekiti",6
+2160,"NGA","Nigeria","NGA.14_1","Enugu",10
+2161,"NGA","Nigeria","NGA.15_1","Federal Capital Territory",8
+2162,"NGA","Nigeria","NGA.16_1","Gombe",25
+2163,"NGA","Nigeria","NGA.17_1","Imo",6
+2164,"NGA","Nigeria","NGA.18_1","Jigawa",29
+2165,"NGA","Nigeria","NGA.19_1","Kaduna",59
+2166,"NGA","Nigeria","NGA.20_1","Kano",29
+2167,"NGA","Nigeria","NGA.21_1","Katsina",29
+2168,"NGA","Nigeria","NGA.22_1","Kebbi",48
+2169,"NGA","Nigeria","NGA.23_1","Kogi",37
+2170,"NGA","Nigeria","NGA.24_1","Kwara",47
+2171,"NGA","Nigeria","NGA.25_1","Lagos",7
+2172,"NGA","Nigeria","NGA.26_1","Nasarawa",35
+2173,"NGA","Nigeria","NGA.27_1","Niger",94
+2174,"NGA","Nigeria","NGA.28_1","Ogun",24
+2175,"NGA","Nigeria","NGA.29_1","Ondo",21
+2176,"NGA","Nigeria","NGA.30_1","Osun",11
+2177,"NGA","Nigeria","NGA.31_1","Oyo",35
+2178,"NGA","Nigeria","NGA.32_1","Plateau",35
+2179,"NGA","Nigeria","NGA.33_1","Rivers",15
+2180,"NGA","Nigeria","NGA.34_1","Sokoto",43
+2181,"NGA","Nigeria","NGA.35_1","Taraba",78
+2182,"NGA","Nigeria","NGA.36_1","Yobe",58
+2183,"NGA","Nigeria","NGA.37_1","Zamfara",46
+2184,"NIC","Nicaragua","NIC.1_1","Atl<U+00E1>ntico Norte",56
+2185,"NIC","Nicaragua","NIC.2_1","Atl<U+00E1>ntico Sur",45
+2186,"NIC","Nicaragua","NIC.3_1","Boaco",6
+2187,"NIC","Nicaragua","NIC.4_1","Carazo",1
+2188,"NIC","Nicaragua","NIC.5_1","Chinandega",7
+2189,"NIC","Nicaragua","NIC.6_1","Chontales",9
+2190,"NIC","Nicaragua","NIC.7_1","Estel<U+00ED>",4
+2191,"NIC","Nicaragua","NIC.8_1","Granada",1
+2192,"NIC","Nicaragua","NIC.9_1","Jinotega",14
+2193,"NIC","Nicaragua","NIC.10_1","Lago Nicaragua",10
+2194,"NIC","Nicaragua","NIC.11_1","Le<U+00F3>n",9
+2195,"NIC","Nicaragua","NIC.12_1","Madriz",1
+2196,"NIC","Nicaragua","NIC.13_1","Managua",7
+2197,"NIC","Nicaragua","NIC.14_1","Masaya",1
+2198,"NIC","Nicaragua","NIC.15_1","Matagalpa",11
+2199,"NIC","Nicaragua","NIC.16_1","Nueva Segovia",5
+2200,"NIC","Nicaragua","NIC.17_1","R<U+00ED>o San Juan",8
+2201,"NIC","Nicaragua","NIC.18_1","Rivas",4
+2202,"NLD","Netherlands","NLD.1_1","Drenthe",4
+2203,"NLD","Netherlands","NLD.2_1","Flevoland",3
+2204,"NLD","Netherlands","NLD.3_1","Frysl<U+00E2>n",14
+2205,"NLD","Netherlands","NLD.4_1","Gelderland",12
+2206,"NLD","Netherlands","NLD.5_1","Groningen",8
+2207,"NLD","Netherlands","NLD.6_1","IJsselmeer",7
+2208,"NLD","Netherlands","NLD.7_1","Limburg",3
+2209,"NLD","Netherlands","NLD.8_1","Noord-Brabant",12
+2210,"NLD","Netherlands","NLD.9_1","Noord-Holland",8
+2211,"NLD","Netherlands","NLD.10_1","Overijssel",7
+2212,"NLD","Netherlands","NLD.11_1","Utrecht",3
+2213,"NLD","Netherlands","NLD.12_1","Zeeland",5
+2214,"NLD","Netherlands","NLD.13_1","Zeeuwse meren",3
+2215,"NLD","Netherlands","NLD.14_1","(unnamed NLD.14_1)",9
+2216,"NOR","Norway","NOR.1_1","Akershus",11
+2217,"NOR","Norway","NOR.2_1","<U+00C3>stfold",10
+2218,"NOR","Norway","NOR.3_1","Aust-Agder",30
+2219,"NOR","Norway","NOR.4_1","Buskerud",35
+2220,"NOR","Norway","NOR.5_1","Finnmark",245
+2221,"NOR","Norway","NOR.6_1","Hedmark",72
+2222,"NOR","Norway","NOR.7_1","Hordaland",54
+2223,"NOR","Norway","NOR.8_1","M<U+00F8>re og Romsdal",62
+2224,"NOR","Norway","NOR.9_1","Nord-Tr<U+00F8>ndelag",80
+2225,"NOR","Norway","NOR.10_1","Nordland",208
+2226,"NOR","Norway","NOR.11_1","Oppland",69
+2227,"NOR","Norway","NOR.12_1","Oslo",3
+2228,"NOR","Norway","NOR.13_1","Rogaland",34
+2229,"NOR","Norway","NOR.14_1","Sogn og Fjordane",65
+2230,"NOR","Norway","NOR.15_1","S<U+00F8>r-Tr<U+00F8>ndelag",70
+2231,"NOR","Norway","NOR.16_1","Telemark",40
+2232,"NOR","Norway","NOR.17_1","Troms",140
+2233,"NOR","Norway","NOR.18_1","Vest-Agder",25
+2234,"NOR","Norway","NOR.19_1","Vestfold",12
+2235,"NPL","Nepal","NPL.1_1","Central",39
+2236,"NPL","Nepal","NPL.2_1","East",40
+2237,"NPL","Nepal","NPL.3_1","Far-Western",28
+2238,"NPL","Nepal","NPL.4_1","Mid-Western",65
+2239,"NPL","Nepal","NPL.5_1","West",44
+2253,"NRU","Nauru","NRU.14_1","Yaren",1
+2254,"NZL","New Zealand","NZL.1_1","Auckland",21
+2255,"NZL","New Zealand","NZL.2_1","Bay of Plenty",30
+2256,"NZL","New Zealand","NZL.3_1","Canterbury",102
+2257,"NZL","New Zealand","NZL.4_1","Chatham Islands",13
+2258,"NZL","New Zealand","NZL.5_1","Gisborne",20
+2259,"NZL","New Zealand","NZL.6_1","Hawke's Bay",31
+2260,"NZL","New Zealand","NZL.7_1","Manawatu-Wanganui",39
+2261,"NZL","New Zealand","NZL.8_1","Marlborough",32
+2262,"NZL","New Zealand","NZL.9_1","Nelson",1
+2263,"NZL","New Zealand","NZL.10_1","Northern Islands",6
+2264,"NZL","New Zealand","NZL.11_1","Northland",42
+2265,"NZL","New Zealand","NZL.12_1","Otago",58
+2266,"NZL","New Zealand","NZL.13_1","Southern Islands",16
+2267,"NZL","New Zealand","NZL.14_1","Southland",90
+2268,"NZL","New Zealand","NZL.15_1","Taranaki",20
+2269,"NZL","New Zealand","NZL.16_1","Tasman",23
+2270,"NZL","New Zealand","NZL.17_1","Waikato",57
+2271,"NZL","New Zealand","NZL.18_1","Wellington",24
+2272,"NZL","New Zealand","NZL.19_1","West Coast",56
+2273,"OMN","Oman","OMN.1_1","Ad Dakhliyah",44
+2274,"OMN","Oman","OMN.2_1","Al Batinah North",15
+2275,"OMN","Oman","OMN.3_1","Al Batinah South",9
+2276,"OMN","Oman","OMN.4_1","Al Buraymi",8
+2277,"OMN","Oman","OMN.5_1","Al Dhahira",39
+2278,"OMN","Oman","OMN.6_1","Al Wusta",103
+2279,"OMN","Oman","OMN.7_1","Ash Sharqiyah North",36
+2280,"OMN","Oman","OMN.8_1","Ash Sharqiyah South",18
+2281,"OMN","Oman","OMN.9_1","Dhofar",201
+2282,"OMN","Oman","OMN.10_1","Musandam",11
+2283,"OMN","Oman","OMN.11_1","Muscat",12
+2284,"Z06","Pakistan","Z06.1_1","Azad Kashmir",22
+2285,"PAK","Pakistan","PAK.2_1","Balochistan",529
+2286,"PAK","Pakistan","PAK.3_1","Federally Administered Tribal Ar",37
+2287,"Z06","Pakistan","Z06.6_1","Gilgit-Baltistan",111
+2288,"PAK","Pakistan","PAK.4_1","Islamabad",2
+2289,"PAK","Pakistan","PAK.5_1","Khyber-Pakhtunkhwa",119
+2290,"PAK","Pakistan","PAK.7_1","Punjab",306
+2291,"PAK","Pakistan","PAK.8_1","Sindh",208
+2292,"PAN","Panama","PAN.1_1","Bocas del Toro",9
+2293,"PAN","Panama","PAN.2_1","Chiriqu<U+00ED>",14
+2294,"PAN","Panama","PAN.3_1","Cocl<U+00E9>",8
+2295,"PAN","Panama","PAN.4_1","Col<U+00F3>n",8
+2296,"PAN","Panama","PAN.5_1","Dari<U+00E9>n",20
+2297,"PAN","Panama","PAN.6_1","Ember<U+00E1>",7
+2298,"PAN","Panama","PAN.7_1","Herrera",2
+2299,"PAN","Panama","PAN.8_1","Kuna Yala",10
+2300,"PAN","Panama","PAN.9_1","Los Santos",15
+2301,"PAN","Panama","PAN.10_1","Ng<U+00F6>be Bugl<U+00E9>",14
+2302,"PAN","Panama","PAN.12_1","Panam<U+00E1>",25
+2303,"PAN","Panama","PAN.11_1","Panam<U+00E1> Oeste",7
+2304,"PAN","Panama","PAN.13_1","Veraguas",30
+2305,"PER","Peru","PER.1_1","Amazonas",52
+2306,"PER","Peru","PER.2_1","Ancash",52
+2307,"PER","Peru","PER.3_1","Apur<U+00ED>mac",28
+2308,"PER","Peru","PER.4_1","Arequipa",94
+2309,"PER","Peru","PER.5_1","Ayacucho",60
+2310,"PER","Peru","PER.6_1","Cajamarca",43
+2311,"PER","Peru","PER.7_1","Callao",2
+2312,"PER","Peru","PER.8_1","Cusco",99
+2313,"PER","Peru","PER.9_1","Huancavelica",29
+2314,"PER","Peru","PER.10_1","Hu<U+00E1>nuco",47
+2315,"PER","Peru","PER.11_1","Ica",37
+2316,"PER","Peru","PER.12_1","Jun<U+00ED>n",60
+2317,"PER","Peru","PER.13_1","La Libertad",38
+2318,"PER","Peru","PER.14_1","Lambayeque",22
+2319,"PER","Peru","PER.16_1","Lima",53
+2320,"PER","Peru","PER.15_1","Lima Province",5
+2321,"PER","Peru","PER.17_1","Loreto",493
+2322,"PER","Peru","PER.18_1","Madre de Dios",106
+2323,"PER","Peru","PER.19_1","Moquegua",21
+2324,"PER","Peru","PER.20_1","Pasco",32
+2325,"PER","Peru","PER.21_1","Piura",54
+2326,"PER","Peru","PER.22_1","Puno",100
+2327,"PER","Peru","PER.23_1","San Mart<U+00ED>n",67
+2328,"PER","Peru","PER.24_1","Tacna",27
+2329,"PER","Peru","PER.25_1","Tumbes",10
+2330,"PER","Peru","PER.26_1","Ucayali",136
+2331,"PHL","Philippines","PHL.1_1","Abra",5
+2332,"PHL","Philippines","PHL.2_1","Agusan del Norte",5
+2333,"PHL","Philippines","PHL.3_1","Agusan del Sur",11
+2334,"PHL","Philippines","PHL.4_1","Aklan",2
+2335,"PHL","Philippines","PHL.5_1","Albay",6
+2336,"PHL","Philippines","PHL.6_1","Antique",16
+2337,"PHL","Philippines","PHL.7_1","Apayao",4
+2338,"PHL","Philippines","PHL.8_1","Aurora",7
+2339,"PHL","Philippines","PHL.9_1","Basilan",9
+2340,"PHL","Philippines","PHL.10_1","Bataan",4
+2341,"PHL","Philippines","PHL.11_1","Batanes",5
+2342,"PHL","Philippines","PHL.12_1","Batangas",8
+2343,"PHL","Philippines","PHL.13_1","Benguet",3
+2344,"PHL","Philippines","PHL.14_1","Biliran",4
+2345,"PHL","Philippines","PHL.15_1","Bohol",11
+2346,"PHL","Philippines","PHL.16_1","Bukidnon",12
+2347,"PHL","Philippines","PHL.17_1","Bulacan",3
+2348,"PHL","Philippines","PHL.18_1","Cagayan",32
+2349,"PHL","Philippines","PHL.19_1","Camarines Norte",8
+2350,"PHL","Philippines","PHL.20_1","Camarines Sur",16
+2351,"PHL","Philippines","PHL.21_1","Camiguin",3
+2352,"PHL","Philippines","PHL.22_1","Capiz",4
+2353,"PHL","Philippines","PHL.23_1","Catanduanes",6
+2354,"PHL","Philippines","PHL.24_1","Cavite",3
+2355,"PHL","Philippines","PHL.25_1","Cebu",20
+2356,"PHL","Philippines","PHL.26_1","Compostela Valley",5
+2357,"PHL","Philippines","PHL.27_1","Davao del Norte",5
+2358,"PHL","Philippines","PHL.28_1","Davao del Sur",14
+2359,"PHL","Philippines","PHL.29_1","Davao Oriental",14
+2360,"PHL","Philippines","PHL.30_1","Dinagat Islands",2
+2361,"PHL","Philippines","PHL.31_1","Eastern Samar",15
+2362,"PHL","Philippines","PHL.32_1","Guimaras",3
+2363,"PHL","Philippines","PHL.33_1","Ifugao",2
+2364,"PHL","Philippines","PHL.34_1","Ilocos Norte",8
+2365,"PHL","Philippines","PHL.35_1","Ilocos Sur",6
+2366,"PHL","Philippines","PHL.36_1","Iloilo",14
+2367,"PHL","Philippines","PHL.37_1","Isabela",17
+2368,"PHL","Philippines","PHL.38_1","Kalinga",4
+2369,"PHL","Philippines","PHL.39_1","La Union",3
+2370,"PHL","Philippines","PHL.40_1","Laguna",3
+2371,"PHL","Philippines","PHL.41_1","Lanao del Norte",3
+2372,"PHL","Philippines","PHL.42_1","Lanao del Sur",7
+2373,"PHL","Philippines","PHL.43_1","Leyte",16
+2374,"PHL","Philippines","PHL.44_1","Maguindanao",8
+2375,"PHL","Philippines","PHL.45_1","Marinduque",4
+2376,"PHL","Philippines","PHL.46_1","Masbate",21
+2377,"PHL","Philippines","PHL.47_1","Metropolitan Manila",1
+2378,"PHL","Philippines","PHL.48_1","Misamis Occidental",6
+2379,"PHL","Philippines","PHL.49_1","Misamis Oriental",9
+2380,"PHL","Philippines","PHL.50_1","Mountain Province",4
+2381,"PHL","Philippines","PHL.51_1","Negros Occidental",17
+2382,"PHL","Philippines","PHL.52_1","Negros Oriental",12
+2383,"PHL","Philippines","PHL.53_1","North Cotabato",8
+2384,"PHL","Philippines","PHL.54_1","Northern Samar",12
+2385,"PHL","Philippines","PHL.55_1","Nueva Ecija",5
+2386,"PHL","Philippines","PHL.56_1","Nueva Vizcaya",8
+2387,"PHL","Philippines","PHL.57_1","Occidental Mindoro",16
+2388,"PHL","Philippines","PHL.58_1","Oriental Mindoro",13
+2389,"PHL","Philippines","PHL.59_1","Palawan",86
+2390,"PHL","Philippines","PHL.60_1","Pampanga",4
+2391,"PHL","Philippines","PHL.61_1","Pangasinan",11
+2392,"PHL","Philippines","PHL.62_1","Quezon",30
+2393,"PHL","Philippines","PHL.63_1","Quirino",5
+2394,"PHL","Philippines","PHL.64_1","Rizal",2
+2395,"PHL","Philippines","PHL.65_1","Romblon",14
+2396,"PHL","Philippines","PHL.66_1","Samar",11
+2397,"PHL","Philippines","PHL.67_1","Sarangani",7
+2398,"PHL","Philippines","PHL.68_1","Siquijor",3
+2399,"PHL","Philippines","PHL.69_1","Sorsogon",7
+2400,"PHL","Philippines","PHL.70_1","South Cotabato",5
+2401,"PHL","Philippines","PHL.71_1","Southern Leyte",6
+2402,"PHL","Philippines","PHL.72_1","Sultan Kudarat",10
+2403,"PHL","Philippines","PHL.73_1","Sulu",26
+2404,"PHL","Philippines","PHL.74_1","Surigao del Norte",10
+2405,"PHL","Philippines","PHL.75_1","Surigao del Sur",13
+2406,"PHL","Philippines","PHL.76_1","Tarlac",4
+2407,"PHL","Philippines","PHL.77_1","Tawi-Tawi",26
+2408,"PHL","Philippines","PHL.78_1","Zambales",8
+2409,"PHL","Philippines","PHL.79_1","Zamboanga del Norte",14
+2410,"PHL","Philippines","PHL.80_1","Zamboanga del Sur",13
+2411,"PHL","Philippines","PHL.81_1","Zamboanga Sibugay",10
+2415,"PLW","Palau","PLW.4_1","Hatohobei",3
+2416,"PLW","Palau","PLW.5_1","Kayangel",1
+2419,"PLW","Palau","PLW.8_1","Ngaraard",1
+2420,"PLW","Palau","PLW.9_1","Ngarchelong",1
+2422,"PLW","Palau","PLW.11_1","Ngatpang",1
+2424,"PLW","Palau","PLW.13_1","Ngeremlengui",2
+2426,"PLW","Palau","PLW.15_1","Peleliu",4
+2427,"PLW","Palau","PLW.16_1","Sonsorol",3
+2428,"PNG","Papua New Guinea","PNG.1_1","Bougainville",29
+2429,"PNG","Papua New Guinea","PNG.2_1","Central",47
+2430,"PNG","Papua New Guinea","PNG.3_1","Chimbu",10
+2431,"PNG","Papua New Guinea","PNG.4_1","East New Britain",33
+2432,"PNG","Papua New Guinea","PNG.5_1","East Sepik",67
+2433,"PNG","Papua New Guinea","PNG.6_1","Eastern Highlands",13
+2434,"PNG","Papua New Guinea","PNG.7_1","Enga",17
+2435,"PNG","Papua New Guinea","PNG.8_1","Gulf",59
+2436,"PNG","Papua New Guinea","PNG.9_1","Hela",13
+2437,"PNG","Papua New Guinea","PNG.10_1","Jiwaka",6
+2438,"PNG","Papua New Guinea","PNG.11_1","Madang",55
+2439,"PNG","Papua New Guinea","PNG.12_1","Manus",46
+2440,"PNG","Papua New Guinea","PNG.13_1","Milne Bay",111
+2441,"PNG","Papua New Guinea","PNG.14_1","Morobe",61
+2442,"PNG","Papua New Guinea","PNG.15_1","National Capital District",2
+2443,"PNG","Papua New Guinea","PNG.16_1","New Ireland",61
+2444,"PNG","Papua New Guinea","PNG.17_1","Oro",37
+2445,"PNG","Papua New Guinea","PNG.18_1","Sandaun",51
+2446,"PNG","Papua New Guinea","PNG.19_1","Southern Highlands",17
+2447,"PNG","Papua New Guinea","PNG.20_1","West New Britain",57
+2448,"PNG","Papua New Guinea","PNG.22_1","Western",145
+2449,"PNG","Papua New Guinea","PNG.21_1","Western Highlands",6
+2450,"POL","Poland","POL.1_1","Dolno<U+015B>l<U+0105>skie",42
+2451,"POL","Poland","POL.2_1","Kujawsko-Pomorskie",39
+2452,"POL","Poland","POL.3_1","<U+0141><U+00F3>dzkie",36
+2453,"POL","Poland","POL.4_1","Lubelskie",53
+2454,"POL","Poland","POL.5_1","Lubuskie",28
+2455,"POL","Poland","POL.6_1","Ma<U+0142>opolskie",29
+2456,"POL","Poland","POL.7_1","Mazowieckie",75
+2457,"POL","Poland","POL.8_1","Opolskie",19
+2458,"POL","Poland","POL.9_1","Podkarpackie",33
+2459,"POL","Poland","POL.10_1","Podlaskie",45
+2460,"POL","Poland","POL.11_1","Pomorskie",50
+2461,"POL","Poland","POL.12_1","<U+015A>l<U+0105>skie",25
+2462,"POL","Poland","POL.13_1","<U+015A>wi<U+0119>tokrzyskie",24
+2463,"POL","Poland","POL.14_1","Warmi<U+0144>sko-Mazurskie",49
+2464,"POL","Poland","POL.15_1","Wielkopolskie",65
+2465,"POL","Poland","POL.16_1","Zachodniopomorskie",56
+2472,"PRI","Puerto Rico","PRI.7_1","Arecibo",1
+2479,"PRI","Puerto Rico","PRI.14_1","Camuy",1
+2480,"PRI","Puerto Rico","PRI.15_1","Can<U+00F3>vanas",1
+2483,"PRI","Puerto Rico","PRI.18_1","Cayey",1
+2487,"PRI","Puerto Rico","PRI.22_1","Coamo",1
+2490,"PRI","Puerto Rico","PRI.25_1","Culebra",1
+2492,"PRI","Puerto Rico","PRI.27_1","Fajardo",1
+2497,"PRI","Puerto Rico","PRI.32_1","Guaynabo",1
+2500,"PRI","Puerto Rico","PRI.35_1","Hormigueros",1
+2501,"PRI","Puerto Rico","PRI.36_1","Humacao",1
+2502,"PRI","Puerto Rico","PRI.37_1","Isabela",2
+2506,"PRI","Puerto Rico","PRI.41_1","Lajas",1
+2515,"PRI","Puerto Rico","PRI.50_1","Mayag<U+00FC>ez",1
+2516,"PRI","Puerto Rico","PRI.51_1","Moca",1
+2518,"PRI","Puerto Rico","PRI.53_1","Naguabo",1
+2521,"PRI","Puerto Rico","PRI.56_1","Patillas",1
+2522,"PRI","Puerto Rico","PRI.57_1","Pe<U+00F1>uelas",2
+2523,"PRI","Puerto Rico","PRI.58_1","Ponce",1
+2525,"PRI","Puerto Rico","PRI.60_1","Rinc<U+00F3>n",1
+2528,"PRI","Puerto Rico","PRI.63_1","Salinas",1
+2533,"PRI","Puerto Rico","PRI.68_1","Santa Isabel",1
+2539,"PRI","Puerto Rico","PRI.74_1","Vega Baja",1
+2540,"PRI","Puerto Rico","PRI.75_1","Vieques",3
+2543,"PRI","Puerto Rico","PRI.78_1","Yauco",1
+2544,"PRK","North Korea","PRK.1_1","Chagang-do",31
+2545,"PRK","North Korea","PRK.2_1","Hamgy<U+014F>ng-bukto",37
+2546,"PRK","North Korea","PRK.3_1","Hamgy<U+014F>ng-namdo",33
+2547,"PRK","North Korea","PRK.4_1","Hwanghae-bukto",12
+2548,"PRK","North Korea","PRK.5_1","Hwanghae-namdo",26
+2549,"PRK","North Korea","PRK.6_1","Kaes<U+014F>ng",3
+2550,"PRK","North Korea","PRK.7_1","Kangw<U+014F>n-do",25
+2551,"PRK","North Korea","PRK.8_1","Kumgangsan",3
+2552,"PRK","North Korea","PRK.9_1","P'y<U+014F>ngan-bukto",27
+2553,"PRK","North Korea","PRK.10_1","P'y<U+014F>ngan-namdo",24
+2554,"PRK","North Korea","PRK.11_1","P'y<U+014F>ngyang",5
+2555,"PRK","North Korea","PRK.12_1","Ras<U+014F>n",4
+2556,"PRK","North Korea","PRK.13_1","Ryanggang",25
+2558,"PRT","Portugal","PRT.1_1","Aveiro",6
+2559,"PRT","Portugal","PRT.2_1","Azores",27
+2560,"PRT","Portugal","PRT.3_1","Beja",16
+2561,"PRT","Portugal","PRT.4_1","Braga",5
+2562,"PRT","Portugal","PRT.5_1","Bragan<U+00E7>a",11
+2563,"PRT","Portugal","PRT.6_1","Castelo Branco",10
+2564,"PRT","Portugal","PRT.7_1","Coimbra",8
+2565,"PRT","Portugal","PRT.8_1","<U+00C9>vora",13
+2566,"PRT","Portugal","PRT.9_1","Faro",14
+2567,"PRT","Portugal","PRT.10_1","Guarda",10
+2568,"PRT","Portugal","PRT.11_1","Leiria",9
+2569,"PRT","Portugal","PRT.12_1","Lisboa",7
+2570,"PRT","Portugal","PRT.13_1","Madeira",14
+2571,"PRT","Portugal","PRT.14_1","Portalegre",10
+2572,"PRT","Portugal","PRT.15_1","Porto",5
+2573,"PRT","Portugal","PRT.16_1","Santar<U+00E9>m",12
+2574,"PRT","Portugal","PRT.17_1","Set<U+00FA>bal",13
+2575,"PRT","Portugal","PRT.18_1","Viana do Castelo",3
+2576,"PRT","Portugal","PRT.19_1","Vila Real",7
+2577,"PRT","Portugal","PRT.20_1","Viseu",9
+2578,"PRY","Paraguay","PRY.1_1","Alto Paraguay",109
+2579,"PRY","Paraguay","PRY.2_1","Alto Paran<U+00E1>",20
+2580,"PRY","Paraguay","PRY.3_1","Amambay",19
+2582,"PRY","Paraguay","PRY.5_1","Boquer<U+00F3>n",122
+2583,"PRY","Paraguay","PRY.6_1","Caaguaz<U+00FA>",18
+2584,"PRY","Paraguay","PRY.7_1","Caazap<U+00E1>",14
+2585,"PRY","Paraguay","PRY.8_1","Canindey<U+00FA>",23
+2586,"PRY","Paraguay","PRY.9_1","Central",3
+2587,"PRY","Paraguay","PRY.10_1","Concepci<U+00F3>n",25
+2588,"PRY","Paraguay","PRY.11_1","Cordillera",8
+2589,"PRY","Paraguay","PRY.12_1","Guair<U+00E1>",6
+2590,"PRY","Paraguay","PRY.13_1","Itap<U+00FA>a",22
+2591,"PRY","Paraguay","PRY.14_1","Misiones",13
+2592,"PRY","Paraguay","PRY.15_1","<U+00D1>eembuc<U+00FA>",18
+2593,"PRY","Paraguay","PRY.16_1","Paraguar<U+00ED>",11
+2594,"PRY","Paraguay","PRY.17_1","Presidente Hayes",102
+2595,"PRY","Paraguay","PRY.18_1","San Pedro",29
+2596,"PSE","Palestine","PSE.1_1","Gaza",2
+2597,"PSE","Palestine","PSE.2_1","West Bank",9
+2598,"PYF","French Polynesia","PYF.1_1","<U+00CE>les Australes",40
+2599,"PYF","French Polynesia","PYF.2_1","<U+00CE>les du Vent",13
+2600,"PYF","French Polynesia","PYF.3_1","<U+00CE>les Marquises",14
+2601,"PYF","French Polynesia","PYF.4_1","<U+00CE>les Sous-le-Vent",17
+2602,"PYF","French Polynesia","PYF.5_1","<U+00CE>les Tuamotu-Gambier",129
+2603,"QAT","Qatar","QAT.1_1","Ad Dawhah",1
+2604,"QAT","Qatar","QAT.2_1","Al Daayen",2
+2605,"QAT","Qatar","QAT.3_1","Al Khor",3
+2606,"QAT","Qatar","QAT.4_1","Al Wakrah",5
+2607,"QAT","Qatar","QAT.5_1","Ar Rayyan",9
+2608,"QAT","Qatar","QAT.6_1","Madinat ash Shamal",3
+2610,"REU","R<U+00E9>union","REU.1_1","Saint-Beno<U+00EE>t",1
+2611,"REU","R<U+00E9>union","REU.2_1","Saint-Denis",2
+2612,"REU","R<U+00E9>union","REU.3_1","Saint-Paul",2
+2613,"REU","R<U+00E9>union","REU.4_1","Saint-Pierre",4
+2614,"ROU","Romania","ROU.1_1","Alba",12
+2615,"ROU","Romania","ROU.2_1","Arad",16
+2616,"ROU","Romania","ROU.3_1","Arge<U+0219>",11
+2617,"ROU","Romania","ROU.4_1","Bac<U+0103>u",13
+2618,"ROU","Romania","ROU.5_1","Bihor",13
+2619,"ROU","Romania","ROU.6_1","Bistri<U+021B>a-N<U+0103>s<U+0103>ud",9
+2620,"ROU","Romania","ROU.7_1","Boto<U+0219>ani",10
+2621,"ROU","Romania","ROU.9_1","Br<U+0103>ila",9
+2622,"ROU","Romania","ROU.8_1","Bra<U+0219>ov",10
+2623,"ROU","Romania","ROU.10_1","Bucharest",1
+2624,"ROU","Romania","ROU.11_1","Buz<U+0103>u",12
+2625,"ROU","Romania","ROU.12_1","C<U+0103>l<U+0103>ra<U+0219>i",9
+2626,"ROU","Romania","ROU.13_1","Cara<U+0219>-Severin",16
+2627,"ROU","Romania","ROU.14_1","Cluj",12
+2628,"ROU","Romania","ROU.15_1","Constan<U+021B>a",18
+2629,"ROU","Romania","ROU.16_1","Covasna",8
+2630,"ROU","Romania","ROU.17_1","D<U+00E2>mbovi<U+021B>a",7
+2631,"ROU","Romania","ROU.18_1","Dolj",15
+2632,"ROU","Romania","ROU.19_1","Gala<U+021B>i",9
+2633,"ROU","Romania","ROU.20_1","Giurgiu",6
+2634,"ROU","Romania","ROU.21_1","Gorj",8
+2635,"ROU","Romania","ROU.22_1","Harghita",12
+2636,"ROU","Romania","ROU.23_1","Hunedoara",12
+2637,"ROU","Romania","ROU.25_1","Ialomi<U+021B>a",6
+2638,"ROU","Romania","ROU.24_1","Ia<U+0219>i",9
+2639,"ROU","Romania","ROU.26_1","Ilfov",3
+2640,"ROU","Romania","ROU.27_1","Maramure<U+0219>",12
+2641,"ROU","Romania","ROU.28_1","Mehedin<U+021B>i",9
+2642,"ROU","Romania","ROU.29_1","Mure<U+0219>",13
+2643,"ROU","Romania","ROU.30_1","Neam<U+021B>",9
+2644,"ROU","Romania","ROU.31_1","Olt",11
+2645,"ROU","Romania","ROU.32_1","Prahova",10
+2646,"ROU","Romania","ROU.33_1","S<U+0103>laj",9
+2647,"ROU","Romania","ROU.34_1","Satu Mare",9
+2648,"ROU","Romania","ROU.35_1","Sibiu",11
+2649,"ROU","Romania","ROU.36_1","Suceava",19
+2650,"ROU","Romania","ROU.37_1","Teleorman",10
+2651,"ROU","Romania","ROU.38_1","Timi<U+0219>",18
+2652,"ROU","Romania","ROU.39_1","Tulcea",17
+2653,"ROU","Romania","ROU.40_1","V<U+00E2>lcea",10
+2654,"ROU","Romania","ROU.41_1","Vaslui",10
+2655,"ROU","Romania","ROU.42_1","Vrancea",8
+2656,"RUS","Russia","RUS.1_1","Adygey",14
+2657,"RUS","Russia","RUS.2_1","Altay",359
+2658,"RUS","Russia","RUS.3_1","Amur",796
+2659,"RUS","Russia","RUS.4_1","Arkhangel'sk",1805
+2660,"RUS","Russia","RUS.5_1","Astrakhan'",92
+2661,"RUS","Russia","RUS.6_1","Bashkortostan",321
+2662,"RUS","Russia","RUS.7_1","Belgorod",58
+2663,"RUS","Russia","RUS.8_1","Bryansk",76
+2664,"RUS","Russia","RUS.9_1","Buryat",769
+2665,"RUS","Russia","RUS.10_1","Chechnya",26
+2666,"RUS","Russia","RUS.11_1","Chelyabinsk",195
+2667,"RUS","Russia","RUS.12_1","Chukot",2530
+2668,"RUS","Russia","RUS.13_1","Chuvash",42
+2669,"RUS","Russia","RUS.14_1","City of St. Petersburg",6
+2670,"RUS","Russia","RUS.15_1","Dagestan",101
+2671,"RUS","Russia","RUS.16_1","Gorno-Altay",189
+2672,"RUS","Russia","RUS.17_1","Ingush",6
+2673,"RUS","Russia","RUS.18_1","Irkutsk",1832
+2674,"RUS","Russia","RUS.19_1","Ivanovo",55
+2675,"RUS","Russia","RUS.20_1","Kabardin-Balkar",20
+2676,"RUS","Russia","RUS.21_1","Kaliningrad",40
+2677,"RUS","Russia","RUS.22_1","Kalmyk",141
+2678,"RUS","Russia","RUS.23_1","Kaluga",68
+2679,"RUS","Russia","RUS.24_1","Kamchatka",1316
+2680,"RUS","Russia","RUS.25_1","Karachay-Cherkess",25
+2681,"RUS","Russia","RUS.26_1","Karelia",526
+2682,"RUS","Russia","RUS.27_1","Kemerovo",209
+2683,"RUS","Russia","RUS.28_1","Khabarovsk",1852
+2684,"RUS","Russia","RUS.29_1","Khakass",129
+2685,"RUS","Russia","RUS.30_1","Khanty-Mansiy",1455
+2686,"RUS","Russia","RUS.31_1","Kirov",296
+2687,"RUS","Russia","RUS.32_1","Komi",1227
+2688,"RUS","Russia","RUS.33_1","Kostroma",147
+2689,"RUS","Russia","RUS.34_1","Krasnodar",160
+2690,"RUS","Russia","RUS.35_1","Krasnoyarsk",8373
+2691,"RUS","Russia","RUS.36_1","Kurgan",161
+2692,"RUS","Russia","RUS.37_1","Kursk",63
+2693,"RUS","Russia","RUS.38_1","Leningrad",243
+2694,"RUS","Russia","RUS.39_1","Lipetsk",52
+2695,"RUS","Russia","RUS.40_1","Magadan",1373
+2696,"RUS","Russia","RUS.41_1","Mariy-El",54
+2697,"RUS","Russia","RUS.42_1","Mordovia",55
+2698,"RUS","Russia","RUS.43_1","Moscow City",3
+2699,"RUS","Russia","RUS.44_1","Moskva",108
+2700,"RUS","Russia","RUS.45_1","Murmansk",552
+2701,"RUS","Russia","RUS.46_1","Nenets",742
+2702,"RUS","Russia","RUS.47_1","Nizhegorod",171
+2703,"RUS","Russia","RUS.48_1","North Ossetia",14
+2704,"RUS","Russia","RUS.49_1","Novgorod",132
+2705,"RUS","Russia","RUS.50_1","Novosibirsk",407
+2706,"RUS","Russia","RUS.51_1","Omsk",325
+2707,"RUS","Russia","RUS.52_1","Orel",50
+2708,"RUS","Russia","RUS.53_1","Orenburg",257
+2709,"RUS","Russia","RUS.54_1","Penza",93
+2710,"RUS","Russia","RUS.55_1","Perm'",408
+2711,"RUS","Russia","RUS.56_1","Primor'ye",329
+2712,"RUS","Russia","RUS.57_1","Pskov",133
+2713,"RUS","Russia","RUS.58_1","Rostov",198
+2714,"RUS","Russia","RUS.59_1","Ryazan'",90
+2715,"RUS","Russia","RUS.60_1","Sakha",10141
+2716,"RUS","Russia","RUS.61_1","Sakhalin",322
+2717,"RUS","Russia","RUS.62_1","Samara",113
+2718,"RUS","Russia","RUS.63_1","Saratov",211
+2719,"RUS","Russia","RUS.64_1","Smolensk",108
+2720,"RUS","Russia","RUS.65_1","Stavropol'",124
+2721,"RUS","Russia","RUS.66_1","Sverdlovsk",482
+2722,"RUS","Russia","RUS.67_1","Tambov",69
+2723,"RUS","Russia","RUS.68_1","Tatarstan",163
+2724,"RUS","Russia","RUS.69_1","Tomsk",773
+2725,"RUS","Russia","RUS.70_1","Tula",56
+2726,"RUS","Russia","RUS.71_1","Tuva",351
+2727,"RUS","Russia","RUS.72_1","Tver'",200
+2728,"RUS","Russia","RUS.73_1","Tyumen'",379
+2729,"RUS","Russia","RUS.74_1","Udmurt",101
+2730,"RUS","Russia","RUS.75_1","Ul'yanovsk",81
+2731,"RUS","Russia","RUS.76_1","Vladimir",65
+2732,"RUS","Russia","RUS.77_1","Volgograd",225
+2733,"RUS","Russia","RUS.78_1","Vologda",379
+2734,"RUS","Russia","RUS.79_1","Voronezh",108
+2735,"RUS","Russia","RUS.80_1","Yamal-Nenets",2482
+2736,"RUS","Russia","RUS.81_1","Yaroslavl'",90
+2737,"RUS","Russia","RUS.82_1","Yevrey",70
+2738,"RUS","Russia","RUS.83_1","Zabaykal'ye",920
+2739,"RWA","Rwanda","RWA.1_1","Amajyaruguru",3
+2740,"RWA","Rwanda","RWA.2_1","Amajyepfo",9
+2741,"RWA","Rwanda","RWA.3_1","Iburasirazuba",13
+2742,"RWA","Rwanda","RWA.4_1","Iburengerazuba",6
+2743,"RWA","Rwanda","RWA.5_1","Umujyi wa Kigali",1
+2744,"SAU","Saudi Arabia","SAU.1_1","'Asir",118
+2745,"SAU","Saudi Arabia","SAU.2_1","Al Bahah",15
+2746,"SAU","Saudi Arabia","SAU.3_1","Al Hudud ash Shamaliyah",155
+2747,"SAU","Saudi Arabia","SAU.4_1","Al Jawf",121
+2748,"SAU","Saudi Arabia","SAU.5_1","Al Madinah",223
+2749,"SAU","Saudi Arabia","SAU.6_1","Al Qassim",100
+2750,"SAU","Saudi Arabia","SAU.7_1","Ar Riyad",539
+2751,"SAU","Saudi Arabia","SAU.8_1","Ash-Sharq<U+012B>yah",755
+2752,"SAU","Saudi Arabia","SAU.9_1","<U+1E24>a<U+02BC>il",177
+2753,"SAU","Saudi Arabia","SAU.10_1","Jizan",37
+2754,"SAU","Saudi Arabia","SAU.11_1","Makkah",226
+2755,"SAU","Saudi Arabia","SAU.12_1","Najran",165
+2756,"SAU","Saudi Arabia","SAU.13_1","Tabuk",216
+2757,"SDN","Sudan","SDN.1_1","Al Jazirah",33
+2758,"SDN","Sudan","SDN.2_1","Al Qadarif",87
+2759,"SDN","Sudan","SDN.3_1","Blue Nile",47
+2760,"SDN","Sudan","SDN.4_1","Central Darfur",49
+2761,"SDN","Sudan","SDN.5_1","East Darfur",74
+2762,"SDN","Sudan","SDN.6_1","Kassala",60
+2763,"SDN","Sudan","SDN.7_1","Khartoum",26
+2764,"SDN","Sudan","SDN.8_1","North Darfur",431
+2765,"SDN","Sudan","SDN.9_1","North Kurdufan",252
+2766,"SDN","Sudan","SDN.10_1","Northern",507
+2767,"SDN","Sudan","SDN.11_1","Red Sea",334
+2768,"SDN","Sudan","SDN.12_1","River Nile",173
+2769,"SDN","Sudan","SDN.13_1","Sennar",54
+2770,"SDN","Sudan","SDN.14_1","South Darfur",101
+2771,"SDN","Sudan","SDN.15_1","South Kurdufan",105
+2772,"SDN","Sudan","SDN.16_1","West Darfur",29
+2773,"SDN","Sudan","SDN.17_1","West Kurdufan",150
+2774,"SDN","Sudan","SDN.18_1","White Nile",52
+2775,"SEN","Senegal","SEN.1_1","Dakar",4
+2776,"SEN","Senegal","SEN.2_1","Diourbel",7
+2777,"SEN","Senegal","SEN.3_1","Fatick",11
+2778,"SEN","Senegal","SEN.4_1","Kaffrine",16
+2779,"SEN","Senegal","SEN.5_1","Kaolack",8
+2780,"SEN","Senegal","SEN.6_1","K<U+00E9>dougou",22
+2781,"SEN","Senegal","SEN.7_1","Kolda",15
+2782,"SEN","Senegal","SEN.8_1","Louga",34
+2783,"SEN","Senegal","SEN.9_1","Matam",39
+2784,"SEN","Senegal","SEN.10_1","Saint-Louis",29
+2785,"SEN","Senegal","SEN.11_1","S<U+00E9>dhiou",10
+2786,"SEN","Senegal","SEN.12_1","Tambacounda",53
+2787,"SEN","Senegal","SEN.13_1","Thi<U+00E8>s",13
+2788,"SEN","Senegal","SEN.14_1","Ziguinchor",14
+2792,"SGP","Singapore","SGP.4_1","North-East",1
+2793,"SGP","Singapore","SGP.5_1","West",1
+2794,"SHN","Saint Helena, Ascension and Tris","SHN.1_1","Ascension",1
+2795,"SHN","Saint Helena, Ascension and Tris","SHN.2_1","Saint Helena",4
+2796,"SHN","Saint Helena, Ascension and Tris","SHN.3_1","Tristan da Cunha",6
+2797,"SJM","Svalbard and Jan Mayen","SJM.1_1","Jan Mayen",9
+2798,"SJM","Svalbard and Jan Mayen","SJM.2_1","Svalbard",683
+2799,"SLB","Solomon Islands","SLB.1_1","Central",10
+2800,"SLB","Solomon Islands","SLB.2_1","Choiseul",16
+2801,"SLB","Solomon Islands","SLB.3_1","Guadalcanal",14
+2802,"SLB","Solomon Islands","SLB.4_1","Honiara",2
+2803,"SLB","Solomon Islands","SLB.5_1","Isabel",20
+2804,"SLB","Solomon Islands","SLB.6_1","Makira Ulawa",18
+2805,"SLB","Solomon Islands","SLB.7_1","Malaita",26
+2806,"SLB","Solomon Islands","SLB.8_1","Rennell and Bellona",8
+2807,"SLB","Solomon Islands","SLB.9_1","Temotu",21
+2808,"SLB","Solomon Islands","SLB.10_1","Western",37
+2809,"SLE","Sierra Leone","SLE.1_1","Eastern",21
+2810,"SLE","Sierra Leone","SLE.2_1","Northern",50
+2811,"SLE","Sierra Leone","SLE.3_1","Southern",33
+2812,"SLE","Sierra Leone","SLE.4_1","Western",4
+2813,"SLV","El Salvador","SLV.1_1","Ahuachap<U+00E1>n",2
+2814,"SLV","El Salvador","SLV.2_1","Caba<U+00F1>as",2
+2815,"SLV","El Salvador","SLV.3_1","Chalatenango",3
+2816,"SLV","El Salvador","SLV.4_1","Cuscatl<U+00E1>n",1
+2817,"SLV","El Salvador","SLV.5_1","La Libertad",4
+2818,"SLV","El Salvador","SLV.6_1","La Paz",1
+2819,"SLV","El Salvador","SLV.7_1","La Uni<U+00F3>n",6
+2820,"SLV","El Salvador","SLV.8_1","Moraz<U+00E1>n",2
+2821,"SLV","El Salvador","SLV.9_1","San Miguel",4
+2822,"SLV","El Salvador","SLV.10_1","San Salvador",2
+2823,"SLV","El Salvador","SLV.11_1","San Vicente",2
+2824,"SLV","El Salvador","SLV.12_1","Santa Ana",3
+2825,"SLV","El Salvador","SLV.13_1","Sonsonate",2
+2826,"SLV","El Salvador","SLV.14_1","Usulut<U+00E1>n",5
+2836,"SOM","Somalia","SOM.1_1","Awdal",27
+2837,"SOM","Somalia","SOM.2_1","Bakool",34
+2838,"SOM","Somalia","SOM.3_1","Banaadir",1
+2839,"SOM","Somalia","SOM.4_1","Bari",110
+2840,"SOM","Somalia","SOM.5_1","Bay",59
+2841,"SOM","Somalia","SOM.6_1","Galguduud",67
+2842,"SOM","Somalia","SOM.7_1","Gedo",58
+2843,"SOM","Somalia","SOM.8_1","Hiiraan",45
+2844,"SOM","Somalia","SOM.9_1","Jubbada Dhexe",28
+2845,"SOM","Somalia","SOM.10_1","Jubbada Hoose",69
+2846,"SOM","Somalia","SOM.11_1","Mudug",87
+2847,"SOM","Somalia","SOM.12_1","Nugaal",39
+2848,"SOM","Somalia","SOM.13_1","Sanaag",79
+2849,"SOM","Somalia","SOM.14_1","Shabeellaha Dhexe",31
+2850,"SOM","Somalia","SOM.15_1","Shabeellaha Hoose",37
+2851,"SOM","Somalia","SOM.16_1","Sool",50
+2852,"SOM","Somalia","SOM.17_1","Togdheer",45
+2853,"SOM","Somalia","SOM.18_1","Woqooyi Galbeed",42
+2854,"SPM","Saint Pierre and Miquelon","SPM.1_1","Miquelon-Langlade",3
+2855,"SPM","Saint Pierre and Miquelon","SPM.2_1","Saint-Pierre",2
+2856,"SRB","Serbia","SRB.1_1","Borski",5
+2857,"SRB","Serbia","SRB.2_1","Brani<U+010D>evski",9
+2858,"SRB","Serbia","SRB.3_1","Grad Beograd",6
+2859,"SRB","Serbia","SRB.4_1","Jablani<U+010D>ki",5
+2860,"SRB","Serbia","SRB.5_1","Ju<U+017E>no-Ba<U+010D>ki",7
+2861,"SRB","Serbia","SRB.6_1","Ju<U+017E>no-Banatski",8
+2862,"SRB","Serbia","SRB.7_1","Kolubarski",4
+2863,"SRB","Serbia","SRB.8_1","Ma<U+010D>vanski",6
+2864,"SRB","Serbia","SRB.9_1","Moravi<U+010D>ki",5
+2865,"SRB","Serbia","SRB.10_1","Ni<U+0161>avski",5
+2866,"SRB","Serbia","SRB.11_1","P<U+010D>injski",7
+2867,"SRB","Serbia","SRB.12_1","Pirotski",4
+2868,"SRB","Serbia","SRB.13_1","Podunavski",2
+2869,"SRB","Serbia","SRB.14_1","Pomoravski",5
+2870,"SRB","Serbia","SRB.15_1","Rasinski",4
+2871,"SRB","Serbia","SRB.16_1","Ra<U+0161>ki",6
+2872,"SRB","Serbia","SRB.17_1","Severno-Ba<U+010D>ki",3
+2873,"SRB","Serbia","SRB.18_1","Severno-Banatski",6
+2874,"SRB","Serbia","SRB.19_1","Srednje-Banatski",6
+2875,"SRB","Serbia","SRB.20_1","Sremski",7
+2876,"SRB","Serbia","SRB.21_1","<U+0160>umadijski",4
+2877,"SRB","Serbia","SRB.22_1","Topli<U+010D>ki",5
+2878,"SRB","Serbia","SRB.23_1","Zaje<U+010D>arski",9
+2879,"SRB","Serbia","SRB.24_1","Zapadno-Ba<U+010D>ki",4
+2880,"SRB","Serbia","SRB.25_1","Zlatiborski",12
+2881,"SSD","South Sudan","SSD.1_1","Central Equatoria",55
+2882,"SSD","South Sudan","SSD.2_1","Eastern Equatoria",89
+2883,"SSD","South Sudan","SSD.3_1","Jungoli",164
+2884,"SSD","South Sudan","SSD.4_1","Lakes",55
+2885,"SSD","South Sudan","SSD.5_1","North Bahr-al-Ghazal",36
+2886,"SSD","South Sudan","SSD.6_1","Unity",47
+2887,"SSD","South Sudan","SSD.7_1","Upper Nile",105
+2888,"SSD","South Sudan","SSD.8_1","Warap",53
+2889,"SSD","South Sudan","SSD.9_1","West Bahr-al-Ghazal",115
+2890,"SSD","South Sudan","SSD.10_1","West Equatoria",104
+2891,"STP","S<U+00E3>o Tom<U+00E9> and Pr<U+00ED>ncipe","STP.1_1","Pr<U+00ED>ncipe",2
+2892,"STP","S<U+00E3>o Tom<U+00E9> and Pr<U+00ED>ncipe","STP.2_1","S<U+00E3>o Tom<U+00E9>",7
+2893,"SUR","Suriname","SUR.1_1","Brokopondo",8
+2894,"SUR","Suriname","SUR.2_1","Commewijne",2
+2895,"SUR","Suriname","SUR.3_1","Coronie",4
+2896,"SUR","Suriname","SUR.4_1","Marowijne",9
+2897,"SUR","Suriname","SUR.5_1","Nickerie",11
+2898,"SUR","Suriname","SUR.6_1","Para",9
+2899,"SUR","Suriname","SUR.7_1","Paramaribo",1
+2900,"SUR","Suriname","SUR.8_1","Saramacca",10
+2901,"SUR","Suriname","SUR.9_1","Sipaliwini",146
+2903,"SVK","Slovakia","SVK.1_1","Banskobystrick<U+00FD>",21
+2904,"SVK","Slovakia","SVK.2_1","Bratislavsk<U+00FD>",4
+2905,"SVK","Slovakia","SVK.3_1","Ko<U+0161>ick<U+00FD>",14
+2906,"SVK","Slovakia","SVK.4_1","Nitriansky",13
+2907,"SVK","Slovakia","SVK.5_1","Pre<U+0161>ovsk<U+00FD>",19
+2908,"SVK","Slovakia","SVK.6_1","Tren<U+010D>iansky",8
+2909,"SVK","Slovakia","SVK.7_1","Trnavsk<U+00FD>",8
+2910,"SVK","Slovakia","SVK.8_1","<U+017D>ilinsk<U+00FD>",12
+2911,"SVN","Slovenia","SVN.1_1","Gorenjska",4
+2912,"SVN","Slovenia","SVN.2_1","Gori<U+0161>ka",4
+2913,"SVN","Slovenia","SVN.3_1","Jugovzhodna Slovenija",5
+2914,"SVN","Slovenia","SVN.4_1","Koro<U+0161>ka",2
+2915,"SVN","Slovenia","SVN.5_1","Notranjsko-kra<U+0161>ka",3
+2916,"SVN","Slovenia","SVN.6_1","Obalno-kra<U+0161>ka",1
+2917,"SVN","Slovenia","SVN.7_1","Osrednjeslovenska",5
+2918,"SVN","Slovenia","SVN.8_1","Podravska",4
+2919,"SVN","Slovenia","SVN.9_1","Pomurska",2
+2920,"SVN","Slovenia","SVN.10_1","Savinjska",5
+2921,"SVN","Slovenia","SVN.11_1","Spodnjeposavska",2
+2922,"SVN","Slovenia","SVN.12_1","Zasavska",1
+2923,"SWE","Sweden","SWE.1_1","Blekinge",14
+2924,"SWE","Sweden","SWE.2_1","Dalarna",80
+2925,"SWE","Sweden","SWE.3_1","G<U+00E4>vleborg",60
+2926,"SWE","Sweden","SWE.4_1","Gotland",22
+2927,"SWE","Sweden","SWE.5_1","Halland",17
+2928,"SWE","Sweden","SWE.6_1","J<U+00E4>mtland",154
+2929,"SWE","Sweden","SWE.7_1","J<U+00F6>nk<U+00F6>ping",24
+2930,"SWE","Sweden","SWE.8_1","Kalmar",39
+2931,"SWE","Sweden","SWE.9_1","Kronoberg",22
+2932,"SWE","Sweden","SWE.10_1","Norrbotten",364
+2933,"SWE","Sweden","SWE.11_1","Orebro",21
+2934,"SWE","Sweden","SWE.12_1","<U+00D6>sterg<U+00F6>tland",36
+2935,"SWE","Sweden","SWE.13_1","Sk<U+00E5>ne",38
+2936,"SWE","Sweden","SWE.14_1","S<U+00F6>dermanland",23
+2937,"SWE","Sweden","SWE.15_1","Stockholm",38
+2938,"SWE","Sweden","SWE.16_1","Uppsala",25
+2939,"SWE","Sweden","SWE.17_1","V<U+00E4>rmland",58
+2940,"SWE","Sweden","SWE.18_1","V<U+00E4>sterbotten",193
+2941,"SWE","Sweden","SWE.19_1","V<U+00E4>sternorrland",77
+2942,"SWE","Sweden","SWE.20_1","V<U+00E4>stmanland",19
+2943,"SWE","Sweden","SWE.21_1","V<U+00E4>stra G<U+00F6>taland",84
+2944,"SWZ","Swaziland","SWZ.1_1","Hhohho",6
+2945,"SWZ","Swaziland","SWZ.2_1","Lubombo",8
+2946,"SWZ","Swaziland","SWZ.3_1","Manzini",6
+2947,"SWZ","Swaziland","SWZ.4_1","Shiselweni",5
+2954,"SYC","Seychelles","SYC.7_1","Baie Sainte Anne",1
+2963,"SYC","Seychelles","SYC.16_1","La Digue and Inner Islands",8
+2967,"SYC","Seychelles","SYC.20_1","Outer Islands",28
+2969,"SYC","Seychelles","SYC.22_1","Pointe La Rue",1
+2972,"SYC","Seychelles","SYC.25_1","Saint Louis",1
+2973,"SYC","Seychelles","SYC.26_1","Takamaka",2
+2974,"SYR","Syria","SYR.1_1","Al <U+1E24>asakah",38
+2975,"SYR","Syria","SYR.2_1","Aleppo",31
+2976,"SYR","Syria","SYR.3_1","Ar Raqqah",35
+2977,"SYR","Syria","SYR.4_1","As Suwayda'",11
+2979,"SYR","Syria","SYR.6_1","Dar`a",7
+2980,"SYR","Syria","SYR.7_1","Dayr Az Zawr",44
+2981,"SYR","Syria","SYR.8_1","Hamah",17
+2982,"SYR","Syria","SYR.9_1","Hims",71
+2983,"SYR","Syria","SYR.10_1","Idlib",6
+2984,"SYR","Syria","SYR.11_1","Lattakia",5
+2985,"SYR","Syria","SYR.12_1","Quneitra",1
+2986,"SYR","Syria","SYR.13_1","Rif Dimashq",28
+2987,"SYR","Syria","SYR.14_1","Tartus",5
+2988,"TCA","Turks and Caicos Islands","TCA.1_1","Grand Turk",1
+2989,"TCA","Turks and Caicos Islands","TCA.2_1","Middle Caicos",1
+2990,"TCA","Turks and Caicos Islands","TCA.3_1","North Caicos",1
+2991,"TCA","Turks and Caicos Islands","TCA.4_1","Providenciales and West Caicos",4
+2992,"TCA","Turks and Caicos Islands","TCA.5_1","Salt Cay",3
+2993,"TCA","Turks and Caicos Islands","TCA.6_1","South Caicos and East Caicos",7
+2994,"TCD","Chad","TCD.1_1","Barh el Ghazel",77
+2995,"TCD","Chad","TCD.2_1","Batha",116
+2996,"TCD","Chad","TCD.3_1","Borkou",348
+2997,"TCD","Chad","TCD.4_1","Chari-Baguirmi",59
+2998,"TCD","Chad","TCD.5_1","Ennedi Est",103
+2999,"TCD","Chad","TCD.6_1","Ennedi Ouest",151
+3000,"TCD","Chad","TCD.7_1","Gu<U+00E9>ra",85
+3001,"TCD","Chad","TCD.8_1","Hadjer-Lamis",41
+3002,"TCD","Chad","TCD.9_1","Kanem",92
+3003,"TCD","Chad","TCD.10_1","Lac",27
+3004,"TCD","Chad","TCD.11_1","Logone Occidental",11
+3005,"TCD","Chad","TCD.12_1","Logone Oriental",30
+3006,"TCD","Chad","TCD.13_1","Mandoul",23
+3007,"TCD","Chad","TCD.14_1","Mayo-Kebbi Est",25
+3008,"TCD","Chad","TCD.15_1","Mayo-Kebbi Ouest",17
+3009,"TCD","Chad","TCD.16_1","Moyen-Chari",56
+3010,"TCD","Chad","TCD.17_1","Ouadda<U+00EF>",41
+3011,"TCD","Chad","TCD.18_1","Salamat",88
+3012,"TCD","Chad","TCD.19_1","Sila",48
+3013,"TCD","Chad","TCD.20_1","Tandjil<U+00E9>",26
+3014,"TCD","Chad","TCD.21_1","Tibesti",179
+3016,"TCD","Chad","TCD.23_1","Wadi Fira",76
+3017,"TGO","Togo","TGO.1_1","Centre",18
+3018,"TGO","Togo","TGO.2_1","Kara",15
+3019,"TGO","Togo","TGO.3_1","Maritime",9
+3020,"TGO","Togo","TGO.4_1","Plateaux",26
+3021,"TGO","Togo","TGO.5_1","Savanes",12
+3022,"THA","Thailand","THA.1_1","Amnat Charoen",4
+3023,"THA","Thailand","THA.2_1","Ang Thong",1
+3024,"THA","Thailand","THA.3_1","Bangkok Metropolis",3
+3025,"THA","Thailand","THA.4_1","Bueng Kan",6
+3026,"THA","Thailand","THA.5_1","Buri Ram",15
+3027,"THA","Thailand","THA.6_1","Chachoengsao",6
+3028,"THA","Thailand","THA.7_1","Chai Nat",3
+3029,"THA","Thailand","THA.8_1","Chaiyaphum",17
+3030,"THA","Thailand","THA.9_1","Chanthaburi",10
+3031,"THA","Thailand","THA.10_1","Chiang Mai",29
+3032,"THA","Thailand","THA.11_1","Chiang Rai",15
+3033,"THA","Thailand","THA.12_1","Chon Buri",7
+3034,"THA","Thailand","THA.13_1","Chumphon",11
+3035,"THA","Thailand","THA.14_1","Kalasin",9
+3036,"THA","Thailand","THA.15_1","Kamphaeng Phet",11
+3037,"THA","Thailand","THA.16_1","Kanchanaburi",25
+3038,"THA","Thailand","THA.17_1","Khon Kaen",14
+3039,"THA","Thailand","THA.18_1","Krabi",7
+3040,"THA","Thailand","THA.19_1","Lampang",18
+3041,"THA","Thailand","THA.20_1","Lamphun",7
+3042,"THA","Thailand","THA.21_1","Loei",14
+3043,"THA","Thailand","THA.22_1","Lop Buri",8
+3044,"THA","Thailand","THA.23_1","Mae Hong Son",18
+3045,"THA","Thailand","THA.24_1","Maha Sarakham",7
+3046,"THA","Thailand","THA.25_1","Mukdahan",6
+3047,"THA","Thailand","THA.26_1","Nakhon Nayok",3
+3048,"THA","Thailand","THA.27_1","Nakhon Pathom",2
+3049,"THA","Thailand","THA.28_1","Nakhon Phanom",6
+3050,"THA","Thailand","THA.29_1","Nakhon Ratchasima",25
+3051,"THA","Thailand","THA.30_1","Nakhon Sawan",13
+3052,"THA","Thailand","THA.31_1","Nakhon Si Thammarat",18
+3053,"THA","Thailand","THA.32_1","Nan",15
+3054,"THA","Thailand","THA.33_1","Narathiwat",7
+3055,"THA","Thailand","THA.34_1","Nong Bua Lam Phu",7
+3056,"THA","Thailand","THA.35_1","Nong Khai",4
+3057,"THA","Thailand","THA.36_1","Nonthaburi",1
+3058,"THA","Thailand","THA.37_1","Pathum Thani",2
+3059,"THA","Thailand","THA.38_1","Pattani",5
+3060,"THA","Thailand","THA.39_1","Phangnga",13
+3061,"THA","Thailand","THA.40_1","Phatthalung",5
+3062,"THA","Thailand","THA.41_1","Phayao",9
+3063,"THA","Thailand","THA.42_1","Phetchabun",17
+3064,"THA","Thailand","THA.43_1","Phetchaburi",9
+3065,"THA","Thailand","THA.44_1","Phichit",5
+3066,"THA","Thailand","THA.45_1","Phitsanulok",16
+3067,"THA","Thailand","THA.46_1","Phra Nakhon Si Ayutthaya",3
+3068,"THA","Thailand","THA.47_1","Phrae",10
+3069,"THA","Thailand","THA.48_1","Phuket",6
+3070,"THA","Thailand","THA.49_1","Prachin Buri",8
+3071,"THA","Thailand","THA.50_1","Prachuap Khiri Khan",16
+3072,"THA","Thailand","THA.51_1","Ranong",9
+3073,"THA","Thailand","THA.52_1","Ratchaburi",6
+3074,"THA","Thailand","THA.53_1","Rayong",8
+3075,"THA","Thailand","THA.54_1","Roi Et",11
+3076,"THA","Thailand","THA.55_1","Sa Kaeo",10
+3077,"THA","Thailand","THA.56_1","Sakon Nakhon",13
+3078,"THA","Thailand","THA.57_1","Samut Prakan",4
+3079,"THA","Thailand","THA.58_1","Samut Sakhon",2
+3080,"THA","Thailand","THA.59_1","Samut Songkhram",2
+3081,"THA","Thailand","THA.60_1","Saraburi",6
+3082,"THA","Thailand","THA.61_1","Satun",9
+3083,"THA","Thailand","THA.62_1","Si Sa Ket",11
+3084,"THA","Thailand","THA.63_1","Sing Buri",1
+3085,"THA","Thailand","THA.64_1","Songkhla",15
+3086,"THA","Thailand","THA.65_1","Sukhothai",9
+3087,"THA","Thailand","THA.66_1","Suphan Buri",9
+3088,"THA","Thailand","THA.67_1","Surat Thani",26
+3089,"THA","Thailand","THA.68_1","Surin",12
+3090,"THA","Thailand","THA.69_1","Tak",21
+3091,"THA","Thailand","THA.70_1","Trang",15
+3092,"THA","Thailand","THA.71_1","Trat",9
+3093,"THA","Thailand","THA.72_1","Ubon Ratchathani",19
+3094,"THA","Thailand","THA.73_1","Udon Thani",16
+3095,"THA","Thailand","THA.74_1","Uthai Thani",11
+3096,"THA","Thailand","THA.75_1","Uttaradit",9
+3097,"THA","Thailand","THA.76_1","Yala",6
+3098,"THA","Thailand","THA.77_1","Yasothon",6
+3099,"TJK","Tajikistan","TJK.5_1","Districts of Republican Subordin",47
+3101,"TJK","Tajikistan","TJK.2_1","Gorno-Badakhshan",106
+3102,"TJK","Tajikistan","TJK.3_1","Khatlon",39
+3103,"TJK","Tajikistan","TJK.4_1","Sughd",42
+3104,"TKL","Tokelau","TKL.1_1","Anafu",2
+3105,"TKL","Tokelau","TKL.2_1","Fakaofo",2
+3106,"TKL","Tokelau","TKL.3_1","Nukunonu",1
+3107,"TKM","Turkmenistan","TKM.1_1","Ahal",154
+3108,"TKM","Turkmenistan","TKM.2_1","A<U+015F>gabat",1
+3109,"TKM","Turkmenistan","TKM.3_1","Balkan",249
+3110,"TKM","Turkmenistan","TKM.6_1","Da<U+015F>oguz",133
+3111,"TKM","Turkmenistan","TKM.4_1","Lebap",159
+3112,"TKM","Turkmenistan","TKM.5_1","Mary",136
+3113,"TLS","Timor-Leste","TLS.1_1","Aileu",1
+3114,"TLS","Timor-Leste","TLS.2_1","Ainaro",2
+3115,"TLS","Timor-Leste","TLS.3_1","Ambeno",4
+3116,"TLS","Timor-Leste","TLS.4_1","Baucau",3
+3117,"TLS","Timor-Leste","TLS.5_1","Bobonaro",2
+3118,"TLS","Timor-Leste","TLS.6_1","Covalima",3
+3119,"TLS","Timor-Leste","TLS.7_1","Dili",3
+3120,"TLS","Timor-Leste","TLS.8_1","Ermera",1
+3121,"TLS","Timor-Leste","TLS.9_1","Laut<U+00E9>m",7
+3122,"TLS","Timor-Leste","TLS.10_1","Liqui<U+00E7><U+00E1>",2
+3123,"TLS","Timor-Leste","TLS.11_1","Manatuto",4
+3124,"TLS","Timor-Leste","TLS.12_1","Manufahi",2
+3125,"TLS","Timor-Leste","TLS.13_1","Viqueque",3
+3126,"TON","Tonga","TON.1_1","'Eua",2
+3127,"TON","Tonga","TON.2_1","Ha'apai",14
+3128,"TON","Tonga","TON.3_1","Niuas",2
+3129,"TON","Tonga","TON.4_1","Tongatapu",4
+3130,"TON","Tonga","TON.5_1","Vava'u",9
+3133,"TTO","Trinidad and Tobago","TTO.3_1","Couva-Tabaquite-Talparo",1
+3134,"TTO","Trinidad and Tobago","TTO.4_1","Diego Martin",2
+3135,"TTO","Trinidad and Tobago","TTO.5_1","Mayaro/Rio Claro",4
+3139,"TTO","Trinidad and Tobago","TTO.9_1","Princes Town",1
+3141,"TTO","Trinidad and Tobago","TTO.11_1","San Juan-Laventille",2
+3142,"TTO","Trinidad and Tobago","TTO.12_1","Sangre Grande",2
+3143,"TTO","Trinidad and Tobago","TTO.13_1","Siparia",2
+3144,"TTO","Trinidad and Tobago","TTO.14_1","Tobago",7
+3145,"TTO","Trinidad and Tobago","TTO.15_1","Tunapuna/Piarco",1
+3146,"TUN","Tunisia","TUN.1_1","Ariana",2
+3147,"TUN","Tunisia","TUN.2_1","B<U+00E9>ja",4
+3148,"TUN","Tunisia","TUN.3_1","Ben Arous (Tunis Sud)",1
+3149,"TUN","Tunisia","TUN.4_1","Bizerte",12
+3150,"TUN","Tunisia","TUN.5_1","Gab<U+00E8>s",13
+3151,"TUN","Tunisia","TUN.6_1","Gafsa",13
+3152,"TUN","Tunisia","TUN.7_1","Jendouba",4
+3153,"TUN","Tunisia","TUN.8_1","Kairouan",12
+3154,"TUN","Tunisia","TUN.9_1","Kass<U+00E9>rine",13
+3155,"TUN","Tunisia","TUN.10_1","Kebili",35
+3156,"TUN","Tunisia","TUN.11_1","Le Kef",8
+3157,"TUN","Tunisia","TUN.12_1","Mahdia",4
+3158,"TUN","Tunisia","TUN.13_1","Manubah",3
+3159,"TUN","Tunisia","TUN.14_1","M<U+00E9>denine",20
+3160,"TUN","Tunisia","TUN.15_1","Monastir",5
+3161,"TUN","Tunisia","TUN.16_1","Nabeul",9
+3162,"TUN","Tunisia","TUN.17_1","Sfax",21
+3163,"TUN","Tunisia","TUN.18_1","Sidi Bou Zid",11
+3164,"TUN","Tunisia","TUN.19_1","Siliana",9
+3165,"TUN","Tunisia","TUN.20_1","Sousse",7
+3166,"TUN","Tunisia","TUN.21_1","Tataouine",62
+3167,"TUN","Tunisia","TUN.22_1","Tozeur",10
+3168,"TUN","Tunisia","TUN.23_1","Tunis",1
+3169,"TUN","Tunisia","TUN.24_1","Zaghouan",3
+3170,"TUR","Turkey","TUR.1_1","Adana",29
+3171,"TUR","Turkey","TUR.2_1","Adiyaman",12
+3172,"TUR","Turkey","TUR.3_1","Afyon",25
+3173,"TUR","Turkey","TUR.4_1","Agri",18
+3174,"TUR","Turkey","TUR.5_1","Aksaray",12
+3175,"TUR","Turkey","TUR.6_1","Amasya",10
+3176,"TUR","Turkey","TUR.7_1","Ankara",44
+3177,"TUR","Turkey","TUR.8_1","Antalya",45
+3178,"TUR","Turkey","TUR.9_1","Ardahan",8
+3179,"TUR","Turkey","TUR.10_1","Artvin",14
+3180,"TUR","Turkey","TUR.11_1","Aydin",15
+3181,"TUR","Turkey","TUR.12_1","Balikesir",28
+3182,"TUR","Turkey","TUR.13_1","Bart<U+0131>n",5
+3183,"TUR","Turkey","TUR.14_1","Batman",7
+3184,"TUR","Turkey","TUR.15_1","Bayburt",6
+3185,"TUR","Turkey","TUR.16_1","Bilecik",7
+3186,"TUR","Turkey","TUR.17_1","Bing<U+00F6>l",15
+3187,"TUR","Turkey","TUR.18_1","Bitlis",13
+3188,"TUR","Turkey","TUR.19_1","Bolu",14
+3189,"TUR","Turkey","TUR.20_1","Burdur",12
+3190,"TUR","Turkey","TUR.21_1","Bursa",21
+3191,"TUR","Turkey","TUR.22_1","<U+00C7>anakkale",28
+3192,"TUR","Turkey","TUR.23_1","<U+00C7>ankiri",13
+3193,"TUR","Turkey","TUR.24_1","<U+00C7>orum",21
+3194,"TUR","Turkey","TUR.25_1","Denizli",18
+3195,"TUR","Turkey","TUR.26_1","Diyarbakir",24
+3196,"TUR","Turkey","TUR.27_1","D<U+00FC>zce",2
+3197,"TUR","Turkey","TUR.28_1","Edirne",12
+3198,"TUR","Turkey","TUR.29_1","Elaz<U+0131><U+011F>",16
+3199,"TUR","Turkey","TUR.30_1","Erzincan",21
+3200,"TUR","Turkey","TUR.31_1","Erzurum",40
+3201,"TUR","Turkey","TUR.32_1","Eskisehir",24
+3202,"TUR","Turkey","TUR.33_1","Gaziantep",11
+3203,"TUR","Turkey","TUR.34_1","Giresun",14
+3204,"TUR","Turkey","TUR.35_1","G<U+00FC>m<U+00FC>shane",9
+3205,"TUR","Turkey","TUR.36_1","Hakkari",10
+3206,"TUR","Turkey","TUR.37_1","Hatay",12
+3207,"TUR","Turkey","TUR.38_1","I<U+011F>d<U+0131>r",5
+3208,"TUR","Turkey","TUR.39_1","Isparta",13
+3209,"TUR","Turkey","TUR.40_1","Istanbul",15
+3210,"TUR","Turkey","TUR.41_1","Izmir",28
+3211,"TUR","Turkey","TUR.42_1","K. Maras",25
+3212,"TUR","Turkey","TUR.43_1","Karab<U+00FC>k",5
+3213,"TUR","Turkey","TUR.44_1","Karaman",13
+3214,"TUR","Turkey","TUR.45_1","Kars",17
+3215,"TUR","Turkey","TUR.46_1","Kastamonu",28
+3216,"TUR","Turkey","TUR.47_1","Kayseri",27
+3217,"TUR","Turkey","TUR.48_1","Kilis",2
+3218,"TUR","Turkey","TUR.49_1","Kinkkale",8
+3219,"TUR","Turkey","TUR.50_1","Kirklareli",12
+3220,"TUR","Turkey","TUR.51_1","Kirsehir",10
+3221,"TUR","Turkey","TUR.52_1","Kocaeli",10
+3222,"TUR","Turkey","TUR.53_1","Konya",69
+3223,"TUR","Turkey","TUR.54_1","K<U+00FC>tahya",21
+3224,"TUR","Turkey","TUR.55_1","Malatya",19
+3225,"TUR","Turkey","TUR.56_1","Manisa",20
+3226,"TUR","Turkey","TUR.57_1","Mardin",20
+3227,"TUR","Turkey","TUR.58_1","Mersin",30
+3228,"TUR","Turkey","TUR.59_1","Mugla",35
+3229,"TUR","Turkey","TUR.60_1","Mus",14
+3230,"TUR","Turkey","TUR.61_1","Nevsehir",9
+3231,"TUR","Turkey","TUR.62_1","Nigde",12
+3232,"TUR","Turkey","TUR.63_1","Ordu",11
+3233,"TUR","Turkey","TUR.64_1","Osmaniye",4
+3234,"TUR","Turkey","TUR.65_1","Rize",9
+3235,"TUR","Turkey","TUR.66_1","Sakarya",11
+3236,"TUR","Turkey","TUR.67_1","Samsun",21
+3237,"TUR","Turkey","TUR.68_1","Sanliurfa",30
+3238,"TUR","Turkey","TUR.69_1","Siirt",8
+3239,"TUR","Turkey","TUR.70_1","Sinop",14
+3240,"TUR","Turkey","TUR.71_1","Sirnak",15
+3241,"TUR","Turkey","TUR.72_1","Sivas",48
+3242,"TUR","Turkey","TUR.73_1","Tekirdag",15
+3243,"TUR","Turkey","TUR.74_1","Tokat",16
+3244,"TUR","Turkey","TUR.75_1","Trabzon",14
+3245,"TUR","Turkey","TUR.76_1","Tunceli",13
+3246,"TUR","Turkey","TUR.77_1","Usak",9
+3247,"TUR","Turkey","TUR.78_1","Van",33
+3248,"TUR","Turkey","TUR.79_1","Yalova",3
+3249,"TUR","Turkey","TUR.80_1","Yozgat",23
+3250,"TUR","Turkey","TUR.81_1","Zinguldak",9
+3251,"TUV","Tuvalu","TUV.1_1","Funafuti",2
+3252,"TUV","Tuvalu","TUV.2_1","Nanumanga",1
+3253,"TUV","Tuvalu","TUV.3_1","Nanumea",1
+3254,"TUV","Tuvalu","TUV.4_1","Niulakita",1
+3255,"TUV","Tuvalu","TUV.5_1","Niutao",1
+3256,"TUV","Tuvalu","TUV.6_1","Nui",2
+3257,"TUV","Tuvalu","TUV.7_1","Nukufetau",2
+3258,"TUV","Tuvalu","TUV.8_1","Nukulaelae",1
+3259,"TUV","Tuvalu","TUV.9_1","Vaitupu",1
+3260,"TWN","Taiwan","TWN.1_1","Fujian",11
+3261,"TWN","Taiwan","TWN.2_1","Kaohsiung",7
+3262,"TWN","Taiwan","TWN.3_1","New Taipei",9
+3263,"TWN","Taiwan","TWN.4_1","Taichung",4
+3264,"TWN","Taiwan","TWN.5_1","Tainan",4
+3266,"TWN","Taiwan","TWN.7_1","Taiwan",67
+3267,"TZA","Tanzania","TZA.1_1","Arusha",47
+3268,"TZA","Tanzania","TZA.2_1","Dar es Salaam",7
+3269,"TZA","Tanzania","TZA.3_1","Dodoma",55
+3270,"TZA","Tanzania","TZA.4_1","Geita",29
+3271,"TZA","Tanzania","TZA.5_1","Iringa",46
+3272,"TZA","Tanzania","TZA.6_1","Kagera",49
+3273,"TZA","Tanzania","TZA.18_1","Kaskazini Pemba",2
+3274,"TZA","Tanzania","TZA.28_1","Kaskazini Unguja",3
+3275,"TZA","Tanzania","TZA.7_1","Katavi",66
+3276,"TZA","Tanzania","TZA.8_1","Kigoma",59
+3277,"TZA","Tanzania","TZA.9_1","Kilimanjaro",18
+3278,"TZA","Tanzania","TZA.19_1","Kusini Pemba",4
+3279,"TZA","Tanzania","TZA.29_1","Kusini Unguja",3
+3280,"TZA","Tanzania","TZA.10_1","Lindi",89
+3281,"TZA","Tanzania","TZA.11_1","Manyara",62
+3282,"TZA","Tanzania","TZA.12_1","Mara",41
+3283,"TZA","Tanzania","TZA.13_1","Mbeya",46
+3284,"TZA","Tanzania","TZA.30_1","Mjini Magharibi",3
+3285,"TZA","Tanzania","TZA.14_1","Morogoro",92
+3286,"TZA","Tanzania","TZA.15_1","Mtwara",27
+3287,"TZA","Tanzania","TZA.16_1","Mwanza",30
+3288,"TZA","Tanzania","TZA.17_1","Njombe",31
+3289,"TZA","Tanzania","TZA.20_1","Pwani",52
+3290,"TZA","Tanzania","TZA.21_1","Rukwa",35
+3291,"TZA","Tanzania","TZA.22_1","Ruvuma",83
+3292,"TZA","Tanzania","TZA.23_1","Shinyanga",22
+3293,"TZA","Tanzania","TZA.24_1","Simiyu",36
+3294,"TZA","Tanzania","TZA.25_1","Singida",63
+3295,"TZA","Tanzania","TZA.31_1","Songwe",32
+3296,"TZA","Tanzania","TZA.26_1","Tabora",96
+3297,"TZA","Tanzania","TZA.27_1","Tanga",41
+3298,"UGA","Uganda","UGA.1_1","Adjumani",3
+3299,"UGA","Uganda","UGA.2_1","Apac",9
+3300,"UGA","Uganda","UGA.3_1","Arua",5
+3301,"UGA","Uganda","UGA.4_1","Bugiri",2
+3302,"UGA","Uganda","UGA.5_1","Bundibugyo",2
+3303,"UGA","Uganda","UGA.6_1","Bushenyi",6
+3305,"UGA","Uganda","UGA.8_1","Gulu",17
+3306,"UGA","Uganda","UGA.9_1","Hoima",3
+3307,"UGA","Uganda","UGA.10_1","Iganga",4
+3308,"UGA","Uganda","UGA.11_1","Jinja",1
+3309,"UGA","Uganda","UGA.12_1","Kabale",1
+3310,"UGA","Uganda","UGA.13_1","Kabarole",4
+3311,"UGA","Uganda","UGA.14_1","Kaberamaido",2
+3312,"UGA","Uganda","UGA.15_1","Kalangala",1
+3313,"UGA","Uganda","UGA.16_1","Kampala",1
+3314,"UGA","Uganda","UGA.17_1","Kamuli",5
+3315,"UGA","Uganda","UGA.18_1","Kamwenge",2
+3317,"UGA","Uganda","UGA.20_1","Kapchorwa",2
+3318,"UGA","Uganda","UGA.21_1","Kasese",4
+3319,"UGA","Uganda","UGA.22_1","Katakwi",5
+3320,"UGA","Uganda","UGA.23_1","Kayunga",2
+3321,"UGA","Uganda","UGA.24_1","Kibale",6
+3322,"UGA","Uganda","UGA.25_1","Kiboga",5
+3323,"UGA","Uganda","UGA.26_1","Kisoro",2
+3324,"UGA","Uganda","UGA.27_1","Kitgum",11
+3325,"UGA","Uganda","UGA.28_1","Kotido",17
+3326,"UGA","Uganda","UGA.29_1","Kumi",5
+3327,"UGA","Uganda","UGA.30_1","Kyenjojo",7
+3328,"UGA","Uganda","UGA.31_1","Lake Albert",7
+3329,"UGA","Uganda","UGA.32_1","Lake Victoria",39
+3330,"UGA","Uganda","UGA.33_1","Lira",9
+3331,"UGA","Uganda","UGA.34_1","Luwero",9
+3332,"UGA","Uganda","UGA.35_1","Masaka",5
+3333,"UGA","Uganda","UGA.36_1","Masindi",10
+3334,"UGA","Uganda","UGA.37_1","Mayuge",2
+3335,"UGA","Uganda","UGA.38_1","Mbale",1
+3336,"UGA","Uganda","UGA.39_1","Mbarara",11
+3337,"UGA","Uganda","UGA.40_1","Moroto",10
+3338,"UGA","Uganda","UGA.41_1","Moyo",3
+3339,"UGA","Uganda","UGA.42_1","Mpigi",3
+3340,"UGA","Uganda","UGA.43_1","Mubende",8
+3341,"UGA","Uganda","UGA.44_1","Mukono",3
+3342,"UGA","Uganda","UGA.45_1","Nakapiripirit",9
+3343,"UGA","Uganda","UGA.46_1","Nakasongola",3
+3344,"UGA","Uganda","UGA.47_1","Nebbi",5
+3345,"UGA","Uganda","UGA.48_1","Ntungamo",3
+3346,"UGA","Uganda","UGA.49_1","Pader",10
+3347,"UGA","Uganda","UGA.50_1","Pallisa",3
+3348,"UGA","Uganda","UGA.51_1","Rakai",7
+3349,"UGA","Uganda","UGA.52_1","Rukungiri",2
+3350,"UGA","Uganda","UGA.53_1","Sembabule",3
+3351,"UGA","Uganda","UGA.54_1","Sironko",1
+3352,"UGA","Uganda","UGA.55_1","Soroti",4
+3353,"UGA","Uganda","UGA.56_1","Tororo",3
+3354,"UGA","Uganda","UGA.57_1","Wakiso",2
+3355,"UGA","Uganda","UGA.58_1","Yumbe",4
+3356,"UKR","Ukraine","?","?",1
+3357,"UKR","Ukraine","UKR.1_1","Cherkasy",40
+3358,"UKR","Ukraine","UKR.2_1","Chernihiv",67
+3359,"UKR","Ukraine","UKR.3_1","Chernivtsi",14
+3360,"UKR","Ukraine","UKR.4_1","Crimea",67
+3361,"UKR","Ukraine","UKR.5_1","Dnipropetrovs'k",62
+3362,"UKR","Ukraine","UKR.6_1","Donets'k",55
+3363,"UKR","Ukraine","UKR.7_1","Ivano-Frankivs'k",26
+3364,"UKR","Ukraine","UKR.8_1","Kharkiv",62
+3365,"UKR","Ukraine","UKR.9_1","Kherson",55
+3366,"UKR","Ukraine","UKR.10_1","Khmel'nyts'kyy",39
+3367,"UKR","Ukraine","UKR.12_1","Kiev",55
+3369,"UKR","Ukraine","UKR.13_1","Kirovohrad",51
+3370,"UKR","Ukraine","UKR.14_1","L'viv",45
+3371,"UKR","Ukraine","UKR.15_1","Luhans'k",53
+3372,"UKR","Ukraine","UKR.16_1","Mykolayiv",47
+3373,"UKR","Ukraine","UKR.17_1","Odessa",70
+3374,"UKR","Ukraine","UKR.18_1","Poltava",56
+3375,"UKR","Ukraine","UKR.19_1","Rivne",43
+3376,"UKR","Ukraine","UKR.20_1","Sevastopol'",5
+3377,"UKR","Ukraine","UKR.21_1","Sumy",46
+3378,"UKR","Ukraine","UKR.22_1","Ternopil'",29
+3379,"UKR","Ukraine","UKR.24_1","Vinnytsya",50
+3380,"UKR","Ukraine","UKR.25_1","Volyn",45
+3381,"UKR","Ukraine","UKR.23_1","Zakarpattia",24
+3382,"UKR","Ukraine","UKR.26_1","Zaporizhia",61
+3383,"UKR","Ukraine","UKR.27_1","Zhytomyr",64
+3384,"UMI","United States Minor Outlying Isl","UMI.1_1","Baker",1
+3385,"UMI","United States Minor Outlying Isl","UMI.2_1","Howland",1
+3386,"UMI","United States Minor Outlying Isl","UMI.3_1","Jarvis island",1
+3387,"UMI","United States Minor Outlying Isl","UMI.4_1","Johnston",3
+3388,"UMI","United States Minor Outlying Isl","UMI.5_1","Kingman Reef",1
+3389,"UMI","United States Minor Outlying Isl","UMI.6_1","Midway",8
+3390,"UMI","United States Minor Outlying Isl","UMI.7_1","Navassa",1
+3391,"UMI","United States Minor Outlying Isl","UMI.8_1","Palmyra",1
+3392,"UMI","United States Minor Outlying Isl","UMI.9_1","Wake",1
+3393,"URY","Uruguay","URY.1_2","Artigas",18
+3394,"URY","Uruguay","URY.2_2","Canelones",10
+3395,"URY","Uruguay","URY.3_2","Cerro Largo",20
+3396,"URY","Uruguay","URY.4_2","Colonia",14
+3397,"URY","Uruguay","URY.5_2","Durazno",20
+3398,"URY","Uruguay","URY.6_2","Flores",7
+3399,"URY","Uruguay","URY.7_2","Florida",16
+3400,"URY","Uruguay","URY.8_2","Lavalleja",14
+3401,"URY","Uruguay","URY.9_2","Maldonado",8
+3402,"URY","Uruguay","URY.10_2","Montevideo",1
+3403,"URY","Uruguay","URY.11_2","Paysand<U+00FA>",24
+3404,"URY","Uruguay","URY.12_2","R<U+00ED>o Negro",16
+3405,"URY","Uruguay","URY.13_2","Rivera",13
+3406,"URY","Uruguay","URY.14_2","Rocha",25
+3407,"URY","Uruguay","URY.15_2","Salto",21
+3408,"URY","Uruguay","URY.16_2","San Jos<U+00E9>",10
+3409,"URY","Uruguay","URY.17_2","Soriano",14
+3410,"URY","Uruguay","URY.18_2","Tacuaremb<U+00F3>",24
+3411,"URY","Uruguay","URY.19_2","Treinta y Tres",17
+3412,"USA","United States","USA.1_1","Alabama",212
+3413,"USA","United States","USA.2_1","Alaska",5206
+3414,"USA","United States","USA.3_1","Arizona",470
+3415,"USA","United States","USA.4_1","Arkansas",219
+3416,"USA","United States","USA.5_1","California",725
+3417,"USA","United States","USA.6_1","Colorado",448
+3418,"USA","United States","USA.7_1","Connecticut",25
+3419,"USA","United States","USA.8_1","Delaware",10
+3421,"USA","United States","USA.10_1","Florida",289
+3422,"USA","United States","USA.11_1","Georgia",238
+3423,"USA","United States","USA.12_1","Hawaii",58
+3424,"USA","United States","USA.13_1","Idaho",390
+3425,"USA","United States","USA.14_1","Illinois",256
+3426,"USA","United States","USA.15_1","Indiana",159
+3427,"USA","United States","USA.16_1","Iowa",258
+3428,"USA","United States","USA.17_1","Kansas",353
+3429,"USA","United States","USA.18_1","Kentucky",171
+3430,"USA","United States","USA.19_1","Louisiana",209
+3431,"USA","United States","USA.20_1","Maine",173
+3432,"USA","United States","USA.21_1","Maryland",51
+3433,"USA","United States","USA.22_1","Massachusetts",55
+3434,"USA","United States","USA.23_1","Michigan",455
+3435,"USA","United States","USA.24_1","Minnesota",423
+3436,"USA","United States","USA.25_1","Mississippi",197
+3437,"USA","United States","USA.26_1","Missouri",288
+3438,"USA","United States","USA.27_1","Montana",725
+3439,"USA","United States","USA.28_1","Nebraska",342
+3440,"USA","United States","USA.29_1","Nevada",483
+3441,"USA","United States","USA.30_1","New Hampshire",45
+3442,"USA","United States","USA.31_1","New Jersey",40
+3443,"USA","United States","USA.32_1","New Mexico",495
+3444,"USA","United States","USA.33_1","New York",251
+3445,"USA","United States","USA.34_1","North Carolina",223
+3446,"USA","United States","USA.35_1","North Dakota",339
+3447,"USA","United States","USA.36_1","Ohio",204
+3448,"USA","United States","USA.37_1","Oklahoma",288
+3449,"USA","United States","USA.38_1","Oregon",464
+3450,"USA","United States","USA.39_1","Pennsylvania",198
+3451,"USA","United States","USA.40_1","Rhode Island",8
+3452,"USA","United States","USA.41_1","South Carolina",136
+3453,"USA","United States","USA.42_1","South Dakota",367
+3454,"USA","United States","USA.43_1","Tennessee",171
+3455,"USA","United States","USA.44_1","Texas",1068
+3456,"USA","United States","USA.45_1","Utah",368
+3457,"USA","United States","USA.46_1","Vermont",46
+3458,"USA","United States","USA.47_1","Virginia",197
+3459,"USA","United States","USA.48_1","Washington",358
+3460,"USA","United States","USA.49_1","West Virginia",104
+3461,"USA","United States","USA.50_1","Wisconsin",306
+3462,"USA","United States","USA.51_1","Wyoming",448
+3463,"UZB","Uzbekistan","UZB.1_1","Andijon",7
+3464,"UZB","Uzbekistan","UZB.2_1","Buxoro",68
+3465,"UZB","Uzbekistan","UZB.3_1","Farg'ona",10
+3466,"UZB","Uzbekistan","UZB.4_1","Jizzax",38
+3467,"UZB","Uzbekistan","UZB.8_1","Namangan",13
+3468,"UZB","Uzbekistan","UZB.9_1","Navoiy",195
+3469,"UZB","Uzbekistan","UZB.5_1","Qaraqalpaqstan",294
+3470,"UZB","Uzbekistan","UZB.6_1","Qashqadaryo",46
+3471,"UZB","Uzbekistan","UZB.10_1","Samarqand'",25
+3472,"UZB","Uzbekistan","UZB.11_1","Sirdaryo",7
+3473,"UZB","Uzbekistan","UZB.12_1","Surxondaryo",36
+3474,"UZB","Uzbekistan","UZB.14_1","Toshkent",27
+3476,"UZB","Uzbekistan","UZB.7_1","Xorazm",11
+3478,"VCT","Saint Vincent and the Grenadines","VCT.2_1","Grenadines",3
+3482,"VCT","Saint Vincent and the Grenadines","VCT.6_1","Saint Patrick",4
+3483,"VEN","Venezuela","VEN.1_1","Amazonas",235
+3484,"VEN","Venezuela","VEN.2_1","Anzo<U+00E1>tegui",66
+3485,"VEN","Venezuela","VEN.3_1","Apure",95
+3486,"VEN","Venezuela","VEN.4_1","Aragua",12
+3487,"VEN","Venezuela","VEN.5_1","Barinas",44
+3488,"VEN","Venezuela","VEN.6_1","Bol<U+00ED>var",314
+3489,"VEN","Venezuela","VEN.7_1","Carabobo",6
+3490,"VEN","Venezuela","VEN.8_1","Cojedes",18
+3491,"VEN","Venezuela","VEN.9_1","Delta Amacuro",65
+3492,"VEN","Venezuela","VEN.10_1","Dependencias Federales",13
+3493,"VEN","Venezuela","VEN.11_1","Distrito Capital",2
+3494,"VEN","Venezuela","VEN.12_1","Falc<U+00F3>n",52
+3495,"VEN","Venezuela","VEN.13_1","Gu<U+00E1>rico",89
+3496,"VEN","Venezuela","VEN.14_1","Lara",24
+3497,"VEN","Venezuela","VEN.15_1","M<U+00E9>rida",18
+3498,"VEN","Venezuela","VEN.16_1","Miranda",13
+3499,"VEN","Venezuela","VEN.17_1","Monagas",37
+3500,"VEN","Venezuela","VEN.18_1","Nueva Esparta",7
+3501,"VEN","Venezuela","VEN.19_1","Portuguesa",27
+3502,"VEN","Venezuela","VEN.20_1","Sucre",26
+3503,"VEN","Venezuela","VEN.21_1","T<U+00E1>chira",14
+3504,"VEN","Venezuela","VEN.22_1","Trujillo",12
+3505,"VEN","Venezuela","VEN.23_1","Vargas",7
+3506,"VEN","Venezuela","VEN.24_1","Yaracuy",10
+3507,"VEN","Venezuela","VEN.25_1","Zulia",75
+3512,"VGB","British Virgin Islands","VGB.5_1","Virgin Gorda",2
+3513,"VIR","Virgin Islands, U.S.","VIR.1_1","Saint Croix",4
+3514,"VIR","Virgin Islands, U.S.","VIR.2_1","Saint John",1
+3515,"VIR","Virgin Islands, U.S.","VIR.3_1","Saint Thomas",3
+3516,"VNM","Vietnam","VNM.1_1","An Giang",5
+3517,"VNM","Vietnam","VNM.7_1","B<U+00E0> R<U+1ECB>a - V<U+0169>ng T<U+00E0>u",5
+3518,"VNM","Vietnam","VNM.3_1","B<U+1EAF>c Giang",4
+3519,"VNM","Vietnam","VNM.4_1","B<U+1EAF>c K<U+1EA1>n",8
+3520,"VNM","Vietnam","VNM.2_1","B<U+1EA1>c Li<U+00EA>u",4
+3521,"VNM","Vietnam","VNM.5_1","B<U+1EAF>c Ninh",1
+3522,"VNM","Vietnam","VNM.6_1","B<U+1EBF>n Tre",3
+3523,"VNM","Vietnam","VNM.8_1","B<U+00EC>nh <U+0110><U+1ECB>nh",11
+3524,"VNM","Vietnam","VNM.9_1","B<U+00EC>nh D<U+01B0><U+01A1>ng",3
+3525,"VNM","Vietnam","VNM.10_1","B<U+00EC>nh Ph<U+01B0><U+1EDB>c",10
+3526,"VNM","Vietnam","VNM.11_1","B<U+00EC>nh Thu<U+1EAD>n",17
+3527,"VNM","Vietnam","VNM.13_1","C<U+00E0> Mau",12
+3528,"VNM","Vietnam","VNM.12_1","C<U+1EA7>n Th<U+01A1>",2
+3529,"VNM","Vietnam","VNM.14_1","Cao B<U+1EB1>ng",11
+3530,"VNM","Vietnam","VNM.19_1","<U+0110><U+00E0> N<U+1EB5>ng",2
+3531,"VNM","Vietnam","VNM.15_1","<U+0110><U+1EAF>k L<U+1EAF>k",17
+3532,"VNM","Vietnam","VNM.16_1","<U+0110><U+1EAF>k N<U+00F4>ng",9
+3533,"VNM","Vietnam","VNM.20_1","<U+0110>i<U+1EC7>n Bi<U+00EA>n",12
+3534,"VNM","Vietnam","VNM.17_1","<U+0110><U+1ED3>ng Nai",7
+3535,"VNM","Vietnam","VNM.18_1","<U+0110><U+1ED3>ng Th<U+00E1>p",4
+3536,"VNM","Vietnam","VNM.21_1","Gia Lai",19
+3537,"VNM","Vietnam","VNM.26_1","H<U+00E0> Giang",10
+3538,"VNM","Vietnam","VNM.28_1","H<U+00E0> Nam",1
+3539,"VNM","Vietnam","VNM.27_1","H<U+00E0> N<U+1ED9>i",5
+3540,"VNM","Vietnam","VNM.29_1","H<U+00E0> T<U+0129>nh",8
+3541,"VNM","Vietnam","VNM.22_1","H<U+1EA3>i D<U+01B0><U+01A1>ng",2
+3542,"VNM","Vietnam","VNM.23_1","H<U+1EA3>i Ph<U+00F2>ng",4
+3543,"VNM","Vietnam","VNM.24_1","H<U+1EAD>u Giang",2
+3544,"VNM","Vietnam","VNM.25_1","H<U+1ED3> Ch<U+00ED> Minh",3
+3545,"VNM","Vietnam","VNM.30_1","Ho<U+00E0> B<U+00EC>nh",6
+3546,"VNM","Vietnam","VNM.31_1","H<U+01B0>ng Y<U+00EA>n",1
+3547,"VNM","Vietnam","VNM.32_1","Kh<U+00E1>nh H<U+00F2>a",11
+3548,"VNM","Vietnam","VNM.33_1","Ki<U+00EA>n Giang",22
+3549,"VNM","Vietnam","VNM.34_1","Kon Tum",15
+3550,"VNM","Vietnam","VNM.36_1","Lai Ch<U+00E2>u",12
+3551,"VNM","Vietnam","VNM.37_1","L<U+00E2>m <U+0110><U+1ED3>ng",14
+3552,"VNM","Vietnam","VNM.35_1","L<U+1EA1>ng S<U+01A1>n",11
+3553,"VNM","Vietnam","VNM.38_1","L<U+00E0>o Cai",8
+3554,"VNM","Vietnam","VNM.39_1","Long An",6
+3555,"VNM","Vietnam","VNM.40_1","Nam <U+0110><U+1ECB>nh",2
+3556,"VNM","Vietnam","VNM.41_1","Ngh<U+1EC7> An",29
+3557,"VNM","Vietnam","VNM.42_1","Ninh B<U+00EC>nh",3
+3558,"VNM","Vietnam","VNM.43_1","Ninh Thu<U+1EAD>n",6
+3559,"VNM","Vietnam","VNM.44_1","Ph<U+00FA> Th<U+1ECD>",4
+3560,"VNM","Vietnam","VNM.45_1","Ph<U+00FA> Y<U+00EA>n",10
+3561,"VNM","Vietnam","VNM.46_1","Qu<U+1EA3>ng B<U+00EC>nh",16
+3562,"VNM","Vietnam","VNM.47_1","Qu<U+1EA3>ng Nam",17
+3563,"VNM","Vietnam","VNM.48_1","Qu<U+1EA3>ng Ng<U+00E3>i",11
+3564,"VNM","Vietnam","VNM.49_1","Qu<U+1EA3>ng Ninh",18
+3565,"VNM","Vietnam","VNM.50_1","Qu<U+1EA3>ng Tr<U+1ECB>",9
+3566,"VNM","Vietnam","VNM.51_1","S<U+00F3>c Tr<U+0103>ng",7
+3567,"VNM","Vietnam","VNM.52_1","S<U+01A1>n La",21
+3568,"VNM","Vietnam","VNM.53_1","T<U+00E2>y Ninh",7
+3569,"VNM","Vietnam","VNM.55_1","Th<U+00E1>i B<U+00EC>nh",6
+3570,"VNM","Vietnam","VNM.56_1","Th<U+00E1>i Nguy<U+00EA>n",5
+3571,"VNM","Vietnam","VNM.57_1","Thanh H<U+00F3>a",15
+3572,"VNM","Vietnam","VNM.54_1","Th<U+1EEB>a Thi<U+00EA>n Hu<U+1EBF>",10
+3573,"VNM","Vietnam","VNM.58_1","Ti<U+1EC1>n Giang",5
+3574,"VNM","Vietnam","VNM.59_1","Tr<U+00E0> Vinh",4
+3575,"VNM","Vietnam","VNM.60_1","Tuy<U+00EA>n Quang",9
+3576,"VNM","Vietnam","VNM.61_1","V<U+0129>nh Long",2
+3577,"VNM","Vietnam","VNM.62_1","V<U+0129>nh Ph<U+00FA>c",1
+3578,"VNM","Vietnam","VNM.63_1","Y<U+00EA>n B<U+00E1>i",9
+3579,"VUT","Vanuatu","VUT.1_1","Malampa",13
+3580,"VUT","Vanuatu","VUT.2_1","Penama",9
+3581,"VUT","Vanuatu","VUT.3_1","Sanma",16
+3582,"VUT","Vanuatu","VUT.4_1","Shefa",14
+3583,"VUT","Vanuatu","VUT.5_1","Tafea",17
+3584,"VUT","Vanuatu","VUT.6_1","Torba",13
+3585,"WLF","Wallis and Futuna","WLF.1_1","Alo",1
+3586,"WLF","Wallis and Futuna","WLF.2_1","Singave",2
+3587,"WLF","Wallis and Futuna","WLF.3_1","Uv<U+00E9>a",3
+3590,"WSM","Samoa","WSM.3_1","Atua",3
+3591,"WSM","Samoa","WSM.4_1","Fa'asaleleaga",3
+3592,"WSM","Samoa","WSM.5_1","Gaga'emauga",1
+3593,"WSM","Samoa","WSM.6_1","Gagaifomauga",1
+3594,"WSM","Samoa","WSM.7_1","Palauli",2
+3595,"WSM","Samoa","WSM.8_1","Satupa'itea",1
+3596,"WSM","Samoa","WSM.9_1","Tuamasaga",1
+3597,"WSM","Samoa","WSM.10_1","Va'a-o-Fonoti",1
+3598,"WSM","Samoa","WSM.11_1","Vaisigano",3
+3599,"XAD","Akrotiri and Dhekelia","XAD.1_1","Akrotiri",2
+3600,"XAD","Akrotiri and Dhekelia","XAD.2_1","Dhekelia",1
+3601,"XKO","Kosovo","XKO.1_1","<U+0110>akovica",3
+3602,"XKO","Kosovo","XKO.2_1","Gnjilane",2
+3603,"XKO","Kosovo","XKO.3_1","Kosovska Mitrovica",4
+3604,"XKO","Kosovo","XKO.4_1","Pe<U+0107>ki",2
+3605,"XKO","Kosovo","XKO.5_1","Pristina",4
+3606,"XKO","Kosovo","XKO.6_1","Prizren",4
+3607,"XKO","Kosovo","XKO.7_1","Uro<U+0161>evac",1
+3608,"YEM","Yemen","YEM.1_1","`Adan",4
+3609,"YEM","Yemen","YEM.2_1","Abyan",28
+3610,"YEM","Yemen","YEM.3_1","Al Bayda'",11
+3611,"YEM","Yemen","YEM.4_1","Al Dali'",5
+3612,"YEM","Yemen","YEM.5_1","Al Hudaydah",35
+3613,"YEM","Yemen","YEM.6_1","Al Jawf",52
+3614,"YEM","Yemen","YEM.7_1","Al Mahrah",96
+3615,"YEM","Yemen","YEM.8_1","Al Mahwit",2
+3617,"YEM","Yemen","YEM.10_1","Amran",12
+3618,"YEM","Yemen","YEM.11_1","Dhamar",12
+3619,"YEM","Yemen","YEM.12_1","Hadramawt",248
+3620,"YEM","Yemen","YEM.13_1","Hajjah",15
+3621,"YEM","Yemen","YEM.14_1","Ibb",6
+3622,"YEM","Yemen","YEM.15_1","Lahij",20
+3623,"YEM","Yemen","YEM.16_1","Ma'rib",22
+3624,"YEM","Yemen","YEM.17_1","Raymah",3
+3625,"YEM","Yemen","YEM.18_1","Sa`dah",17
+3626,"YEM","Yemen","YEM.19_1","San`a'",18
+3627,"YEM","Yemen","YEM.20_1","Shabwah",57
+3628,"YEM","Yemen","YEM.21_1","Ta`izz",18
+3629,"ZAF","South Africa","ZAF.1_1","Eastern Cape",279
+3630,"ZAF","South Africa","ZAF.2_1","Free State",190
+3631,"ZAF","South Africa","ZAF.3_1","Gauteng",28
+3632,"ZAF","South Africa","ZAF.4_1","KwaZulu-Natal",154
+3633,"ZAF","South Africa","ZAF.5_1","Limpopo",178
+3634,"ZAF","South Africa","ZAF.6_1","Mpumalanga",111
+3635,"ZAF","South Africa","ZAF.7_1","North West",152
+3636,"ZAF","South Africa","ZAF.8_1","Northern Cape",567
+3637,"ZAF","South Africa","ZAF.9_1","Western Cape",223
+3638,"ZMB","Zambia","ZMB.1_1","Central",145
+3639,"ZMB","Zambia","ZMB.2_1","Copperbelt",44
+3640,"ZMB","Zambia","ZMB.3_1","Eastern",66
+3641,"ZMB","Zambia","ZMB.4_1","Luapula",69
+3642,"ZMB","Zambia","ZMB.5_1","Lusaka",34
+3643,"ZMB","Zambia","ZMB.6_1","Muchinga",118
+3644,"ZMB","Zambia","ZMB.7_1","North-Western",168
+3645,"ZMB","Zambia","ZMB.8_1","Northern",101
+3646,"ZMB","Zambia","ZMB.9_1","Southern",92
+3647,"ZMB","Zambia","ZMB.10_1","Western",170
+3648,"ZNC","Northern Cyprus","ZNC.1_1","Gazima<U+011F>usa",2
+3649,"ZNC","Northern Cyprus","ZNC.2_1","Girne",1
+3650,"ZNC","Northern Cyprus","ZNC.3_1","G<U+00FC>zelyurt",1
+3651,"ZNC","Northern Cyprus","ZNC.4_1","Iskele",6
+3652,"ZNC","Northern Cyprus","ZNC.5_1","Nicosia",3
+3653,"ZWE","Zimbabwe","ZWE.1_1","Bulawayo",1
+3654,"ZWE","Zimbabwe","ZWE.2_1","Harare",1
+3655,"ZWE","Zimbabwe","ZWE.3_1","Manicaland",48
+3656,"ZWE","Zimbabwe","ZWE.4_1","Mashonaland Central",39
+3657,"ZWE","Zimbabwe","ZWE.5_1","Mashonaland East",43
+3658,"ZWE","Zimbabwe","ZWE.6_1","Mashonaland West",81
+3659,"ZWE","Zimbabwe","ZWE.7_1","Masvingo",76
+3660,"ZWE","Zimbabwe","ZWE.8_1","Matabeleland North",104
+3661,"ZWE","Zimbabwe","ZWE.9_1","Matabeleland South",76
+3662,"ZWE","Zimbabwe","ZWE.10_1","Midlands",66
