@@ -878,7 +878,7 @@ ui <- fluidPage(
                          labelField   = "label",
                          searchField  = c("label", "biome", "realm"),
                          sortField    = "label",
-                         maxOptions   = 15,
+                         maxOptions   = 2000,
                          render = I("{
                            option: function(item, escape) {
                              return '<div><div>' + escape(item.label) + '</div>' +
