@@ -1,5 +1,7 @@
 #!/usr/bin/env Rscript
-# Build precomputed hotspot raster data for recent years.
+# Build precomputed hotspot raster data for recent years, at the 1% data floor
+# and at the app's default 10% exposure threshold, together with the headline
+# card statistics, so the landing view needs no year-shard read.
 # Run once (or after each pipeline run that updates year shards).
 # Output: exposureApp/inst/extdata/allExpForShiny_hotspot_cache_v1.qs
 #
@@ -82,40 +84,49 @@ existing <- if (file.exists(OUT_CACHE)) {
   tryCatch(qs2::qs_read(OUT_CACHE), error = function(e) list())
 } else list()
 
+THRESHOLDS <- c(1L, 10L)     # 1 = data floor (key "YEAR"), others keyed "YEAR@THR"
+SWEEP      <- c(1L, 5L, 10L, 25L)
+
 cache <- existing
 for (yr in target_years) {
-  key <- as.character(yr)
-  fp  <- year_paths[key]
+  fp <- year_paths[as.character(yr)]
   if (!file.exists(fp)) { cat(sprintf("  skip %d (shard missing)\n", yr)); next }
 
-  cat(sprintf("  computing year %d ...", yr))
-  d <- qs2::qs_read(fp)
+  cat(sprintf("  computing year %d ...\n", yr))
+  d <- qs2::qs_read(fp) %>%
+    filter(!is.na(cell), cell >= 1L, cell <= n_cells, var %in% vars_avail)
+  if (!"propExposed" %in% names(d)) d$propExposed <- NA_real_
 
-  counts <- d %>%
-    filter(!is.na(cell), cell >= 1L, cell <= n_cells,
-           var %in% vars_avail) %>%
-    group_by(cell) %>%
-    summarize(n = n_distinct(spName), .groups = "drop")
+  # exposed-species count at the sweep thresholds (all taxa, all variables)
+  sweep <- data.frame(thr = SWEEP,
+                      n = vapply(SWEEP, function(p) length(unique(d$spName[is.na(d$propExposed) | d$propExposed >= p / 100])), integer(1)))
 
-  if (!nrow(counts)) {
-    cat(" (no rows)\n")
-    next
+  for (thr in THRESHOLDS) {
+    dd <- if (thr <= 1L) d else d[is.na(d$propExposed) | d$propExposed >= thr / 100, , drop = FALSE]
+    counts <- dd %>% group_by(cell) %>% summarize(n = n_distinct(spName), .groups = "drop")
+    key <- if (thr <= 1L) as.character(yr) else sprintf("%d@%d", yr, thr)
+    if (!nrow(counts)) { cat(sprintf("    %s: no rows\n", key)); next }
+
+    top <- function(col) {
+      t <- dd %>% filter(!is.na(.data[[col]])) %>% distinct(spName, .data[[col]]) %>% count(.data[[col]], sort = TRUE)
+      if (nrow(t)) list(name = as.character(t[[col]][1]), n = as.integer(t$n[1])) else NULL
+    }
+    cell_vals <- rep(NA_integer_, n_cells)   # compact integer vector (NA outside exposed cells)
+    cell_vals[counts$cell] <- as.integer(counts$n)
+    cache[[key]] <- list(
+      year       = yr,
+      threshold  = thr,
+      cell_vals  = cell_vals,
+      minN       = min(counts$n),
+      maxN       = max(counts$n),
+      n_cells    = n_cells,
+      vars_used  = vars_avail,
+      stats      = list(n_cells = nrow(counts), n_species = length(unique(dd$spName)),
+                        top_order = top("orderName"), top_family = top("familyName"), sweep = sweep),
+      built_at   = Sys.time()
+    )
+    cat(sprintf("    %s: %d exposed cells, %d species, max=%d\n", key, nrow(counts), length(unique(dd$spName)), max(counts$n)))
   }
-
-  # store as compact integer vector (NA outside exposed cells)
-  cell_vals            <- rep(NA_integer_, n_cells)
-  cell_vals[counts$cell] <- as.integer(counts$n)
-
-  cache[[key]] <- list(
-    year       = yr,
-    cell_vals  = cell_vals,   # integer vector length ncell
-    minN       = min(counts$n),
-    maxN       = max(counts$n),
-    n_cells    = n_cells,
-    vars_used  = vars_avail,
-    built_at   = Sys.time()
-  )
-  cat(sprintf(" %d exposed cells, max=%d\n", nrow(counts), max(counts$n)))
 }
 
 qs2::qs_save(cache, OUT_CACHE)

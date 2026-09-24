@@ -360,6 +360,18 @@ hotspot_raster_cache <- local({
                   paste(sort(names(out)), collapse = ", ")))
   out
 })
+# Headline-card statistics precomputed alongside the rasters (keyed "YEAR" for the
+# 1% floor and "YEAR@THR" for other thresholds); NULL entries where absent.
+hotspot_stats_cache <- local({
+  if (!file.exists(hotspot_cache_path)) return(list())
+  raw <- tryCatch(read_qs(hotspot_cache_path), error = function(e) NULL)
+  if (is.null(raw) || !is.list(raw)) return(list())
+  Filter(Negate(is.null), lapply(raw, function(e) e$stats))
+})
+hotspot_cache_key <- function(year, thr_pct) {
+  thr_pct <- as.integer(round(as.numeric(thr_pct)))
+  if (thr_pct <= 1L) as.character(year) else sprintf("%s@%d", year, thr_pct)
+}
 
 # Full-range cell lookup for Mammals and Birds (for grey background overlay)
 log_msg("Loading species range cells (Mammals + Birds) ...")
@@ -1574,20 +1586,14 @@ server <- function(input, output, session) {
             # depends on per-species propExposed, which the precomputed/fast paths
             # (cell_trend_df) do not carry, so route to the exact per-row path.
             excl_at_floor <- ((as.numeric(input$excl_threshold %||% 10)) / 100) <= 0.01
-            all_groups_selected <- setequal(input$flt_groups %||% ALL_GROUPS, ALL_GROUPS)
-            is_default_hotspot <- (
-              excl_at_floor &&
-              setequal(sel, vars_avail) &&
-              all_groups_selected &&
-              !isTRUE(input$flt_threatened) &&
-              !isTRUE(input$flt_data_deficient) &&
-              !nzchar(paste(input$flt_order   %||% "", collapse = "")) &&
-              !nzchar(paste(input$flt_family  %||% "", collapse = ""))
-            )
+            default_view <- default_view_active()
+            is_default_hotspot <- excl_at_floor && default_view
             yr_key <- as.character(input$year)
-            if (is_default_hotspot && !is.null(hotspot_raster_cache[[yr_key]])) {
-              rr <- hotspot_raster_cache[[yr_key]]
-              log_msg(sprintf("Using precomputed hotspot raster for year %s", yr_key))
+            cache_key <- hotspot_cache_key(input$year, input$excl_threshold %||% 10)
+            if (default_view && !is.null(hotspot_raster_cache[[cache_key]])) {
+              # precomputed for this year at this threshold (1% floor or the 10% default)
+              rr <- hotspot_raster_cache[[cache_key]]
+              log_msg(sprintf("Using precomputed hotspot raster %s", cache_key))
             } else if (is_default_hotspot) {
               # Fast path: default view for a non-precomputed year, built from the
               # in-memory cell_trend_df instead of a disk read + re-aggregation.
@@ -1697,6 +1703,21 @@ server <- function(input, output, session) {
   })
 
   # ── Summary stat card above the map ──────────────────────────────────────
+  # TRUE when no taxon filter is active and all climate variables are selected:
+  # the precomputed hotspot entries (built for exactly that view) can be used.
+  default_view_active <- function() {
+    sel <- input$sel_vars %||% character(0)
+    setequal(sel, vars_avail) &&
+      setequal(input$flt_groups %||% ALL_GROUPS, ALL_GROUPS) &&
+      !isTRUE(input$flt_threatened) && !isTRUE(input$flt_data_deficient) &&
+      !nzchar(paste(input$flt_order %||% "", collapse = "")) &&
+      !nzchar(paste(input$flt_family %||% "", collapse = ""))
+  }
+  cached_stats <- function() {
+    if (!default_view_active()) return(NULL)
+    hotspot_stats_cache[[hotspot_cache_key(input$year, input$excl_threshold %||% 10)]]
+  }
+
   summary_stats <- reactive({
     sel <- input$sel_vars %||% character(0)
     if (input$mode == "single") {
@@ -1712,6 +1733,13 @@ server <- function(input, output, session) {
            species = species_display_label(sp_sel),
            n_vars = length(cl))
     } else {
+      st <- cached_stats()
+      if (!is.null(st)) {
+        lab <- function(t, col) if (is.null(t)) "\u2014" else
+          sprintf("%s (%d of %d)", t$name, t$n, sum(species_meta[[col]] == t$name, na.rm = TRUE))
+        return(list(kind = "hotspot", n_cells = st$n_cells, n_species = st$n_species,
+                    top_order = lab(st$top_order, "orderName"), top_family = lab(st$top_family, "familyName")))
+      }
       d <- tryCatch(filtered_df(), error = function(e) NULL)
       if (is.null(d) || !nrow(d)) return(NULL)
       top_order <- d %>% filter(!is.na(orderName)) %>%
@@ -1843,6 +1871,10 @@ server <- function(input, output, session) {
   # thresholds for the current year (all taxa). Cheap: uses filtered year slice.
   summary_sweep <- reactive({
     if (!identical(input$mode, "hotspot")) return(NULL)
+    if (setequal(input$sel_vars %||% character(0), vars_avail)) {   # sweep is all-taxa already
+      st <- hotspot_stats_cache[[as.character(input$year)]] %||% hotspot_stats_cache[[hotspot_cache_key(input$year, 10)]]
+      if (!is.null(st$sweep)) return(st$sweep)
+    }
     d <- tryCatch(year_df(), error = function(e) NULL)
     if (is.null(d) || !nrow(d) || !("propExposed" %in% names(d))) return(NULL)
     sel <- input$sel_vars %||% character(0)
