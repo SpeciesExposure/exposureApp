@@ -8,6 +8,7 @@ suppressPackageStartupMessages(suppressWarnings({
   library(jsonlite)
   library(DT)
   library(raster)   # needed for addRasterImage
+  options(shiny.maxRequestSize = 100 * 1024^2)  # shapefile uploads (default 5 MB is below many reserve boundaries)
 }))
 
 `%||%` <- function(a, b) if (!is.null(a)) a else b
@@ -410,6 +411,11 @@ hotspot_transform <- function(x, min_x, max_x, power = 1.8) {
 }
 
 species_display_label <- function(x) gsub("_", " ", as.character(x), fixed = TRUE)
+iucn_label <- function(x) {
+  x <- gsub("_", " ", as.character(x), fixed = TRUE)
+  x[is.na(x) | !nzchar(trimws(x))] <- "Not assessed"
+  x
+}
 normalize_species_value <- function(x) {
   x <- trimws(as.character(x %||% ""))
   if (!nzchar(x)) return("")
@@ -576,6 +582,8 @@ spatvector_to_leaflet_geojson <- function(v) {
   paste(readLines(tmp, warn = FALSE), collapse = "\n")
 }
 
+default_species <- if ("Panthera_leo" %in% species_avail) "Panthera_leo" else species_avail[1]
+
 # ── UI ────────────────────────────────────────────────────────────────────────
 ui <- fluidPage(
   tags$head(
@@ -642,6 +650,7 @@ ui <- fluidPage(
     .summary-card .stat .lab{font-size:11px;color:#607086;text-transform:uppercase;letter-spacing:0.03em}
     .summary-card .stat.wide{min-width:150px}
     .summary-card .stat.wide .num{font-size:13px;font-weight:600}
+    #map{min-height:480px}
     "
     )),
     tags$script(HTML("
@@ -656,6 +665,15 @@ ui <- fluidPage(
           var g = m.layerManager.getLayerGroup('drawn');
           if (g) g.clearLayers();
         } catch (e) {}
+      });
+      Shiny.addCustomMessageHandler('setStatus', function(msg) {
+        var el = document.getElementById('status_msg'); if (!el) return;
+        while (el.firstChild) el.removeChild(el.firstChild);
+        var ic = document.createElement('i');
+        ic.className = msg.busy ? 'fa fa-spinner fa-spin' : 'fa fa-check';
+        ic.setAttribute('aria-hidden', 'true');
+        if (!msg.busy) ic.style.color = '#27ae60';
+        el.appendChild(ic); el.appendChild(document.createTextNode(' ' + (msg.text || '')));
       });
       Shiny.addCustomMessageHandler('setProgress', function(msg) {
         var wrap  = document.getElementById('app-progress-wrap');
@@ -672,18 +690,28 @@ ui <- fluidPage(
           label.textContent = msg.label || '';
         }
       });
-      document.addEventListener('DOMContentLoaded', function(){
-        var tips = document.querySelectorAll('.tip');
-        tips.forEach(function(t){
+      function initTips(){
+        document.querySelectorAll('.tip:not([data-tip-init])').forEach(function(t){
+          t.setAttribute('data-tip-init', '1');
           t.setAttribute('tabindex', '0');
           t.setAttribute('role', 'button');
-          t.setAttribute('aria-label', 'Help');
+          t.setAttribute('aria-label', 'Help: ' + (t.getAttribute('data-tip') || ''));
         });
+      }
+      document.addEventListener('DOMContentLoaded', function(){
+        initTips();
+        $(document).on('shiny:value', function(){ setTimeout(initTips, 0); });  // badges inside rendered outputs
         document.addEventListener('click', function(ev){
-          tips.forEach(function(t){ if (t !== ev.target) t.classList.remove('tip-open'); });
+          document.querySelectorAll('.tip').forEach(function(t){ if (t !== ev.target) t.classList.remove('tip-open'); });
           if (ev.target.classList && ev.target.classList.contains('tip')) {
             ev.target.classList.toggle('tip-open');
             ev.preventDefault();
+          }
+        });
+        document.addEventListener('keydown', function(ev){
+          if (ev.key === 'Escape') document.querySelectorAll('.tip.tip-open').forEach(function(t){ t.classList.remove('tip-open'); });
+          if ((ev.key === 'Enter' || ev.key === ' ') && ev.target.classList && ev.target.classList.contains('tip')) {
+            ev.target.classList.toggle('tip-open'); ev.preventDefault();
           }
         });
       });
@@ -691,7 +719,9 @@ ui <- fluidPage(
   ),
 
   tags$div(style = "display:flex;align-items:center;justify-content:space-between;padding:10px 15px 4px 15px",
-    tags$h2("Species exposure to extreme climate", style = "margin:0"),
+    div(tags$h2("Species exposure to extreme climate", style = "margin:0"),
+        div(style = "font-size:12px;color:#607086;margin-top:2px",
+            "A species is exposed in a 0.25\u00b0 grid cell in a given year when that year's climate there exceeds the extremes the species experienced historically, for at least one climate variable. Hotspot mode counts exposed species per cell; single-species mode maps one species.")),
     tags$a(href = "https://speciesexposure.github.io/#home", target = "_blank",
            style = "font-size:13px;color:#3498db;text-decoration:none;white-space:nowrap",
            "https://speciesexposure.github.io/#home ↗")
@@ -705,7 +735,7 @@ ui <- fluidPage(
       actionButton("reset_all", "Reset all controls", width = "100%"),
       hr(),
       fluidRow(
-        column(4, tags$label("Year", tags$span("?", class="tip", `data-tip`="Select the year to display exposure for."), style = "padding-top:7px;font-weight:600")),
+        column(4, tags$label("Year", `for` = "year", tags$span("?", class="tip", `data-tip`="Select the year to display exposure for."), style = "padding-top:7px;font-weight:600")),
         column(8, selectInput("year", NULL, choices = years_avail, selected = default_year))
       ),
       conditionalPanel("input.mode == 'hotspot'",
@@ -719,7 +749,7 @@ ui <- fluidPage(
             tags$span("?", class="tip", `data-tip`="Animate the map forward through years automatically. It loops back to the first year at the end. Pause to stop."),
             " Auto-advance through years"),
         sliderInput("play_speed",
-                    tags$span("Playback speed (sec/year)",
+                    tags$span("Seconds per year (playback)",
                               tags$span("?", class="tip", `data-tip`="Seconds each year is shown during playback. Lower is faster. Takes effect on the next frame.")),
                     min = 0.25, max = 2.5, value = 0.75, step = 0.25, ticks = FALSE),
         hr(),
@@ -729,7 +759,7 @@ ui <- fluidPage(
                       value = FALSE),
         conditionalPanel("input.change_mode == true",
           fluidRow(
-            column(4, tags$label("Baseline", style = "padding-top:7px;font-weight:600")),
+            column(4, tags$label("Baseline", `for` = "baseline_year", style = "padding-top:7px;font-weight:600")),
             column(8, selectInput("baseline_year", NULL, choices = years_avail,
                                   selected = min(years_avail)))
           )
@@ -747,7 +777,7 @@ ui <- fluidPage(
         selectizeInput("species", NULL,
                        choices  = NULL,
                        selected = character(0),
-                       options  = list(maxItems = 1, placeholder = "Type species name...",
+                       options  = list(maxItems = 1, placeholder = "Latin name, e.g. Panthera leo",
                                        valueField = "value",
                                        labelField = "label",
                                        searchField = c("label", "value")))
@@ -770,7 +800,7 @@ ui <- fluidPage(
         ),
         if (length(orders_avail))
           fluidRow(
-            column(4, tags$label("Order", style = "padding-top:7px;font-weight:600")),
+            column(4, tags$label("Order", `for` = "flt_order", style = "padding-top:7px;font-weight:600")),
             column(8, selectizeInput("flt_order", NULL,
                            choices = c("", orders_avail), selected = "", multiple = TRUE,
                            options = list(placeholder = "All")))
@@ -778,7 +808,7 @@ ui <- fluidPage(
         else helpText("Order filter unavailable — no metadata loaded."),
         if (length(families_avail))
           fluidRow(
-            column(4, tags$label("Family", style = "padding-top:7px;font-weight:600")),
+            column(4, tags$label("Family", `for` = "flt_family", style = "padding-top:7px;font-weight:600")),
             column(8, selectizeInput("flt_family", NULL,
                            choices = c("", families_avail), selected = "", multiple = TRUE,
                            options = list(placeholder = "All")))
@@ -787,19 +817,19 @@ ui <- fluidPage(
         hr(),
         h5(tags$span("Political unit", tags$span("?", class="tip", `data-tip`="Select a country, and optionally a state or county (GADM 4.1 units, on the app's 0.25-degree grid). Click 'Load boundary' to outline that region and list all exposed species within it."))),
         fluidRow(
-          column(4, tags$label("Country", style = "padding-top:7px;font-weight:600")),
+          column(4, tags$label("Country", `for` = "pol_country", style = "padding-top:7px;font-weight:600")),
           column(8, selectizeInput("pol_country", NULL, choices = NULL,
                                    selected = "", multiple = FALSE,
                                    options = list(placeholder = "Select...")))
         ),
         fluidRow(
-          column(4, tags$label("State", style = "padding-top:7px;font-weight:600")),
+          column(4, tags$label("State", `for` = "pol_state", style = "padding-top:7px;font-weight:600")),
           column(8, selectizeInput("pol_state", NULL, choices = NULL,
                                    selected = "", multiple = FALSE,
                                    options = list(placeholder = "All")))
         ),
         fluidRow(
-          column(4, tags$label("County", style = "padding-top:7px;font-weight:600")),
+          column(4, tags$label("County", `for` = "pol_county", style = "padding-top:7px;font-weight:600")),
           column(8, selectizeInput("pol_county", NULL, choices = NULL,
                                    selected = "", multiple = FALSE,
                                    options = list(placeholder = "All")))
@@ -829,24 +859,33 @@ ui <- fluidPage(
                        )),
         actionButton("load_eco", "Load ecoregion", class = "btn-sm", width = "100%"),
         hr(),
-        h5(tags$span("Upload shapefile", tags$span("?", class="tip", `data-tip`="Select all components of a shapefile at once (.shp, .dbf, .shx, .prj). The boundary will be drawn on the map and exposed species listed below."))),
+        h5(tags$span("Upload shapefile", tags$span("?", class="tip", `data-tip`="Select all components of a shapefile at once (.shp, .dbf, .shx, .prj), or a single .zip containing them (up to 100 MB). All features in the file are pooled into one area. The boundary will be drawn on the map and exposed species listed below."))),
         tags$p(style = "font-size:11px;color:#666;margin-bottom:4px",
-               "Select all shapefile components (.shp, .dbf, .shx, .prj) at once."),
+               "Select all shapefile components (.shp, .dbf, .shx, .prj) at once, or one .zip."),
         fileInput("shp_upload", NULL, multiple = TRUE,
-                  accept = c(".shp", ".dbf", ".shx", ".prj", ".cpg"),
+                  accept = c(".shp", ".dbf", ".shx", ".prj", ".cpg", ".zip"),
                   buttonLabel = "Browse…", placeholder = "No file selected"),
         hr(),
         h5(tags$span("Exposure threshold",
                      tags$span("?", class = "tip",
-                       `data-tip` = "Count a species toward the hotspot map in a given year only if at least this fraction of its range is exposed that year. Applied per species per year. Default 10%. Raise it to down-weight wide-ranging species whose exposure is a small fraction of a large range. Note: species with <1% of their range exposed in a year are not included in the dataset, to keep it light — so 1% is the lowest available threshold."))),
+                       `data-tip` = "Count a species toward the hotspot map in a given year only if at least this fraction of its range is exposed that year. Applied per species per year. Default 10%. Raise it to down-weight wide-ranging species whose exposure is a small fraction of a large range. The fraction is the share of the species' range exposed by any climate variable that year (one value per species per year; it does not change with the variable checkboxes). Note: species with <1% of their range exposed in a year are not included in the dataset, to keep it light — so 1% is the lowest available threshold."))),
         sliderInput("excl_threshold", "Minimum % of range exposed (per species-year)",
                     min = 1, max = 100, value = 10, step = 1, post = "%", ticks = FALSE)
       )
     ),
     mainPanel(width = 9,
       uiOutput("summary_card"),
+      div(id = "app-progress-wrap",
+          div(style = "background:#e0e0e0;border-radius:4px;overflow:hidden",
+              div(id = "app-progress-bar")),
+          div(id = "app-progress-label")
+      ),
+      div(id = "status_msg", role = "status", `aria-live` = "polite",
+          style = "color:#2c3e50; background:#f5f7fa; border:1px solid #d9e2ec; border-radius:4px; padding:4px 10px; margin:4px 0;",
+          icon("check", style = "color:#27ae60"), " Ready"),
+      div(role = "alert", uiOutput("exposure_msg")),
       uiOutput("map_year_title"),
-      leafletOutput("map", height = "778px"),
+      leafletOutput("map", height = "calc(100vh - 330px)"),
       div(style = "margin-top:6px;",
           downloadButton("download_map_below", "Download map raster (GeoTIFF)", class = "btn-sm"),
           downloadButton("download_summary", "Download summary stats (CSV)", class = "btn-sm")),
@@ -854,7 +893,7 @@ ui <- fluidPage(
         div(style = "margin-top:8px;",
             plotOutput("trend_ts", height = "150px"),
             div(style = "font-size:11px;color:#666;text-align:center;margin-top:-2px;",
-                "Total exposed species per year at the current exposure threshold (all taxa; order/family/threatened/DD filters not applied to this trend). Vertical line = displayed year.")
+                "Total exposed species per year at the current exposure threshold and climate-variable selection (all taxa; order/family/threatened/DD filters not applied to this trend). Single years vary several-fold, so compare decades rather than two individual years. Vertical line = displayed year.")
         ),
         div(style = "display:flex;justify-content:flex-end;align-items:center;gap:18px;margin-top:4px;margin-bottom:2px;",
             div(style = "display:flex;align-items:center;",
@@ -867,13 +906,6 @@ ui <- fluidPage(
             )
         )
       ),
-      div(id = "app-progress-wrap",
-          div(style = "background:#e0e0e0;border-radius:4px;overflow:hidden",
-              div(id = "app-progress-bar")),
-          div(id = "app-progress-label")
-      ),
-      uiOutput("status_msg"),
-      uiOutput("exposure_msg"),
       conditionalPanel("input.mode == 'single'",
         plotOutput("species_range_trend", height = "200px"),
         h4("Selected species summary"),
@@ -924,11 +956,15 @@ server <- function(input, output, session) {
   status_msg_rv <- reactiveVal("Ready")
   polygon_empty_reason_rv <- reactiveVal(NULL)
 
+  # Status text is pushed as a custom message so it updates DURING an observer
+  # (outputs are only sent after the flush, by which time "…complete" has
+  # overwritten every intermediate message).
   set_status <- function(msg, done = FALSE) {
-    stamp <- format(Sys.time(), "%H:%M:%S")
-    status_msg_rv(paste0("[", stamp, "] ", msg))
+    status_msg_rv(msg)
+    busy <- !isTRUE(done) && grepl("\\.\\.\\.$", msg)
+    session$sendCustomMessage("setStatus", list(text = msg, busy = busy))
     if (isTRUE(done) && !isTRUE(isolate(playing_rv())))
-      showNotification(msg, type = "message", duration = 2, id = "status_toast")
+      showNotification(msg, type = "message", duration = max(3, ceiling(nchar(msg) / 15)), id = "status_toast")
   }
 
   # Remove every region outline: loaded boundaries (tracked by leaflet's layerManager)
@@ -997,7 +1033,7 @@ server <- function(input, output, session) {
 
   updateSelectizeInput(session, "species",
                        choices = species_choices,
-                       selected = species_avail[1],
+                       selected = default_species,
                        server = TRUE)
 
   country_choices <- if (adm_ok) {
@@ -1063,6 +1099,12 @@ server <- function(input, output, session) {
         updateSelectizeInput(session, "pol_country", choices = country_choices, selected = toupper(qs$country), server = TRUE)
       if (!is.null(qs$eco) && nzchar(qs$eco))
         updateSelectizeInput(session, "eco_id", selected = qs$eco)
+      if (!is.null(qs$fix))
+        updateCheckboxInput(session, "fix_color_scale", value = identical(qs$fix, "1"))
+      if (!is.null(qs$order) && nzchar(qs$order))
+        updateSelectizeInput(session, "flt_order", selected = intersect(strsplit(qs$order, ",")[[1]], orders_avail))
+      if (!is.null(qs$family) && nzchar(qs$family))
+        updateSelectizeInput(session, "flt_family", selected = intersect(strsplit(qs$family, ",")[[1]], families_avail))
       if (!is.null(qs$excl)) {
         ev <- suppressWarnings(as.numeric(qs$excl))
         if (is.finite(ev) && ev >= 1 && ev <= 100)
@@ -1091,8 +1133,11 @@ server <- function(input, output, session) {
       change   = if (isTRUE(input$change_mode)) "1" else "0",
       baseline = as.character(input$baseline_year %||% min(years_avail)),
       excl     = as.character(input$excl_threshold %||% 10),
-      groups   = paste(input$flt_groups %||% ALL_GROUPS, collapse = ",")
+      groups   = paste(input$flt_groups %||% ALL_GROUPS, collapse = ","),
+      fix      = if (isTRUE(input$fix_color_scale)) "1" else "0"
     )
+    if (length(input$flt_order  %||% character(0))) q$order  <- paste(input$flt_order,  collapse = ",")
+    if (length(input$flt_family %||% character(0))) q$family <- paste(input$flt_family, collapse = ",")
     if (identical(mode, "single")) {
       sp <- normalize_species_value(input$species)
       if (nzchar(sp)) q$species <- sp
@@ -1189,11 +1234,6 @@ server <- function(input, output, session) {
           icon("exclamation-circle"), " ", msg)
   })
 
-  output$status_msg <- renderUI({
-    msg <- status_msg_rv()
-    div(style = "color:#2c3e50; background:#f5f7fa; border:1px solid #d9e2ec; border-radius:4px; padding:6px 10px; margin-top:6px;",
-        icon("spinner"), " ", msg)
-  })
 
   # O(1) year lookup: picks the pre-split slice instead of scanning all rows
   year_df <- reactive({
@@ -1379,7 +1419,10 @@ server <- function(input, output, session) {
             proxy %>% clearImages() %>% clearControls()
             drawn <- character(0)
 
-            # --- full range background (Mammals + Birds only) ---
+            # --- underlay: cells where the species was exposed in ANY year 1941-2025
+            # (range_cells_mb is built from the exposure tables, not the full range;
+            # birds and mammals only). Drawn in neutral grey and listed in the legend.
+            bg_drawn <- FALSE
             rc <- range_cells_mb[[sp_sel]]
             if (!is.null(rc) && length(rc)) {
               rc <- rc[rc >= 1L & rc <= ncell(tpl)]
@@ -1394,9 +1437,10 @@ server <- function(input, output, session) {
                   max(-61,  min(xy_bg[,2]) - ybuf), min(86,  max(xy_bg[,2]) + ybuf)
                 )
                 r_bg_crop <- raster(terra::crop(setValues(tpl, rv_bg), e_bg))
-                proxy %>% addRasterImage(r_bg_crop, colors = "#a8e063",
-                                         opacity = 0.35, layerId = "range_bg",
+                proxy %>% addRasterImage(r_bg_crop, colors = "#bdbdbd",
+                                         opacity = 0.45, layerId = "range_bg",
                                          method = "ngb")
+                bg_drawn <- TRUE
               }
             }
 
@@ -1415,11 +1459,12 @@ server <- function(input, output, session) {
             }
             if (length(terra_layers) > 0) {
               names(terra_layers) <- make.names(names(terra_layers))
-              map_raster_rv(tryCatch(do.call(c, terra_layers), error = function(e) terra_layers[[1]]))
+              map_raster_rv(terra::rast(terra_layers))  # c() on a named list returns a plain list, not a SpatRaster
             }
             proxy %>% addLegend(position = "bottomright",
-                                colors = vapply(drawn, var_col, character(1)),
-                                labels = vapply(drawn, var_label, character(1)),
+                                colors = c(vapply(drawn, var_col, character(1)), if (bg_drawn) "#bdbdbd"),
+                                labels = c(vapply(drawn, var_label, character(1)),
+                                           if (bg_drawn) "Exposed in any year 1941\u20132025 (birds & mammals only)"),
                                 title = "Climate variable", layerId = "legend_main")
             incProgress(0.8)
             show_progress(90, "Fitting map bounds...")
@@ -1484,7 +1529,7 @@ server <- function(input, output, session) {
                         opacity = input$hotspot_opacity %||% 0.95,
                         title   = sprintf("&Delta; species<br>%d &rarr; %d<br><span style='font-weight:normal;font-size:10px'>all species &amp; variables, &ge;1%% of range<br>(threshold/taxon filters not applied)</span>", baseline_yr, target_yr),
                         layerId = "legend_main")
-            map_raster_rv(terra::rast(rr))
+            map_raster_rv(named_rast(rr))
             hide_progress()
             set_status(sprintf("Change map complete (%d \u2192 %d)", baseline_yr, target_yr), done = TRUE)
           } else {
@@ -1583,7 +1628,7 @@ server <- function(input, output, session) {
             proxy %>% clearImages() %>% clearControls()
             # build explicit legend colours (addLegend requires a proper colorNumeric
             # palette object; using colors+labels avoids that restriction)
-            n_leg        <- if (!is.na(single_val)) 1L else min(7L, length(vals))
+            n_leg        <- if (!is.na(single_val)) 1L else max(2L, min(7L, length(vals), as.integer(maxN - minN + 1)))
             leg_breaks   <- if (!is.na(single_val)) single_val else seq(minN, maxN, length.out = n_leg)
             leg_cols     <- pal(leg_breaks)
             leg_labels   <- formatC(round(leg_breaks), format = "d", big.mark = ",")
@@ -1599,7 +1644,7 @@ server <- function(input, output, session) {
                         title   = leg_title,
                         layerId = "legend_main")
             # store for download
-            map_raster_rv(terra::rast(rr))
+            map_raster_rv(named_rast(rr))
             hide_progress()
             set_status("Hotspot map complete", done = TRUE)
           }
@@ -1642,8 +1687,10 @@ server <- function(input, output, session) {
       list(kind = "hotspot",
            n_cells = dplyr::n_distinct(d$cell[!is.na(d$cell)]),
            n_species = dplyr::n_distinct(d$spName),
-           top_order = if (nrow(top_order)) sprintf("%s (%d)", top_order$orderName, top_order$n) else "\u2014",
-           top_family = if (nrow(top_family)) sprintf("%s (%d)", top_family$familyName, top_family$n) else "\u2014")
+           top_order = if (nrow(top_order)) sprintf("%s (%d of %d)", top_order$orderName, top_order$n,
+                                                    sum(species_meta$orderName == top_order$orderName, na.rm = TRUE)) else "\u2014",
+           top_family = if (nrow(top_family)) sprintf("%s (%d of %d)", top_family$familyName, top_family$n,
+                                                      sum(species_meta$familyName == top_family$familyName, na.rm = TRUE)) else "\u2014")
     }
   })
 
@@ -1668,6 +1715,17 @@ server <- function(input, output, session) {
                "How many of the selected climate variables expose this species in at least one cell this year."),
           stat(s$species, "Species", wide = TRUE, tip =
                "The species currently selected in single-species mode."))
+    } else if (isTRUE(input$change_mode)) {
+      # Describe what the change map shows (all species and variables at the 1%
+      # data floor), not the single-year filtered view.
+      by <- suppressWarnings(as.integer(input$baseline_year)); ty <- suppressWarnings(as.integer(input$year))
+      cnt <- function(y) if (!is.null(sp_trend_df) && is.finite(y)) dplyr::n_distinct(sp_trend_df$spName[sp_trend_df$year == y]) else NA_integer_
+      nb <- cnt(by); nt <- cnt(ty)
+      div(class = "summary-card",
+          stat(fmt(nb), sprintf("Exposed species %s", by), tip = "Species exposed anywhere in the baseline year, all taxa and climate variables, at the 1% data floor (the basis of the change map)."),
+          stat(fmt(nt), sprintf("Exposed species %s", ty), tip = "Species exposed anywhere in the displayed year on the same basis."),
+          stat(if (is.na(nb) || is.na(nt)) "\u2014" else sprintf("%+s", formatC(nt - nb, format = "d", big.mark = ",")), "Change in exposed species", wide = TRUE,
+               tip = "Displayed year minus baseline year. The exposure-threshold slider and taxon filters are not applied to the change map or to these counts."))
     } else {
       sweep <- summary_sweep()
       sweep_ui <- if (!is.null(sweep) && nrow(sweep)) {
@@ -1682,12 +1740,12 @@ server <- function(input, output, session) {
         div(class = "summary-card",
             stat(fmt(s$n_cells), "Exposed cells", tip =
                  "Number of distinct grid cells drawn on the map — cells where at least one qualifying species is exposed this year (after the exposure-threshold and any taxon filters). Each cell counted once."),
-            stat(fmt(s$n_species), "Exposed species", tip =
+            stat(sprintf("%s of %s", fmt(s$n_species), fmt(nrow(species_meta))), "Exposed species", tip =
                  "Number of distinct species contributing to the map this year: those passing the exposure threshold (>= the slider % of their range exposed) and any active order/family/threatened/DD filters."),
-            stat(s$top_order, "Top order", wide = TRUE, tip =
-                 "The taxonomic order contributing the most distinct species to the map this year, with that species count in parentheses."),
-            stat(s$top_family, "Top family", wide = TRUE, tip =
-                 "The taxonomic family contributing the most distinct species to the map this year, with that species count in parentheses.")),
+            stat(s$top_order, "Order with most exposed species", wide = TRUE, tip =
+                 "The taxonomic order contributing the most distinct species to the map this year: exposed species of that order, out of all assessed species in the order. Largest orders tend to rank first; this is not a proportion."),
+            stat(s$top_family, "Family with most exposed species", wide = TRUE, tip =
+                 "The taxonomic family contributing the most distinct species to the map this year: exposed species of that family, out of all assessed species in the family.")),
         sweep_ui
       )
     }
@@ -1712,9 +1770,11 @@ server <- function(input, output, session) {
   trend_series <- reactive({
     if (is.null(sp_trend_df) || !nrow(sp_trend_df)) return(NULL)
     thr <- (as.numeric(input$excl_threshold %||% 10)) / 100
-    key <- as.character(thr)
+    sel <- as.character(input$sel_vars %||% character(0))
+    key <- paste(thr, paste(sort(sel), collapse = ","), sep = "|")
     if (!is.null(.trend_ts_memo[[key]])) return(.trend_ts_memo[[key]])
     d <- sp_trend_df
+    if (length(sel)) d <- d[d$var %in% sel, , drop = FALSE]
     if (is.finite(thr) && thr > 0.01) d <- d[!is.na(d$mean_prop) & d$mean_prop >= thr, , drop = FALSE]
     if (!nrow(d)) return(NULL)
     ts <- d %>% group_by(year) %>% summarize(n_sp = dplyr::n_distinct(spName), .groups = "drop") %>%
@@ -1734,6 +1794,7 @@ server <- function(input, output, session) {
     on.exit(par(op))
     plot(ts$year, ts$n_sp, type = "l", lwd = 2, col = "#c0392b",
          xlab = "", ylab = "Exposed species", xaxs = "i", las = 1,
+         ylim = c(0, max(ts$n_sp, na.rm = TRUE) * 1.05),
          panel.first = grid(col = "#eee", lty = 1))
     if (is.finite(yr)) {
       abline(v = yr, col = "#2166ac", lwd = 1.5, lty = 2)
@@ -1804,10 +1865,11 @@ server <- function(input, output, session) {
       distinct() %>%
       arrange(desc(propExposed), var, spName) %>%
       rename(Species = spName, Variable = var)
-    if ("propExposed"     %in% names(pd)) pd <- rename(pd, `Proportion exposed` = propExposed)
+    if ("propExposed"     %in% names(pd)) pd <- rename(pd, `Global range exposed` = propExposed)
     if ("orderName"       %in% names(pd)) pd <- rename(pd, Order = orderName)
     if ("familyName"      %in% names(pd)) pd <- rename(pd, Family = familyName)
-    if ("redlistCategory" %in% names(pd)) pd <- rename(pd, `IUCN status` = redlistCategory)
+    if ("redlistCategory" %in% names(pd)) pd <- mutate(rename(pd, `IUCN status` = redlistCategory), `IUCN status` = iucn_label(`IUCN status`))
+    pd$Species <- species_display_label(pd$Species)
     pd
   })
 
@@ -1830,7 +1892,8 @@ server <- function(input, output, session) {
     stat <- function(num, lab, wide = FALSE)
       div(class = if (wide) "stat wide" else "stat", span(class = "num", num), span(class = "lab", lab))
     div(class = "summary-card",
-        stat(formatC(n_cell, format = "d", big.mark = ","), "Cells in area"),
+        stat(sprintf("%s of %s", formatC(n_cell, format = "d", big.mark = ","), formatC(length(cell_ids), format = "d", big.mark = ",")),
+             "Cells with exposed species / cells in area"),
         stat(formatC(n_sp,   format = "d", big.mark = ","), "Exposed species"),
         stat(top_ord, "Top order", wide = TRUE))
   })
@@ -1850,7 +1913,8 @@ server <- function(input, output, session) {
     yr <- suppressWarnings(as.integer(input$year))
     op <- par(mar = c(2.6, 4.0, 0.4, 0.6), mgp = c(2.3, 0.5, 0), cex = 0.85, tcl = -0.3); on.exit(par(op))
     plot(ts$year, ts$n_sp, type = "l", lwd = 2, col = "#c0392b", xlab = "", ylab = "Exposed species\u00d7cells",
-         xaxs = "i", las = 1, panel.first = grid(col = "#eee", lty = 1))
+         xaxs = "i", las = 1, ylim = c(0, max(ts$n_sp, na.rm = TRUE) * 1.05),
+         panel.first = grid(col = "#eee", lty = 1))
     if (is.finite(yr)) {
       abline(v = yr, col = "#2166ac", lwd = 1.5, lty = 2)
       yv <- ts$n_sp[match(yr, ts$year)]; if (!is.na(yv)) points(yr, yv, pch = 19, col = "#2166ac", cex = 1.1)
@@ -1858,6 +1922,16 @@ server <- function(input, output, session) {
   })
   # Tracks the last raster(s) drawn on the map for download
   map_raster_rv <- reactiveVal(NULL)
+  # Name the downloadable band after what it holds (the template's band name is a
+  # meaningless "lsm_valid_time..." artefact otherwise)
+  named_rast <- function(rr) {
+    r <- terra::rast(rr)
+    names(r) <- if (isTRUE(input$change_mode))
+      sprintf("delta_species_%s_to_%s", input$baseline_year %||% "baseline", input$year)
+    else
+      sprintf("n_species_exposed_%s_thr%d", input$year, as.integer(as.numeric(input$excl_threshold %||% 10)))
+    r
+  }
 
   # Clear stale click/polygon state whenever the user switches mode
   observeEvent(input$mode, {
@@ -1875,7 +1949,7 @@ server <- function(input, output, session) {
     iso <- toupper(trimws(input$pol_country %||% ""))
     updateSelectizeInput(session, "pol_state", choices = state_choices(iso), selected = "", server = TRUE)
     updateSelectizeInput(session, "pol_county", choices = county_choices(""), selected = "", server = TRUE)
-    if (nzchar(iso)) set_status(sprintf("Administrative units ready for %s", iso), done = TRUE)
+    if (nzchar(iso)) set_status(sprintf("Administrative units ready for %s", iso))
   }, ignoreInit = TRUE)
 
   observeEvent(input$pol_state, {
@@ -1900,6 +1974,7 @@ server <- function(input, output, session) {
   })
 
   observeEvent(input$load_pol_unit, {
+    exposure_msg_rv(NULL)
     if (!in_hotspot_mode("Political-unit summaries")) return()
     if (!adm_ok) {
       showNotification("Political-unit data files (gadm_ADM*.tif/.csv) are missing from the app data directory.", type = "error")
@@ -1936,15 +2011,14 @@ server <- function(input, output, session) {
       if (!length(cell_ids)) {
         polygon_cells_rv(integer(0))
         polygon_empty_reason_rv("No exposed raster cells fall in this boundary.")
-        hide_progress()
-        set_status("Boundary loaded, but no exposed cells fall in it", done = TRUE)
+        done_msg <- "Boundary loaded, but no exposed cells fall in it"
       } else {
         polygon_cells_rv(cell_ids)
         polygon_empty_reason_rv(NULL)
-        hide_progress()
-        set_status(sprintf("Boundary loaded: %s (%d cells)", label, length(cell_ids)), done = TRUE)
+        done_msg <- sprintf("Boundary loaded: %s (%d cells)", label, length(cell_ids))
       }
 
+      show_progress(85, "Building outline...")
       unit_v <- terra::as.polygons(terra::ifel(adm[[lvl]]$r == id, 1L, NA))
       gj <- spatvector_to_leaflet_geojson(wrap_antimeridian(unit_v, unit_cells))
       session$sendCustomMessage("clearDrawn", 1)
@@ -1957,6 +2031,8 @@ server <- function(input, output, session) {
                    fillColor = "#e67e00",
                    fillOpacity = 0.15)
       fit_region(unit_cells, unit_v)
+      hide_progress()
+      set_status(done_msg, done = TRUE)
 
       click_data(NULL)
       hotspot_diag_data(NULL)
@@ -1970,6 +2046,7 @@ server <- function(input, output, session) {
   })
 
   observeEvent(input$load_eco, {
+    exposure_msg_rv(NULL)
     if (!in_hotspot_mode("Ecoregion summaries")) return()
     if (is.null(eco_vals)) {
       showNotification("Ecoregion data files are missing from the app data directory.", type = "error")
@@ -1992,15 +2069,14 @@ server <- function(input, output, session) {
       if (!length(cell_ids)) {
         polygon_cells_rv(integer(0))
         polygon_empty_reason_rv("No exposed raster cells fall in this ecoregion.")
-        hide_progress()
-        set_status("Ecoregion loaded, but no exposed cells fall in it", done = TRUE)
+        done_msg <- "Ecoregion loaded, but no exposed cells fall in it"
       } else {
         polygon_cells_rv(cell_ids)
         polygon_empty_reason_rv(NULL)
-        hide_progress()
-        set_status(sprintf("Ecoregion loaded: %s (%d cells)", label, length(cell_ids)), done = TRUE)
+        done_msg <- sprintf("Ecoregion loaded: %s (%d cells)", label, length(cell_ids))
       }
 
+      show_progress(85, "Building outline...")
       unit_v <- terra::as.polygons(terra::ifel(eco_r == id, 1L, NA))
       gj <- spatvector_to_leaflet_geojson(wrap_antimeridian(unit_v, cell_ids))
       session$sendCustomMessage("clearDrawn", 1)
@@ -2013,6 +2089,8 @@ server <- function(input, output, session) {
                    fillColor = "#e67e00",
                    fillOpacity = 0.15)
       fit_region(cell_ids, unit_v)
+      hide_progress()
+      set_status(done_msg, done = TRUE)
 
       click_data(NULL)
       hotspot_diag_data(NULL)
@@ -2027,6 +2105,7 @@ server <- function(input, output, session) {
 
   # Handle freehand polygon drawn by user on the map
   observeEvent(input$map_draw_new_feature, ignoreNULL = TRUE, {
+    exposure_msg_rv(NULL)
     if (!in_hotspot_mode("Drawn-polygon summaries")) return()
     tryCatch({
       feat <- input$map_draw_new_feature
@@ -2083,6 +2162,8 @@ server <- function(input, output, session) {
   })
 
   observeEvent(input$map_click, ignoreNULL = TRUE, {
+    if (!identical(input$mode, "hotspot")) return()  # the click panel only exists in hotspot mode
+    exposure_msg_rv(NULL)
     set_status("Loading clicked cell...")
     show_progress(5, "Reading click location...")
     withProgress(message = "Loading clicked cell...", value = 0, {
@@ -2139,10 +2220,11 @@ server <- function(input, output, session) {
 
         d <- d %>%
           rename(Species = spName, Variable = var)
-        if ("propExposed" %in% names(d)) d <- rename(d, `Proportion exposed` = propExposed)
+        if ("propExposed" %in% names(d)) d <- rename(d, `Global range exposed` = propExposed)
         if ("orderName"       %in% names(d)) d <- rename(d, Order         = orderName)
         if ("familyName"      %in% names(d)) d <- rename(d, Family        = familyName)
-        if ("redlistCategory" %in% names(d)) d <- rename(d, `IUCN status` = redlistCategory)
+        if ("redlistCategory" %in% names(d)) d <- mutate(rename(d, `IUCN status` = redlistCategory), `IUCN status` = iucn_label(`IUCN status`))
+        d$Species <- species_display_label(d$Species)
         click_data(if (!nrow(d)) NULL else d)
 
         if (input$mode == "hotspot") {
@@ -2187,8 +2269,9 @@ server <- function(input, output, session) {
     info <- click_info()
     if (is.na(info$cell)) return("Click a cell on the map to see exposed species")
     nd <- if (is.null(click_data())) 0 else nrow(click_data())
-    sprintf("Cell %d  (%.3f°N, %.3f°E)  —  %d species × variable rows  |  year %s",
-            info$cell, info$lat, info$lng, nd, input$year)
+    sprintf("Cell %d  (%.3f°%s, %.3f°%s)  —  %d species × variable rows  |  year %s",
+            info$cell, abs(info$lat), if (info$lat < 0) "S" else "N",
+            abs(info$lng), if (info$lng < 0) "W" else "E", nd, input$year)
   })
 
   output$click_table <- renderDT({
@@ -2334,7 +2417,7 @@ paste0('d   <- read.csv("species_', sp, '_allyears.csv")\n'),
 '# ---- 4. Quick plot ----\n',
 'plot(r, main = paste(v, yr))\n\n',
 '# ---- 5. Save to GeoTIFF ----\n',
-paste0('writeRaster(r, "', sp, '_", yr, "_", gsub("[^A-Za-z0-9]+", "_", v), ".tif", overwrite = TRUE)\n'),
+paste0('writeRaster(r, paste0("', sp, '_", yr, "_", gsub("[^A-Za-z0-9]+", "_", v), ".tif"), overwrite = TRUE)\n'),
 sep = "")
     }
   )
@@ -2409,8 +2492,10 @@ sep = "")
       row <- list(
         mode                 = input$mode %||% "",
         year                 = input$year %||% "",
-        variables            = paste(input$sel_vars %||% character(0), collapse = ";"),
+        variables            = paste(vapply(input$sel_vars %||% character(0), var_label, character(1)), collapse = ";"),
+        variable_codes       = paste(input$sel_vars %||% character(0), collapse = ";"),
         exposure_threshold_pct = as.numeric(input$excl_threshold %||% 10),
+        groups               = paste(input$flt_groups %||% ALL_GROUPS, collapse = ";"),
         only_threatened      = isTRUE(input$flt_threatened),
         only_data_deficient  = isTRUE(input$flt_data_deficient),
         order_filter         = paste(input$flt_order  %||% character(0), collapse = ";"),
@@ -2422,6 +2507,12 @@ sep = "")
       if (!is.null(s) && identical(s$kind, "hotspot")) {
         row$exposed_cells <- s$n_cells; row$exposed_species <- s$n_species
         row$top_order <- s$top_order;  row$top_family <- s$top_family
+        pc <- polygon_cells_rv()
+        if (!is.null(pc)) {
+          row$area_cells <- length(pc)
+          fd <- tryCatch(filtered_df(), error = function(e) NULL)
+          row$area_exposed_species <- if (is.null(fd)) NA_integer_ else dplyr::n_distinct(fd$spName[fd$cell %in% pc])
+        }
       } else if (!is.null(s) && identical(s$kind, "single")) {
         row$species <- s$species; row$exposed_cells <- s$n_cells; row$variables_exposed <- s$n_vars
       }
@@ -2430,12 +2521,7 @@ sep = "")
   )
 
   output$download_map_raster_hs <- downloadHandler(
-    filename = function() {
-      if (input$mode == "single")
-        paste0("raster_", gsub("[^A-Za-z0-9_]", "_", input$species %||% "species"), "_", input$year, ".tif")
-      else
-        paste0("raster_hotspot_", input$year, ".tif")
-    },
+    filename = .map_raster_filename,
     content = function(file) {
       r <- .build_map_raster_for_download()
       if (is.null(r)) {
@@ -2451,6 +2537,11 @@ sep = "")
     content = function(file) {
       d <- click_data()
       if (is.null(d)) d <- data.frame()
+      if (nrow(d)) {
+        info <- click_info()
+        d$cell <- info$cell; d$lat <- info$lat; d$lng <- info$lng
+        d$year <- input$year; d$exposure_threshold_pct <- as.numeric(input$excl_threshold %||% 10)
+      }
       write.csv(d, file, row.names = FALSE)
     }
   )
@@ -2471,7 +2562,15 @@ sep = "")
         if (is.null(cell_ids) || length(cell_ids) == 0) {
           msg <- "No exposed raster cells intersect the selected area."
         } else {
-          msg <- "Cells intersect the selected area, but no species pass the current year/variable/filter settings."
+          n1 <- tryCatch({
+            yd <- year_df(); sel <- input$sel_vars %||% character(0)
+            yd <- yd[yd$cell %in% cell_ids & yd$var %in% sel, , drop = FALSE]
+            length(unique(yd$spName))
+          }, error = function(e) NA_integer_)
+          thr <- as.integer(as.numeric(input$excl_threshold %||% 10))
+          msg <- sprintf("No species reach the %d%% exposure threshold in this area in %s%s. Lower the 'Exposure threshold' slider, or change the year, variables or taxon filters.",
+                         thr, input$year %||% "",
+                         if (is.na(n1)) "" else sprintf(" (%s species are exposed here at the 1%% data floor)", formatC(n1, format = "d", big.mark = ",")))
         }
       }
       return(datatable(
@@ -2495,6 +2594,10 @@ sep = "")
         showNotification(paste("Polygon table download failed:", conditionMessage(e)), type = "error", duration = 8); NULL
       })
       if (is.null(d)) d <- data.frame()
+      if (nrow(d)) {
+        d$year <- input$year; d$exposure_threshold_pct <- as.numeric(input$excl_threshold %||% 10)
+        d$area_cells <- length(polygon_cells_rv() %||% integer(0))
+      }
       write.csv(d, file, row.names = FALSE)
     }
   )
@@ -2517,7 +2620,7 @@ sep = "")
     updateCheckboxInput(session, "flt_exposed_only", value = FALSE)
     # server = TRUE updates must resend choices: without them the client clears its
     # option list and the data request fails, leaving the dropdown empty for the session.
-    updateSelectizeInput(session, "species", choices = species_choices, selected = species_avail[1], server = TRUE)
+    updateSelectizeInput(session, "species", choices = species_choices, selected = default_species, server = TRUE)
     updateCheckboxInput(session, "flt_threatened", value = FALSE)
     updateCheckboxInput(session, "flt_data_deficient", value = FALSE)
     updateCheckboxGroupInput(session, "flt_groups",
@@ -2543,15 +2646,12 @@ sep = "")
   })
 
   observeEvent(input$shp_upload, {
+    exposure_msg_rv(NULL)
     files <- input$shp_upload
     req(!is.null(files))
     if (!in_hotspot_mode("Shapefile summaries")) return()
-    shp_row <- files[grepl("\\.shp$", files$name, ignore.case = TRUE), ]
-    if (nrow(shp_row) == 0) {
-      showNotification("No .shp file found — please select all shapefile components.", type = "error")
-      return()
-    }
-    # Copy all uploaded files into a temp dir preserving original extensions
+    # Copy all uploaded files into a temp dir preserving original extensions;
+    # a .zip is unpacked there too
     tmp_dir <- tempfile()
     dir.create(tmp_dir)
     for (i in seq_len(nrow(files))) {
@@ -2560,7 +2660,16 @@ sep = "")
     uploaded_paths <- file.path(tmp_dir, files$name)
     md5 <- tools::md5sum(uploaded_paths)
     shp_hash <- paste(paste(names(md5), unname(md5), sep = "="), collapse = "|")
-    shp_path <- file.path(tmp_dir, shp_row$name[1])
+    for (z in list.files(tmp_dir, pattern = "\\.zip$", full.names = TRUE, ignore.case = TRUE))
+      tryCatch(utils::unzip(z, exdir = tmp_dir), error = function(e) NULL)
+    shp_files <- list.files(tmp_dir, pattern = "\\.shp$", full.names = TRUE, recursive = TRUE, ignore.case = TRUE)
+    if (!length(shp_files)) {
+      showNotification("No .shp file found — select all shapefile components (.shp, .dbf, .shx, .prj) or one .zip containing them.", type = "error", duration = 8)
+      return()
+    }
+    if (length(shp_files) > 1)
+      showNotification(sprintf("%d shapefiles uploaded; using %s. All features in it are pooled into one area.", length(shp_files), basename(shp_files[1])), type = "warning", duration = 8)
+    shp_path <- shp_files[1]
     set_status("Reading uploaded shapefile...")
     show_progress(15, "Reading shapefile...")
     tryCatch({
