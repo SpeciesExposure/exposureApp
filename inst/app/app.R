@@ -582,6 +582,36 @@ spatvector_to_leaflet_geojson <- function(v) {
   paste(readLines(tmp, warn = FALSE), collapse = "\n")
 }
 
+# Per-species history (all years, selected variables) built from two shipped
+# tables instead of scanning all 85 yearly shards (~80 s, ~3 GB retained):
+# species_year_cells gives the exposed cells per species-year-variable, and the
+# trends cache gives propExposed, which is one value per species-year (constant
+# across variables), so the result matches the shard rows exactly. Falls back to
+# the shard scan only if either table is unavailable.
+species_history_fast <- function(sp, sel_vars) {
+  sel_vars <- as.character(sel_vars %||% character(0))
+  syc <- get_species_year_cells()
+  if (is.null(syc) || !nrow(syc) || is.null(sp_trend_df) || !nrow(sp_trend_df)) return(NULL)
+  if (!length(sel_vars) || !nzchar(sp %||% "") || !(sp %in% species_avail)) return(empty_app_df())
+  rows <- syc[syc$spName == sp & syc$var %in% sel_vars, , drop = FALSE]
+  if (!nrow(rows)) return(empty_app_df())
+  n <- lengths(rows$cells)
+  d <- data.frame(spName = sp,
+                  cell   = as.integer(unlist(rows$cells, use.names = FALSE)),
+                  var    = rep(as.character(rows$var), n),
+                  year   = rep(as.integer(rows$year), n),
+                  stringsAsFactors = FALSE)
+  pe <- sp_trend_df[sp_trend_df$spName == sp, , drop = FALSE]
+  d$propExposed <- pe$mean_prop[match(paste(d$year, d$var), paste(pe$year, pe$var))]
+  meta <- species_meta[match(sp, species_meta$spName), intersect(c("group", "orderName", "familyName", "redlistCategory"), names(species_meta)), drop = FALSE]
+  for (nm in names(meta)) d[[nm]] <- meta[[nm]][1]
+  d
+}
+species_history <- function(sp, sel_vars) {
+  d <- species_history_fast(sp, sel_vars)
+  if (is.null(d)) load_species_history(sp, sel_vars) else d
+}
+
 default_species <- if ("Panthera_leo" %in% species_avail) "Panthera_leo" else species_avail[1]
 
 # ── UI ────────────────────────────────────────────────────────────────────────
@@ -1320,16 +1350,17 @@ server <- function(input, output, session) {
     req(input$mode == "single", input$species)
     sel <- input$sel_vars
     req(length(sel))
-    d <- load_species_history(normalize_species_value(input$species), sel)
+    d <- species_history(normalize_species_value(input$species), sel)
     d <- ensure_prop_exposed(d)
     d %>%
       group_by(year) %>%
       summarize(
-        Exposed_cells     = n_distinct(cell),
-        Mean_prop_exposed = round(mean(.data$propExposed, na.rm = TRUE), 4),
+        `Exposed cells`          = n_distinct(cell),
+        `Fraction of range exposed` = round(mean(.data$propExposed, na.rm = TRUE), 4),
         .groups = "drop"
       ) %>%
-      arrange(desc(year))
+      arrange(desc(year)) %>%
+      rename(Year = year)
   }) |> bindCache(input$species, input$sel_vars)
 
   output$species_summary <- renderDT({
@@ -2024,6 +2055,7 @@ server <- function(input, output, session) {
       session$sendCustomMessage("clearDrawn", 1)
       leafletProxy("map") %>%
         clearGroup("drawn") %>%
+        addGeoJSON(gj, group = "drawn", color = "#ffffff", weight = 5, opacity = 0.85, fill = FALSE) %>%  # white casing so the outline reads over gold/red cells
         addGeoJSON(gj,
                    group = "drawn",
                    color = "#e67e00",
@@ -2082,6 +2114,7 @@ server <- function(input, output, session) {
       session$sendCustomMessage("clearDrawn", 1)
       leafletProxy("map") %>%
         clearGroup("drawn") %>%
+        addGeoJSON(gj, group = "drawn", color = "#ffffff", weight = 5, opacity = 0.85, fill = FALSE) %>%  # white casing so the outline reads over gold/red cells
         addGeoJSON(gj,
                    group = "drawn",
                    color = "#e67e00",
@@ -2370,7 +2403,7 @@ server <- function(input, output, session) {
       req(input$species)
       sel <- input$sel_vars %||% character(0)
       req(length(sel))
-      load_species_history(normalize_species_value(input$species), sel) %>%
+      species_history(normalize_species_value(input$species), sel) %>%
         arrange(year, var) %>%
         mutate(var = vapply(as.character(var), var_label, character(1)))
     } else {
@@ -2713,6 +2746,7 @@ sep = "")
       session$sendCustomMessage("clearDrawn", 1)
       leafletProxy("map") %>%
         clearGroup("drawn") %>%
+        addGeoJSON(gj, group = "drawn", color = "#ffffff", weight = 5, opacity = 0.85, fill = FALSE) %>%  # white casing so the outline reads over gold/red cells
         addGeoJSON(gj, group = "drawn",
                    color = "#e67e00", weight = 2,
                    fillColor = "#e67e00", fillOpacity = 0.15)
