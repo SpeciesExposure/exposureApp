@@ -1303,7 +1303,14 @@ server <- function(input, output, session) {
   })
 
   output$map <- renderLeaflet({
-    leaflet::leaflet() %>% leaflet::addProviderTiles(leaflet::providers$CartoDB.DarkMatter) %>%
+    # CARTO deprecated keyless raster basemaps (tiles watermarked "API KEY REQUIRED");
+    # Esri's dark gray canvas needs no key. Note Esri tile paths are {z}/{y}/{x}.
+    leaflet::leaflet() %>%
+      leaflet::addTiles(
+        urlTemplate = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+        attribution = "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ",
+        options = leaflet::tileOptions(maxZoom = 16)
+      ) %>%
       setView(lng = 0, lat = 15, zoom = 3) %>%
       leaflet.extras::addDrawToolbar(
         targetGroup         = "drawn",
