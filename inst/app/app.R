@@ -422,6 +422,14 @@ normalize_species_value <- function(x) {
   cand <- gsub("[[:space:]]+", "_", x)
   if (cand %in% species_avail) cand else x
 }
+species_choice_df <- function(x) {
+  data.frame(
+    value = as.character(x),
+    label = species_display_label(x),
+    stringsAsFactors = FALSE
+  )
+}
+species_choices <- species_choice_df(species_avail)
 
 # ── helpers ───────────────────────────────────────────────────────────────────
 get_species_year_cell_list <- function(sp, year, sel_vars) {
@@ -796,11 +804,17 @@ ui <- fluidPage(
       conditionalPanel("input.mode == 'single'",
         h5(tags$span("Species", tags$span("?", class="tip", `data-tip`="Scroll the list or type part of a Latin name (e.g. 'Panthera' or 'leo') to filter it. The map will show all grid cells where that species is exposed to the selected climate variable(s) in the chosen year."))),
         checkboxInput("flt_exposed_only", "Only show species with exposure in selected year/variable(s)", value = FALSE),
-        # Full list in the page (32k names) so the dropdown can be scrolled; typing filters it.
+        # Server-side list (names are fetched on demand) so the page does not carry
+        # 32k option tags, which took the browser 20-30 s to initialise. maxOptions
+        # is the cap on names returned per fetch: set above the species count so an
+        # empty query returns the whole list and the dropdown can be scrolled.
         selectizeInput("species", NULL,
-                       choices  = setNames(species_avail, species_display_label(species_avail)),
-                       selected = default_species,
+                       choices  = NULL,
+                       selected = character(0),
                        options  = list(maxItems = 1, placeholder = "Type or scroll to choose a species",
+                                       valueField = "value",
+                                       labelField = "label",
+                                       searchField = c("label", "value"),
                                        maxOptions = 50000))
       ),
       conditionalPanel("input.mode == 'hotspot'",
@@ -1052,6 +1066,10 @@ server <- function(input, output, session) {
     nzchar(sp_norm) && (sp_norm %in% species_avail)
   }
 
+  updateSelectizeInput(session, "species",
+                       choices = species_choices,
+                       selected = default_species,
+                       server = TRUE)
 
   country_choices <- if (adm_ok) {
     t0 <- adm[[1]]$tab[order(adm[[1]]$tab$COUNTRY), ]
@@ -1102,7 +1120,7 @@ server <- function(input, output, session) {
       if (!is.null(qs$species)) {
         sp <- normalize_species_value(qs$species)
         if (is_valid_species_selection(sp))
-          updateSelectizeInput(session, "species", selected = sp)
+          updateSelectizeInput(session, "species", choices = species_choices, selected = sp, server = TRUE)
       }
       if (!is.null(qs$threat))
         updateCheckboxInput(session, "flt_threatened", value = identical(qs$threat, "1"))
@@ -1220,7 +1238,6 @@ server <- function(input, output, session) {
   }
 
   # Re-filter species list when checkbox or year/vars change
-  .species_list_full <- TRUE   # the UI starts with the full list embedded
   observe({
     req(input$mode == "single")
     if (isTRUE(input$flt_exposed_only)) {
@@ -1231,14 +1248,10 @@ server <- function(input, output, session) {
       spp <- species_avail
     }
     cur <- normalize_species_value(isolate(input$species))
-    sel_sp <- if (nzchar(cur %||% "") && cur %in% spp) cur else spp[1]
-    is_full <- identical(spp, species_avail)
-    if (is_full && isTRUE(.species_list_full)) {
-      updateSelectizeInput(session, "species", selected = sel_sp)   # list unchanged: don't resend 32k names
-    } else {
-      updateSelectizeInput(session, "species", choices = setNames(spp, species_display_label(spp)), selected = sel_sp)
-      .species_list_full <<- is_full
-    }
+    updateSelectizeInput(session, "species",
+                         choices = species_choice_df(spp),
+                         selected = if (nzchar(cur %||% "") && cur %in% spp) cur else spp[1],
+                         server = TRUE)
   })
 
   observeEvent(input$vars_all, {
@@ -2645,7 +2658,7 @@ sep = "")
     updateCheckboxInput(session, "flt_exposed_only", value = FALSE)
     # server = TRUE updates must resend choices: without them the client clears its
     # option list and the data request fails, leaving the dropdown empty for the session.
-    updateSelectizeInput(session, "species", selected = default_species)
+    updateSelectizeInput(session, "species", choices = species_choices, selected = default_species, server = TRUE)
     updateCheckboxInput(session, "flt_threatened", value = FALSE)
     updateCheckboxInput(session, "flt_data_deficient", value = FALSE)
     updateCheckboxGroupInput(session, "flt_groups",
