@@ -1580,8 +1580,8 @@ server <- function(input, output, session) {
             div_cols <- colorRampPalette(c("#2166ac", "#67a9cf", "#f7f7f7", "#ef8a62", "#b2182b"))(255)
             pal_change <- colorNumeric(div_cols, domain = c(-lim, lim), na.color = "transparent")
             proxy %>% clearImages() %>% clearControls()
-            leg_breaks <- pretty(c(-lim, lim), n = 5)
-            leg_breaks <- leg_breaks[abs(leg_breaks) <= lim]
+            # Legend ends exactly at +/- the largest absolute change, zero in the middle
+            leg_breaks <- unique(round(seq(-lim, lim, length.out = 7)))
             proxy %>%
               addRasterImage(rr, colors = pal_change, opacity = input$hotspot_opacity %||% 0.95,
                              layerId = "hotspot", method = "ngb") %>%
