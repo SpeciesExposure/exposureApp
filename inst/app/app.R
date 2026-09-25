@@ -838,7 +838,7 @@ ui <- fluidPage(
         div(style = "margin-bottom:4px;",
             tags$label("Taxonomic groups",
                        tags$span("?", class = "tip",
-                         `data-tip` = "Restrict the hotspot map to one or more taxonomic groups. All four are included by default; unticking all four is treated as all groups. Note: reptile and amphibian ranges are more coarsely represented, so their hotspots behave differently from birds and mammals."),
+                         `data-tip` = "Restrict the hotspot map to one or more taxonomic groups. All four are included by default; untick all four to show no species. Note: reptile and amphibian ranges are more coarsely represented, so their hotspots behave differently from birds and mammals."),
                        style = "font-weight:600"),
             checkboxGroupInput("flt_groups", NULL,
                                choices = c("Amphibians", "Birds", "Mammals", "Reptiles"),
@@ -1062,8 +1062,9 @@ server <- function(input, output, session) {
     fam <- fam[nzchar(fam)]
     iuc <- iuc[nzchar(iuc)]
     groups <- groups[nzchar(groups)]
-    # Only apply a group filter when it is a real subset (empty or all-four = no-op)
-    if (length(groups) && !setequal(groups, ALL_GROUPS) && "group" %in% names(d))
+    # No group ticked means no species (all four ticked is a no-op)
+    if (!length(groups)) return(d[0, , drop = FALSE])
+    if (!setequal(groups, ALL_GROUPS) && "group" %in% names(d))
       d <- d %>% filter(group %in% groups)
     if (length(ord)) d <- d %>% filter(orderName %in% ord)
     if (length(fam)) d <- d %>% filter(familyName %in% fam)
@@ -1159,7 +1160,7 @@ server <- function(input, output, session) {
       }
       if (!is.null(qs$groups)) {
         g <- intersect(strsplit(qs$groups, ",")[[1]], ALL_GROUPS)
-        if (length(g)) updateCheckboxGroupInput(session, "flt_groups", selected = g)
+        updateCheckboxGroupInput(session, "flt_groups", selected = g)   # empty = none ticked
       }
     })
     # Release the restore lock so later input changes mirror back into the URL
@@ -1180,7 +1181,7 @@ server <- function(input, output, session) {
       change   = if (isTRUE(input$change_mode)) "1" else "0",
       baseline = as.character(input$baseline_year %||% min(years_avail)),
       excl     = as.character(input$excl_threshold %||% 10),
-      groups   = paste(input$flt_groups %||% ALL_GROUPS, collapse = ","),
+      groups   = paste(input$flt_groups %||% character(0), collapse = ","),
       fix      = if (isTRUE(input$fix_color_scale)) "1" else "0"
     )
     if (length(input$flt_order  %||% character(0))) q$order  <- paste(input$flt_order,  collapse = ",")
@@ -1249,6 +1250,19 @@ server <- function(input, output, session) {
     if (!is.null(b)) leafletProxy("map") %>% fitBounds(b[1], b[2], b[3], b[4])
   }
 
+  # Order and Family lists only offer taxa from the ticked groups; selections
+  # that fall outside the new lists are dropped.
+  observeEvent(input$flt_groups, {
+    g <- input$flt_groups %||% character(0)
+    m <- if (length(g)) species_meta[species_meta$group %in% g, , drop = FALSE] else species_meta[0, , drop = FALSE]
+    ords <- sort(unique(na.omit(as.character(m$orderName))))
+    fams <- sort(unique(na.omit(as.character(m$familyName))))
+    keep_o <- intersect(input$flt_order  %||% character(0), ords)
+    keep_f <- intersect(input$flt_family %||% character(0), fams)
+    updateSelectizeInput(session, "flt_order",  choices = c("", ords), selected = keep_o)
+    updateSelectizeInput(session, "flt_family", choices = c("", fams), selected = keep_f)
+  }, ignoreNULL = FALSE, ignoreInit = TRUE)
+
   # Re-filter species list when checkbox or year/vars change
   observe({
     req(input$mode == "single")
@@ -1299,7 +1313,7 @@ server <- function(input, output, session) {
                                  character(0),
                                  input$flt_threatened %||% FALSE,
                                  input$flt_data_deficient %||% FALSE,
-                                 input$flt_groups %||% ALL_GROUPS)
+                                 input$flt_groups %||% character(0))
       # Exposure threshold (per species-year): keep only species whose exposed
       # fraction of range that year (propExposed) is >= the slider value. The
       # shards already floor at 1%, so thr = 1% is a no-op that reproduces the
@@ -1328,7 +1342,7 @@ server <- function(input, output, session) {
                  paste(sort(input$flt_order  %||% ""), collapse = ","),
                  paste(sort(input$flt_family %||% ""), collapse = ","),
                  isTRUE(input$flt_threatened), isTRUE(input$flt_data_deficient),
-                 paste(sort(input$flt_groups %||% ALL_GROUPS), collapse = ","),
+                 paste(sort(input$flt_groups %||% character(0)), collapse = ","),
                  thr, sep = "|")
     if (!is.null(.fixed_scale_memo[[key]])) return(.fixed_scale_memo[[key]])
     d <- tryCatch(load_year_df(FIXED_SCALE_YEAR), error = function(e) NULL)
@@ -1340,7 +1354,7 @@ server <- function(input, output, session) {
                                character(0),
                                input$flt_threatened %||% FALSE,
                                input$flt_data_deficient %||% FALSE,
-                               input$flt_groups %||% ALL_GROUPS)
+                               input$flt_groups %||% character(0))
     if (is.finite(thr) && thr > 0.01 && "propExposed" %in% names(d))
       d <- d %>% filter(is.na(.data$propExposed) | .data$propExposed >= thr)
     rr <- build_hotspot_raster(d)
@@ -1610,9 +1624,11 @@ server <- function(input, output, session) {
             } else {
               d <- filtered_df()
               if (!length(sel) || nrow(d) == 0) {
-                exposure_msg_rv("No exposed cells for the selected year/filter/variable combination.")
+                no_groups <- !length(input$flt_groups %||% character(0))
+                exposure_msg_rv(if (no_groups) "No taxonomic group is ticked, so no species are shown. Tick at least one group." else
+                                "No exposed cells for the selected year/filter/variable combination.")
                 proxy %>% clearImages() %>% clearControls()
-                show_map_empty("No exposed cells for the selected year, variables, or filters.")
+                show_map_empty(if (no_groups) "No taxonomic group selected." else "No exposed cells for the selected year, variables, or filters.")
                 hide_progress()
                 set_status("Map update complete (no exposed cells)", done = TRUE)
                 return()
@@ -1708,7 +1724,7 @@ server <- function(input, output, session) {
   default_view_active <- function() {
     sel <- input$sel_vars %||% character(0)
     setequal(sel, vars_avail) &&
-      setequal(input$flt_groups %||% ALL_GROUPS, ALL_GROUPS) &&
+      setequal(input$flt_groups %||% character(0), ALL_GROUPS) &&
       !isTRUE(input$flt_threatened) && !isTRUE(input$flt_data_deficient) &&
       !nzchar(paste(input$flt_order %||% "", collapse = "")) &&
       !nzchar(paste(input$flt_family %||% "", collapse = ""))
@@ -2565,7 +2581,7 @@ sep = "")
         variables            = paste(vapply(input$sel_vars %||% character(0), var_label, character(1)), collapse = ";"),
         variable_codes       = paste(input$sel_vars %||% character(0), collapse = ";"),
         exposure_threshold_pct = as.numeric(input$excl_threshold %||% 10),
-        groups               = paste(input$flt_groups %||% ALL_GROUPS, collapse = ";"),
+        groups               = paste(input$flt_groups %||% character(0), collapse = ";"),
         only_threatened      = isTRUE(input$flt_threatened),
         only_data_deficient  = isTRUE(input$flt_data_deficient),
         order_filter         = paste(input$flt_order  %||% character(0), collapse = ";"),
