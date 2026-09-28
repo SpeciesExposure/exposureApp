@@ -62,8 +62,13 @@ app_rows <- allExp %>%
 message(sprintf("app_rows: %d rows, %d species", nrow(app_rows), dplyr::n_distinct(app_rows$spName)))
 
 # --- derived products ----------------------------------------------------------
+# rangeSize (cells in the species' range, the denominator of propExposed) from
+# the pipeline's species attributes, so the app can recompute exposure fractions.
+sp_range <- qs2::qs_read("/Users/cory.merow/Documents/SDMs/Exposure_2025/V8/metadata_V8/spAttributes_v8.qs") %>%
+  dplyr::select(spName, rangeSize) %>% filter(!is.na(rangeSize)) %>% distinct(spName, .keep_all = TRUE)
 app_species_meta <- app_rows %>%
-  distinct(spName, group, orderName, familyName, redlistCategory)
+  distinct(spName, group, orderName, familyName, redlistCategory) %>%
+  left_join(sp_range, by = "spName")
 
 cell_trend_df <- app_rows %>% distinct(spName, cell, year) %>%
   count(cell, year, name = "n_sp")
