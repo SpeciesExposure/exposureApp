@@ -168,7 +168,7 @@ if (use_sharded_app_data) {
       familyName = to_title_case(familyName),
       redlistCategory = as.character(redlistCategory)
     ) %>%
-    distinct(spName, group, orderName, familyName, redlistCategory)
+    distinct(spName, group, orderName, familyName, redlistCategory, .keep_all = TRUE)   # keeps rangeSize
 
   year_files <- as.list(manifest_year_paths[file.exists(manifest_year_paths)])
   years_avail <- sort(as.integer(names(year_files)))
@@ -615,7 +615,7 @@ species_history_fast <- function(sp, sel_vars) {
                   stringsAsFactors = FALSE)
   pe <- sp_trend_df[sp_trend_df$spName == sp, , drop = FALSE]
   d$propExposed <- pe$mean_prop[match(paste(d$year, d$var), paste(pe$year, pe$var))]
-  meta <- species_meta[match(sp, species_meta$spName), intersect(c("group", "orderName", "familyName", "redlistCategory"), names(species_meta)), drop = FALSE]
+  meta <- species_meta[match(sp, species_meta$spName), intersect(c("group", "orderName", "familyName", "redlistCategory", "rangeSize"), names(species_meta)), drop = FALSE]
   for (nm in names(meta)) d[[nm]] <- meta[[nm]][1]
   d
 }
@@ -1264,6 +1264,7 @@ server <- function(input, output, session) {
   }, ignoreNULL = FALSE, ignoreInit = TRUE)
 
   # Re-filter species list when checkbox or year/vars change
+  .species_list_full <- TRUE   # the session starts with the full list loaded
   observe({
     req(input$mode == "single")
     if (isTRUE(input$flt_exposed_only)) {
@@ -1273,11 +1274,16 @@ server <- function(input, output, session) {
     } else {
       spp <- species_avail
     }
+    is_full <- identical(spp, species_avail)
+    # Full list already loaded: leave the selection alone (resending it here
+    # overrode a species restored from a shared link with the first name).
+    if (is_full && isTRUE(.species_list_full)) return()
     cur <- normalize_species_value(isolate(input$species))
     updateSelectizeInput(session, "species",
                          choices = species_choice_df(spp),
                          selected = if (nzchar(cur %||% "") && cur %in% spp) cur else spp[1],
                          server = TRUE)
+    .species_list_full <<- is_full
   })
 
   observeEvent(input$vars_all, {
@@ -1747,7 +1753,8 @@ server <- function(input, output, session) {
            n_cells = length(cells),
            n_species = 1L,
            species = species_display_label(sp_sel),
-           n_vars = length(cl))
+           n_vars = length(cl),
+           range_cells = if ("rangeSize" %in% names(species_meta)) species_meta$rangeSize[match(sp_sel, species_meta$spName)] else NA)
     } else {
       st <- cached_stats()
       if (!is.null(st)) {
@@ -1789,8 +1796,8 @@ server <- function(input, output, session) {
     }
     if (identical(s$kind, "single")) {
       div(class = "summary-card",
-          stat(fmt(s$n_cells), "Exposed cells", tip =
-               "Number of distinct grid cells where this species is exposed in the selected year, counting a cell once even if several climate variables trip it."),
+          stat(if (is.na(s$range_cells)) fmt(s$n_cells) else sprintf("%s of %s", fmt(s$n_cells), fmt(s$range_cells)), "Exposed cells / range cells", tip =
+               "Grid cells where this species is exposed in the selected year (a cell counts once even if several climate variables expose it), out of all cells in the species' range on the 0.25-degree grid."),
           stat(fmt(s$n_vars), "Variables exposed", tip =
                "How many of the selected climate variables expose this species in at least one cell this year."),
           stat(s$species, "Species", wide = TRUE, tip =
@@ -1953,6 +1960,8 @@ server <- function(input, output, session) {
     if ("orderName"       %in% names(pd)) pd <- rename(pd, Order = orderName)
     if ("familyName"      %in% names(pd)) pd <- rename(pd, Family = familyName)
     if ("redlistCategory" %in% names(pd)) pd <- mutate(rename(pd, `IUCN status` = redlistCategory), `IUCN status` = iucn_label(`IUCN status`))
+    if ("rangeSize" %in% names(species_meta))
+      pd$`Range (cells)` <- species_meta$rangeSize[match(pd$Species, species_meta$spName)]
     pd$Species <- species_display_label(pd$Species)
     pd
   })
@@ -2310,6 +2319,8 @@ server <- function(input, output, session) {
         if ("orderName"       %in% names(d)) d <- rename(d, Order         = orderName)
         if ("familyName"      %in% names(d)) d <- rename(d, Family        = familyName)
         if ("redlistCategory" %in% names(d)) d <- mutate(rename(d, `IUCN status` = redlistCategory), `IUCN status` = iucn_label(`IUCN status`))
+        if ("rangeSize" %in% names(species_meta))
+          d$`Range (cells)` <- species_meta$rangeSize[match(d$Species, species_meta$spName)]
         d$Species <- species_display_label(d$Species)
         click_data(if (!nrow(d)) NULL else d)
 
